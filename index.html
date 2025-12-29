@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCPMI Chatbot - Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .demo-container {
+            text-align: center;
+            color: #fafafa;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #a1a1a1;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .instructions {
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            text-align: left;
+        }
+
+        .instructions h2 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: #fafafa;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #a1a1a1;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .instructions code {
+            background: #262626;
+            color: #e5e5e5;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.875rem;
+        }
+
+        .arrow-hint {
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+            color: #525252;
+            font-size: 0.875rem;
+            font-weight: 500;
+            animation: pulse 2s infinite;
+        }
+
+        .arrow-hint::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background: #525252;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .test-section {
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            text-align: left;
+        }
+
+        .test-section h2 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: #fafafa;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .test-item {
+            background: #0a0a0a;
+            border: 1px solid #262626;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .test-item:hover {
+            border-color: #404040;
+        }
+
+        .test-item strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #fafafa;
+            font-weight: 500;
+        }
+
+        .test-item span {
+            font-size: 0.875rem;
+            color: #737373;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #262626;
+            color: #a1a1a1;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid #404040;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <span class="badge">Demo Environment</span>
+        <h1>NCPMI Chatbot</h1>
+        <p>
+            Support chatbot for PMI North Carolina Chapter. Helps visitors
+            find information about membership, events, PDUs, volunteering, and more.
+        </p>
+
+        <div class="instructions">
+            <h2>Setup</h2>
+            <ol>
+                <li>Open a terminal in the <code>server</code> folder</li>
+                <li>Run <code>npm install</code> to install dependencies</li>
+                <li>Run <code>npm start</code> to start the server</li>
+                <li>Click the chat bubble on the bottom right</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>Benchmark Tests</h2>
+            <div class="test-item">
+                <strong>1. PDU Information</strong>
+                <span>"Where can I find information about PDUs?"</span>
+            </div>
+            <div class="test-item">
+                <strong>2. Volunteer Opportunities</strong>
+                <span>"Where can I find the link to volunteer?"</span>
+            </div>
+            <div class="test-item">
+                <strong>3. Chapter Meeting Recordings</strong>
+                <span>"How do I find chapter meeting recordings?"</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrow-hint">Click the chat bubble</div>
+
+    <!-- Load the chat widget -->
+    <link rel="stylesheet" href="widget/widget.css">
+    <script>
+        /**
+         * DEPLOYMENT CONFIGURATION
+         * Set NCPMI_CHAT_API_URL to your server's URL before loading widget.js
+         *
+         * Examples for different PMI chapter websites:
+         * - Local development: 'http://localhost:3002'
+         * - Production NC: 'https://chat-api.ncpmi.org'
+         * - Production Other: 'https://your-chapter-api-server.com'
+         *
+         * The widget will use this URL for all API calls.
+         * Make sure your server has CORS configured to allow requests from your domain.
+         */
+        window.NCPMI_CHAT_API_URL = 'http://localhost:3002';
+    </script>
+    <script src="widget/widget.js"></script>
+</body>
+</html>

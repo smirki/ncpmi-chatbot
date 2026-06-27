@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCPMI Chatbot — Admin Dashboard</title>
+<style>
+    :root {
+        --brand: #662d91;
+        --brand-dark: #4a2070;
+        --bg: #f5f6f8;
+        --card: #ffffff;
+        --border: #e5e7eb;
+        --text: #1f2937;
+        --muted: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+    }
+    header {
+        background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+        color: white;
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header .sub { font-size: 13px; opacity: 0.85; }
+    .refresh-btn {
+        background: rgba(255,255,255,0.18);
+        color: white;
+        border: none;
+        padding: 9px 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .refresh-btn:hover { background: rgba(255,255,255,0.28); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 28px 60px; }
+
+    /* Stat cards */
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+    .stat {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 18px;
+    }
+    .stat .num { font-size: 28px; font-weight: 700; color: var(--brand); }
+    .stat .lbl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; flex-wrap: wrap; }
+    .tab {
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+        cursor: pointer;
+        border: none;
+        background: none;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+    }
+    .tab.active { color: var(--brand); border-bottom-color: var(--brand); }
+    .tab .badge {
+        display: inline-block; min-width: 18px; padding: 0 6px; margin-left: 6px;
+        background: #ef4444; color: white; border-radius: 10px; font-size: 11px; font-weight: 700;
+        text-align: center;
+    }
+
+    /* Tables */
+    .panel { display: none; }
+    .panel.active { display: block; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    th, td { text-align: left; padding: 11px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #fafafa; color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em; }
+    tr:last-child td { border-bottom: none; }
+    tr.clickable { cursor: pointer; }
+    tr.clickable:hover { background: #faf7fd; }
+    .empty { padding: 40px; text-align: center; color: var(--muted); background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+    .muted { color: var(--muted); }
+    .when { white-space: nowrap; color: var(--muted); font-size: 12px; }
+    .pill { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+    .pill.up { background: #dcfce7; color: #166534; }
+    .pill.down { background: #fee2e2; color: #991b1b; }
+    .pill.new { background: #fef3c7; color: #92400e; }
+    .pill.contacted { background: #dbeafe; color: #1e40af; }
+    .pill.resolved { background: #dcfce7; color: #166534; }
+    .truncate { max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    select { padding: 5px 8px; border: 1px solid var(--border); border-radius: 7px; font-size: 12px; }
+    .newsletter-yes { color: var(--brand); font-weight: 600; }
+
+    /* Modal */
+    .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 50; }
+    .modal-bg.open { display: flex; }
+    .modal { background: var(--card); border-radius: 14px; max-width: 640px; width: 100%; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden; }
+    .modal-head { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .modal-head h3 { font-size: 15px; }
+    .modal-close { border: none; background: none; font-size: 22px; cursor: pointer; color: var(--muted); line-height: 1; }
+    .modal-body { padding: 18px 20px; overflow-y: auto; }
+    .msg { margin-bottom: 14px; }
+    .msg .role { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 3px; }
+    .msg .text { padding: 10px 13px; border-radius: 10px; font-size: 13px; white-space: pre-wrap; word-break: break-word; }
+    .msg.user .text { background: #f3e8ff; }
+    .msg.assistant .text { background: #f3f4f6; }
+</style>
+</head>
+<body>
+<header>
+    <div>
+        <h1>NCPMI Chatbot — Admin Dashboard</h1>
+        <div class="sub">Emails, conversations, feedback &amp; staff requests</div>
+    </div>
+    <button class="refresh-btn" id="refresh">Refresh</button>
+</header>
+
+<div class="wrap">
+    <div class="stats" id="stats"></div>
+
+    <div class="tabs" id="tabs">
+        <button class="tab active" data-panel="conversations">Conversations</button>
+        <button class="tab" data-panel="feedback">Feedback</button>
+        <button class="tab" data-panel="staff">Staff Requests <span class="badge" id="staff-badge" style="display:none"></span></button>
+        <button class="tab" data-panel="emails">Emails</button>
+    </div>
+
+    <div class="panel active" id="panel-conversations"></div>
+    <div class="panel" id="panel-feedback"></div>
+    <div class="panel" id="panel-staff"></div>
+    <div class="panel" id="panel-emails"></div>
+</div>
+
+<div class="modal-bg" id="modal-bg">
+    <div class="modal">
+        <div class="modal-head">
+            <h3 id="modal-title">Conversation</h3>
+            <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    const esc = (s) => String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    const fmt = (iso) => {
+        if (!iso) return '';
+        const d = new Date(iso);
+        return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    };
+    const api = (path, opts) => fetch(path, opts).then(r => {
+        if (!r.ok) throw new Error('Request failed: ' + r.status);
+        return r.json();
+    });
+
+    async function loadStats() {
+        const s = await api('/api/admin/stats');
+        const cards = [
+            ['Conversations', s.conversations],
+            ['Questions asked', s.userQuestions],
+            ['Emails collected', s.emails],
+            ['Newsletter sign-ups', s.newsletterSignups],
+            ['Thumbs up', s.thumbsUp],
+            ['Thumbs down', s.thumbsDown],
+            ['Staff requests', s.staffRequests],
+            ['New requests', s.staffRequestsNew]
+        ];
+        document.getElementById('stats').innerHTML = cards.map(([lbl, num]) =>
+            `<div class="stat"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`).join('');
+        const badge = document.getElementById('staff-badge');
+        if (s.staffRequestsNew > 0) { badge.style.display = ''; badge.textContent = s.staffRequestsNew; }
+        else badge.style.display = 'none';
+    }
+
+    function table(headers, rows) {
+        if (!rows.length) return '<div class="empty">Nothing here yet.</div>';
+        return `<table><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>`
+            + `<tbody>${rows.join('')}</tbody></table>`;
+    }
+
+    async function loadConversations() {
+        const convos = await api('/api/admin/conversations');
+        const rows = convos.map(c => `
+            <tr class="clickable" data-cid="${esc(c.conversation_id)}">
+                <td>${esc(c.email || '—')}</td>
+                <td>${c.question_count}</td>
+                <td>${c.message_count}</td>
+                <td class="when">${fmt(c.started_at)}</td>
+                <td class="when">${fmt(c.last_at)}</td>
+            </tr>`);
+        document.getElementById('panel-conversations').innerHTML =
+            table(['Email', 'Questions', 'Messages', 'Started', 'Last activity'], rows);
+        document.querySelectorAll('#panel-conversations tr.clickable').forEach(tr => {
+            tr.addEventListener('click', () => openConversation(tr.dataset.cid));
+        });
+    }
+
+    async function openConversation(cid) {
+        const msgs = await api('/api/admin/conversations/' + encodeURIComponent(cid));
+        document.getElementById('modal-title').textContent =
+            'Conversation — ' + (msgs[0] && msgs[0].email ? msgs[0].email : cid);
+        document.getElementById('modal-body').innerHTML = msgs.length
+            ? msgs.map(m => `
+                <div class="msg ${m.role === 'user' ? 'user' : 'assistant'}">
+                    <div class="role">${m.role === 'user' ? 'Visitor' : 'Assistant'} · ${fmt(m.created_at)}</div>
+                    <div class="text">${esc(m.content)}</div>
+                </div>`).join('')
+            : '<div class="muted">No messages.</div>';
+        document.getElementById('modal-bg').classList.add('open');
+    }
+
+    async function loadFeedback() {
+        const fb = await api('/api/admin/feedback');
+        const rows = fb.map(f => `
+            <tr>
+                <td>${f.helpful ? '<span class="pill up">Up</span>' : '<span class="pill down">Down</span>'}</td>
+                <td class="truncate" title="${esc(f.question)}">${esc(f.question || '—')}</td>
+                <td class="truncate" title="${esc(f.answer)}">${esc(f.answer || '—')}</td>
+                <td>${esc(f.email || '—')}</td>
+                <td class="when">${fmt(f.created_at)}</td>
+            </tr>`);
+        document.getElementById('panel-feedback').innerHTML =
+            table(['Rating', 'Question', 'Answer', 'Email', 'When'], rows);
+    }
+
+    async function loadStaff() {
+        const reqs = await api('/api/admin/staff-requests');
+        const opt = (v, cur) => `<option value="${v}" ${v === cur ? 'selected' : ''}>${v}</option>`;
+        const rows = reqs.map(r => `
+            <tr>
+                <td>${esc(r.email || '—')}</td>
+                <td class="truncate" title="${esc(r.last_question)}">${esc(r.last_question || '—')}</td>
+                <td><span class="pill ${r.status}">${r.status}</span></td>
+                <td class="when">${fmt(r.created_at)}</td>
+                <td>
+                    <select data-id="${r.id}">
+                        ${opt('new', r.status)}${opt('contacted', r.status)}${opt('resolved', r.status)}
+                    </select>
+                </td>
+            </tr>`);
+        document.getElementById('panel-staff').innerHTML =
+            table(['Email', 'Last question', 'Status', 'Requested', 'Update'], rows);
+        document.querySelectorAll('#panel-staff select').forEach(sel => {
+            sel.addEventListener('change', async () => {
+                await api('/api/admin/staff-requests/' + sel.dataset.id + '/status', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ status: sel.value })
+                });
+                loadStaff(); loadStats();
+            });
+        });
+    }
+
+    async function loadEmails() {
+        const emails = await api('/api/admin/emails');
+        const rows = emails.map(e => `
+            <tr>
+                <td>${esc(e.email)}</td>
+                <td>${e.newsletter ? '<span class="newsletter-yes">Yes</span>' : '<span class="muted">No</span>'}</td>
+                <td class="when">${fmt(e.created_at)}</td>
+            </tr>`);
+        document.getElementById('panel-emails').innerHTML =
+            table(['Email', 'Newsletter', 'Collected'], rows);
+    }
+
+    function loadAll() {
+        loadStats(); loadConversations(); loadFeedback(); loadStaff(); loadEmails();
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+        });
+    });
+
+    document.getElementById('refresh').addEventListener('click', loadAll);
+    document.getElementById('modal-close').addEventListener('click', () => document.getElementById('modal-bg').classList.remove('open'));
+    document.getElementById('modal-bg').addEventListener('click', (e) => {
+        if (e.target.id === 'modal-bg') document.getElementById('modal-bg').classList.remove('open');
+    });
+
+    loadAll();
+</script>
+</body>
+</html>

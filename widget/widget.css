@@ -359,6 +359,49 @@
     flex-shrink: 0;
 }
 
+/* Connect with NCPMI staff button */
+.ncpmi-staff-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #662d91;
+    border-radius: 10px;
+    background: #f7f1fb;
+    color: #662d91;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    -webkit-appearance: none;
+}
+
+.ncpmi-staff-btn:hover {
+    background: #efe3f8;
+}
+
+.ncpmi-staff-btn:active {
+    transform: scale(0.99);
+}
+
+.ncpmi-staff-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #6b7280;
+}
+
+.ncpmi-staff-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 .ncpmi-input-container {
     display: flex;
     align-items: center;

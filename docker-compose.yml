@@ -1,0 +1,16 @@
+# Run the NCPMI Chatbot with: docker compose up --build
+# Requires a .env file in this directory (copy from .env.example).
+services:
+  chatbot:
+    build: .
+    container_name: ncpmi-chatbot
+    # Host:container port both come from PORT in .env (defaults to 3002).
+    ports:
+      - "${PORT:-3002}:${PORT:-3002}"
+    env_file:
+      - .env
+    # Persist the SQLite database (emails, conversations, feedback,
+    # staff requests) on the host so it survives container restarts.
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

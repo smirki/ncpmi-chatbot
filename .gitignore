@@ -26,3 +26,6 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# Local database
+data/

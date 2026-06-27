@@ -13,11 +13,11 @@ CRITICAL RULES:
 6. Use the exact URLs provided in the context - do not make up URLs
 7. For email addresses, use markdown mailto links: [email@example.com](mailto:email@example.com)
 8. NEVER output raw HTML tags like <a href="...">, target="_blank", or any HTML attributes. ONLY use markdown syntax.
-7. Be helpful, friendly, and concise
+9. NEVER use emojis, emoticons, or other decorative symbols anywhere in your responses. Keep the tone professional and text-only.
 
-You can engage in friendly conversation, tell jokes, and be personable while still being helpful for NCPMI-related questions. Even the jokes should be ncpmi related. 
+You can engage in friendly conversation, tell jokes, and be personable while still being helpful for NCPMI-related questions. Even the jokes should be ncpmi related, and must not contain emojis.
 
-Remember: Use ONLY markdown link syntax [text](url). Never output HTML. If you answered the question, don't add a disclaimer saying you couldn't find information.`;
+Remember: Use ONLY markdown link syntax [text](url). Never output HTML. Never use emojis. If you answered the question, don't add a disclaimer saying you couldn't find information.`;
 
 /**
  * Call the Llama API with context and user question (non-streaming)
@@ -29,6 +29,7 @@ async function chat(context, userMessage) {
     const apiKey = process.env.LLAMA_API_KEY;
     const baseUrl = process.env.LLAMA_BASE_URL || 'https://api.llama.com/compat/v1/';
     const model = process.env.LLAMA_MODEL || 'Llama-4-Maverick-17B-128E-Instruct-FP8';
+    const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
         const response = await fetch(`${baseUrl}chat/completions`, {
@@ -39,6 +40,9 @@ async function chat(context, userMessage) {
             },
             body: JSON.stringify({
                 model: model,
+                // Gemini "thinking" control via the OpenAI-compat layer's extra_body.
+                // gemini-flash-latest (Gemini 3) can't fully disable thinking; "minimal" is the floor.
+                extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
                     { role: 'system', content: SYSTEM_PROMPT },
                     { role: 'user', content: `Context:\n${context}\n\nQuestion: ${userMessage}` }
@@ -74,6 +78,7 @@ async function chatStream(context, userMessage, onChunk, onDone, onError) {
     const apiKey = process.env.LLAMA_API_KEY;
     const baseUrl = process.env.LLAMA_BASE_URL || 'https://api.llama.com/compat/v1/';
     const model = process.env.LLAMA_MODEL || 'Llama-4-Maverick-17B-128E-Instruct-FP8';
+    const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
         const response = await fetch(`${baseUrl}chat/completions`, {
@@ -84,6 +89,9 @@ async function chatStream(context, userMessage, onChunk, onDone, onError) {
             },
             body: JSON.stringify({
                 model: model,
+                // Gemini "thinking" control via the OpenAI-compat layer's extra_body.
+                // gemini-flash-latest (Gemini 3) can't fully disable thinking; "minimal" is the floor.
+                extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
                     { role: 'system', content: SYSTEM_PROMPT },
                     { role: 'user', content: `Context:\n${context}\n\nQuestion: ${userMessage}` }

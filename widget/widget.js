@@ -9,8 +9,29 @@
     // Configuration
     const CONFIG = {
         apiUrl: window.NCPMI_CHAT_API_URL || `http://localhost:${window.NCPMI_CHAT_PORT || 3002}`,
-        storageKey: 'ncpmi_chat_email'
+        storageKey: 'ncpmi_chat_email',
+        conversationKey: 'ncpmi_chat_cid'
     };
+
+    /**
+     * Get (or create) a stable conversation id so the backend can group
+     * all messages, feedback, and staff requests from this visitor.
+     */
+    function getConversationId() {
+        let cid = localStorage.getItem(CONFIG.conversationKey);
+        if (!cid) {
+            cid = (window.crypto && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : 'cid-' + Math.random().toString(36).slice(2) + '-' + Date.now();
+            localStorage.setItem(CONFIG.conversationKey, cid);
+        }
+        return cid;
+    }
+
+    function newConversationId() {
+        localStorage.removeItem(CONFIG.conversationKey);
+        state.conversationId = getConversationId();
+    }
 
     // State
     let state = {
@@ -22,6 +43,9 @@
         messages: [],
         isLoading: false,
         pendingMessage: null,
+        pendingStaffConnect: false,
+        lastQuestion: null,
+        conversationId: getConversationId(),
         menuOpen: false
     };
 
@@ -38,7 +62,8 @@
         thumbDown: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/></svg>`,
         menu: `<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>`,
         refresh: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`,
-        clear: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`
+        clear: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`,
+        staff: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 1a9 9 0 00-9 9v7a3 3 0 003 3h1a1 1 0 001-1v-6a1 1 0 00-1-1H5v-2a7 7 0 0114 0v2h-2a1 1 0 00-1 1v6a1 1 0 001 1h1a3 3 0 100-6v-3a9 9 0 00-9-9z"/></svg>`
     };
 
     /**
@@ -127,6 +152,10 @@
                         <!-- Messages will be inserted here -->
                     </div>
                     <div class="ncpmi-chat-footer">
+                        <button class="ncpmi-staff-btn" id="ncpmi-staff-btn">
+                            ${ICONS.staff}
+                            <span>Connect with NCPMI staff</span>
+                        </button>
                         <div class="ncpmi-input-container">
                             <input type="text" class="ncpmi-chat-input" id="ncpmi-input" placeholder="Enter your message..." />
                             <button class="ncpmi-send-btn" id="ncpmi-send-btn">
@@ -181,6 +210,9 @@
 
         // Send message
         document.getElementById('ncpmi-send-btn').addEventListener('click', handleSend);
+
+        // Connect with NCPMI staff
+        document.getElementById('ncpmi-staff-btn').addEventListener('click', handleStaffConnect);
 
         // Enter key to send
         document.getElementById('ncpmi-input').addEventListener('keypress', (e) => {
@@ -279,7 +311,23 @@
         // Clear stored email too
         localStorage.removeItem(CONFIG.storageKey);
         state.email = null;
+        state.lastQuestion = null;
+        // Start a brand-new conversation thread
+        newConversationId();
+        resetStaffButton();
         initChat();
+    }
+
+    /**
+     * Re-enable the "Connect with NCPMI staff" button (after clear/refresh)
+     */
+    function resetStaffButton() {
+        const staffBtn = document.getElementById('ncpmi-staff-btn');
+        if (staffBtn) {
+            staffBtn.disabled = false;
+            const label = staffBtn.querySelector('span');
+            if (label) label.textContent = 'Connect with NCPMI staff';
+        }
     }
 
     /**
@@ -450,7 +498,7 @@
             await fetch(`${CONFIG.apiUrl}/api/email`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, newsletter: state.newsletter })
+                body: JSON.stringify({ email, newsletter: state.newsletter, conversationId: state.conversationId })
             });
         } catch (err) {
             console.warn('Failed to register email:', err);
@@ -459,6 +507,13 @@
         // Remove email form
         const emailForm = document.querySelector('.ncpmi-email-form');
         if (emailForm) emailForm.remove();
+
+        // If the email was collected to connect with staff, do that now.
+        if (state.pendingStaffConnect) {
+            state.pendingStaffConnect = false;
+            doStaffConnect();
+            return;
+        }
 
         // Add confirmation message
         addBotMessage(`Thanks! How can I help you today?\n\nPlease select one of the items below or type your question.`, [
@@ -481,6 +536,7 @@
     async function sendMessage(message) {
         // Add user message
         addUserMessage(message);
+        state.lastQuestion = message;
 
         // Show loading
         state.isLoading = true;
@@ -493,7 +549,7 @@
             const response = await fetch(`${CONFIG.apiUrl}/api/chat/stream`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message, email: state.email })
+                body: JSON.stringify({ message, email: state.email, conversationId: state.conversationId })
             });
 
             if (!response.ok) {
@@ -521,8 +577,8 @@
                                 fullText += data.content;
                                 updateStreamingMessage(messageEl, fullText);
                             } else if (data.type === 'done') {
-                                // Finalize message with feedback
-                                finalizeStreamingMessage(messageEl, fullText);
+                                // Finalize message with feedback (tied to the question asked)
+                                finalizeStreamingMessage(messageEl, fullText, message);
                                 state.messages.push({ role: 'bot', text: fullText });
                             } else if (data.type === 'error') {
                                 updateStreamingMessage(messageEl, "I'm sorry, I encountered an error. Please try again or contact [support@ncpmi.org](mailto:support@ncpmi.org)");
@@ -569,7 +625,7 @@
     /**
      * Finalize streaming message with feedback buttons
      */
-    function finalizeStreamingMessage(messageEl, text) {
+    function finalizeStreamingMessage(messageEl, text, question) {
         const bubble = messageEl.querySelector('.ncpmi-message-bubble');
         bubble.innerHTML = parseMarkdown(text);
 
@@ -583,11 +639,11 @@
         `;
         messageEl.appendChild(feedbackEl);
 
-        // Bind feedback events
+        // Bind feedback events (tied to this exact question + answer)
         feedbackEl.querySelectorAll('.ncpmi-feedback-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const helpful = btn.dataset.helpful === 'true';
-                submitFeedback(helpful);
+                submitFeedback(helpful, question, text);
                 feedbackEl.querySelectorAll('.ncpmi-feedback-btn').forEach(b => b.classList.remove('selected'));
                 btn.classList.add('selected');
             });
@@ -803,19 +859,71 @@
     /**
      * Submit feedback
      */
-    async function submitFeedback(helpful) {
+    async function submitFeedback(helpful, question, answer) {
         try {
             await fetch(`${CONFIG.apiUrl}/api/feedback`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     email: state.email,
-                    messageIndex: state.messages.length - 1,
+                    conversationId: state.conversationId,
+                    question: question || null,
+                    answer: answer || null,
                     helpful
                 })
             });
         } catch (err) {
             console.warn('Failed to submit feedback:', err);
+        }
+    }
+
+    /**
+     * Handle "Connect with NCPMI staff" click.
+     * Uses the email already collected; if none yet, collect it first.
+     */
+    function handleStaffConnect() {
+        if (state.isLoading) return;
+
+        if (!state.email) {
+            state.pendingStaffConnect = true;
+            switchTab('chat');
+            addBotMessage("Sure — please share your email and we'll connect you with NCPMI staff.");
+            showEmailForm();
+            return;
+        }
+
+        doStaffConnect();
+    }
+
+    async function doStaffConnect() {
+        const staffBtn = document.getElementById('ncpmi-staff-btn');
+        if (staffBtn) staffBtn.disabled = true;
+
+        try {
+            const response = await fetch(`${CONFIG.apiUrl}/api/staff-connect`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: state.email,
+                    conversationId: state.conversationId,
+                    lastQuestion: state.lastQuestion
+                })
+            });
+            const data = await response.json();
+
+            if (response.ok) {
+                addBotMessage(data.message || "We've reached out to them with your email. They'll get back to you in 2-3 days.");
+                if (staffBtn) {
+                    staffBtn.querySelector('span').textContent = 'Request sent';
+                }
+            } else {
+                if (staffBtn) staffBtn.disabled = false;
+                addBotMessage("Sorry, something went wrong sending your request. Please try again or email [support@ncpmi.org](mailto:support@ncpmi.org).");
+            }
+        } catch (err) {
+            console.warn('Failed to submit staff request:', err);
+            if (staffBtn) staffBtn.disabled = false;
+            addBotMessage("Sorry, I couldn't reach the server. Please try again or email [support@ncpmi.org](mailto:support@ncpmi.org).");
         }
     }
 

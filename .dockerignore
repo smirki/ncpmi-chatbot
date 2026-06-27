@@ -1,0 +1,21 @@
+# Version control
+.git
+.gitignore
+
+# Dependencies (reinstalled inside the image)
+node_modules
+**/node_modules
+
+# Secrets & local data (provided at runtime, never baked into the image)
+.env
+.env.local
+.env.*.local
+data/
+
+# Logs & OS cruft
+*.log
+npm-debug.log*
+.DS_Store
+
+# Tooling
+.claude/

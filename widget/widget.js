@@ -49,7 +49,7 @@
         menuOpen: false
     };
 
-    // Icons
+    // Inline SVG icons (no external icon library is loaded)
     const ICONS = {
         chat: `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>`,
         send: `<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`,
@@ -58,13 +58,24 @@
         collapse: `<svg viewBox="0 0 24 24"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>`,
         home: `<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>`,
         chatTab: `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
-        thumbUp: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`,
-        thumbDown: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/></svg>`,
-        menu: `<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>`,
-        refresh: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`,
-        clear: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`,
-        staff: `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 1a9 9 0 00-9 9v7a3 3 0 003 3h1a1 1 0 001-1v-6a1 1 0 00-1-1H5v-2a7 7 0 0114 0v2h-2a1 1 0 00-1 1v6a1 1 0 001 1h1a3 3 0 100-6v-3a9 9 0 00-9-9z"/></svg>`
+        thumbUp: `<svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>`,
+        thumbDown: `<svg viewBox="0 0 24 24"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/></svg>`,
+        menu: `<svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>`,
+        refresh: `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`,
+        clear: `<svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`,
+        // Quick-link tile icons
+        people: `<svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`,
+        calendar: `<svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>`,
+        school: `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-6 9.18v3.82l6 3.27 6-3.27v-3.82l-6 3.27-6-3.27z"/></svg>`,
+        heart: `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`,
+        mail: `<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>`,
+        chevron: `<svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>`
     };
+
+    /** Wrap bot reply content in a chat bubble. */
+    function botBubbleRow(innerHtml) {
+        return `<div class="ncpmi-message-bubble">${innerHtml}</div>`;
+    }
 
     /**
      * Create the widget HTML structure
@@ -106,43 +117,57 @@
                         </button>
                     </div>
                     <div class="ncpmi-header-title">Hi there</div>
-                    <div class="ncpmi-header-subtitle">Welcome to our website. Ask us anything</div>
+                    <div class="ncpmi-header-subtitle">Welcome to NCPMI. Ask us anything.</div>
                 </div>
+
+                <!-- PMI NC tri-color brand divider -->
+                <div class="ncpmi-accent-bar"><span></span><span></span><span></span></div>
 
                 <!-- Home Tab Content -->
                 <div class="ncpmi-tab-content active" id="ncpmi-home-tab">
                     <div class="ncpmi-home-content">
+                        <div class="ncpmi-home-hero">
+                            <div class="ncpmi-home-hero-title">How can we help?</div>
+                            <div class="ncpmi-home-hero-sub">Find quick links below or start a chat with NCPMI support.</div>
+                        </div>
                         <div class="ncpmi-home-section">
                             <h3>Quick Links</h3>
                             <div class="ncpmi-quick-links">
                                 <a href="https://ncpmi.org/membership/membership-information" target="_blank" class="ncpmi-quick-link">
-                                    <span class="ncpmi-quick-link-icon">👥</span>
-                                    <span>Membership</span>
+                                    <span class="ncpmi-quick-link-icon is-purple">${ICONS.people}</span>
+                                    <span class="ncpmi-quick-link-text">Membership</span>
+                                    <span class="ncpmi-quick-link-chevron">${ICONS.chevron}</span>
                                 </a>
                                 <a href="https://ncpmi.org/events/events-calendar" target="_blank" class="ncpmi-quick-link">
-                                    <span class="ncpmi-quick-link-icon">📅</span>
-                                    <span>Events</span>
+                                    <span class="ncpmi-quick-link-icon is-orange">${ICONS.calendar}</span>
+                                    <span class="ncpmi-quick-link-text">Events</span>
+                                    <span class="ncpmi-quick-link-chevron">${ICONS.chevron}</span>
                                 </a>
                                 <a href="https://ncpmi.org/education/pdu-information" target="_blank" class="ncpmi-quick-link">
-                                    <span class="ncpmi-quick-link-icon">📚</span>
-                                    <span>PDU Info</span>
+                                    <span class="ncpmi-quick-link-icon is-cyan">${ICONS.school}</span>
+                                    <span class="ncpmi-quick-link-text">PDU Info</span>
+                                    <span class="ncpmi-quick-link-chevron">${ICONS.chevron}</span>
                                 </a>
                                 <a href="https://ncpmi.org/membership/volunteer-opportunities" target="_blank" class="ncpmi-quick-link">
-                                    <span class="ncpmi-quick-link-icon">🤝</span>
-                                    <span>Volunteer</span>
+                                    <span class="ncpmi-quick-link-icon is-orange">${ICONS.heart}</span>
+                                    <span class="ncpmi-quick-link-text">Volunteer</span>
+                                    <span class="ncpmi-quick-link-chevron">${ICONS.chevron}</span>
                                 </a>
                             </div>
                         </div>
                         <div class="ncpmi-home-section">
                             <h3>Contact Us</h3>
                             <a href="mailto:support@ncpmi.org" class="ncpmi-contact-link">
-                                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                ${ICONS.mail}
                                 <span>support@ncpmi.org</span>
                             </a>
                         </div>
                     </div>
                     <div class="ncpmi-home-cta">
-                        <button class="ncpmi-start-chat-btn" id="ncpmi-start-chat-btn">Start a conversation</button>
+                        <button class="ncpmi-start-chat-btn" id="ncpmi-start-chat-btn">
+                            ${ICONS.chatTab}
+                            <span>Start a conversation</span>
+                        </button>
                     </div>
                 </div>
 
@@ -152,10 +177,6 @@
                         <!-- Messages will be inserted here -->
                     </div>
                     <div class="ncpmi-chat-footer">
-                        <button class="ncpmi-staff-btn" id="ncpmi-staff-btn">
-                            ${ICONS.staff}
-                            <span>Connect with NCPMI staff</span>
-                        </button>
                         <div class="ncpmi-input-container">
                             <input type="text" class="ncpmi-chat-input" id="ncpmi-input" placeholder="Enter your message..." />
                             <button class="ncpmi-send-btn" id="ncpmi-send-btn">
@@ -210,9 +231,6 @@
 
         // Send message
         document.getElementById('ncpmi-send-btn').addEventListener('click', handleSend);
-
-        // Connect with NCPMI staff
-        document.getElementById('ncpmi-staff-btn').addEventListener('click', handleStaffConnect);
 
         // Enter key to send
         document.getElementById('ncpmi-input').addEventListener('keypress', (e) => {
@@ -314,20 +332,7 @@
         state.lastQuestion = null;
         // Start a brand-new conversation thread
         newConversationId();
-        resetStaffButton();
         initChat();
-    }
-
-    /**
-     * Re-enable the "Connect with NCPMI staff" button (after clear/refresh)
-     */
-    function resetStaffButton() {
-        const staffBtn = document.getElementById('ncpmi-staff-btn');
-        if (staffBtn) {
-            staffBtn.disabled = false;
-            const label = staffBtn.querySelector('span');
-            if (label) label.textContent = 'Connect with NCPMI staff';
-        }
     }
 
     /**
@@ -439,7 +444,8 @@
                 { text: 'Membership Info', action: () => handleQuickReply('Tell me about membership') },
                 { text: 'PDU Information', action: () => handleQuickReply('How do I earn PDUs?') },
                 { text: 'Events', action: () => handleQuickReply('What events are coming up?') },
-                { text: 'Volunteer', action: () => handleQuickReply('How can I volunteer?') }
+                { text: 'Volunteer', action: () => handleQuickReply('How can I volunteer?') },
+                { text: 'Connect with NCPMI staff', action: () => handleStaffConnect() }
             ]);
         }
     }
@@ -520,7 +526,8 @@
             { text: 'Membership Info', action: () => handleQuickReply('Tell me about membership') },
             { text: 'PDU Information', action: () => handleQuickReply('How do I earn PDUs?') },
             { text: 'Events', action: () => handleQuickReply('What events are coming up?') },
-            { text: 'Volunteer', action: () => handleQuickReply('How can I volunteer?') }
+            { text: 'Volunteer', action: () => handleQuickReply('How can I volunteer?') },
+            { text: 'Connect with NCPMI staff', action: () => handleStaffConnect() }
         ]);
 
         // Send pending message if any
@@ -607,7 +614,7 @@
         const messagesContainer = document.getElementById('ncpmi-messages');
         const messageEl = document.createElement('div');
         messageEl.className = 'ncpmi-message bot';
-        messageEl.innerHTML = `<div class="ncpmi-message-bubble"><span class="ncpmi-streaming-cursor"></span></div>`;
+        messageEl.innerHTML = botBubbleRow('<span class="ncpmi-streaming-cursor"></span>');
         messagesContainer.appendChild(messageEl);
         scrollToBottom();
         return messageEl;
@@ -758,7 +765,7 @@
         // Parse markdown and links
         const parsedText = parseMarkdown(text);
 
-        let html = `<div class="ncpmi-message-bubble">${parsedText}</div>`;
+        let html = botBubbleRow(parsedText);
 
         // Add feedback buttons
         if (showFeedback) {
@@ -834,15 +841,13 @@
         const typingEl = document.createElement('div');
         typingEl.className = 'ncpmi-message bot';
         typingEl.id = 'ncpmi-typing';
-        typingEl.innerHTML = `
-            <div class="ncpmi-message-bubble">
-                <div class="ncpmi-typing">
-                    <div class="ncpmi-typing-dot"></div>
-                    <div class="ncpmi-typing-dot"></div>
-                    <div class="ncpmi-typing-dot"></div>
-                </div>
+        typingEl.innerHTML = botBubbleRow(`
+            <div class="ncpmi-typing">
+                <div class="ncpmi-typing-dot"></div>
+                <div class="ncpmi-typing-dot"></div>
+                <div class="ncpmi-typing-dot"></div>
             </div>
-        `;
+        `);
 
         messagesContainer.appendChild(typingEl);
         scrollToBottom();
@@ -887,7 +892,7 @@
         if (!state.email) {
             state.pendingStaffConnect = true;
             switchTab('chat');
-            addBotMessage("Sure — please share your email and we'll connect you with NCPMI staff.");
+            addBotMessage("Sure, please share your email and we'll connect you with NCPMI staff.");
             showEmailForm();
             return;
         }
@@ -896,9 +901,6 @@
     }
 
     async function doStaffConnect() {
-        const staffBtn = document.getElementById('ncpmi-staff-btn');
-        if (staffBtn) staffBtn.disabled = true;
-
         try {
             const response = await fetch(`${CONFIG.apiUrl}/api/staff-connect`, {
                 method: 'POST',
@@ -913,16 +915,11 @@
 
             if (response.ok) {
                 addBotMessage(data.message || "We've reached out to them with your email. They'll get back to you in 2-3 days.");
-                if (staffBtn) {
-                    staffBtn.querySelector('span').textContent = 'Request sent';
-                }
             } else {
-                if (staffBtn) staffBtn.disabled = false;
                 addBotMessage("Sorry, something went wrong sending your request. Please try again or email [support@ncpmi.org](mailto:support@ncpmi.org).");
             }
         } catch (err) {
             console.warn('Failed to submit staff request:', err);
-            if (staffBtn) staffBtn.disabled = false;
             addBotMessage("Sorry, I couldn't reach the server. Please try again or email [support@ncpmi.org](mailto:support@ncpmi.org).");
         }
     }

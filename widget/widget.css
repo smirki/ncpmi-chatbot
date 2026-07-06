@@ -1,151 +1,357 @@
 /* NCPMI Chat Widget Styles - NCPMI Brand Theme */
 
+/* ============================== */
+/* DESIGN TOKENS                  */
+/* ============================== */
+.ncpmi-widget {
+    /* Primary */
+    --ncpmi-brand: #662d91;
+    --ncpmi-brand-dark: #51256f;
+    --ncpmi-brand-darker: #3d1c54;
+    --ncpmi-soft: #f4ecfb;
+    --ncpmi-glow: rgba(102, 45, 145, 0.26);
+    /* PMI North Carolina accent colors */
+    --ncpmi-orange: #f47920;
+    --ncpmi-orange-soft: #fdefdf;
+    --ncpmi-cyan: #1b9fd6;
+    --ncpmi-cyan-soft: #e3f3fb;
+    /* Neutrals */
+    --ncpmi-ink: #1d1726;
+    --ncpmi-text: #312b3b;
+    --ncpmi-muted: #7a7488;
+    --ncpmi-faint: #a8a2b5;
+    --ncpmi-bg: #f5f6f8;
+    --ncpmi-border: #ece7f3;
+    --ncpmi-border-strong: #ddd5e8;
+    --ncpmi-shadow: 0 16px 50px -12px rgba(38, 16, 62, 0.30), 0 6px 16px -8px rgba(38, 16, 62, 0.14);
+    --ncpmi-radius: 20px;
+}
+
 /* Reset for widget */
 .ncpmi-widget * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Helvetica Neue', sans-serif;
 }
 
-/* Floating Chat Bubble */
+.ncpmi-widget button:focus-visible,
+.ncpmi-widget a:focus-visible {
+    outline: 2px solid var(--ncpmi-brand);
+    outline-offset: 2px;
+}
+
+/* ============================== */
+/* FLOATING LAUNCHER BUBBLE       */
+/* ============================== */
 .ncpmi-chat-bubble {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    bottom: 24px;
+    right: 24px;
+    width: 62px;
+    height: 62px;
     border-radius: 50%;
-    background: #662d91;
+    background: var(--ncpmi-brand);
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(102, 45, 145, 0.4);
+    box-shadow: 0 10px 30px -6px var(--ncpmi-glow), 0 4px 10px rgba(0, 0, 0, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.2s;
+    animation: ncpmi-bubble-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.ncpmi-chat-bubble::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    animation: ncpmi-pulse 2.8s infinite;
+    pointer-events: none;
 }
 
 .ncpmi-chat-bubble:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(102, 45, 145, 0.5);
+    transform: translateY(-3px) scale(1.05);
+    background: var(--ncpmi-brand-dark);
+    box-shadow: 0 16px 38px -6px var(--ncpmi-glow), 0 6px 14px rgba(0, 0, 0, 0.16);
+}
+
+.ncpmi-chat-bubble:active {
+    transform: scale(0.96);
 }
 
 .ncpmi-chat-bubble svg {
     width: 28px;
     height: 28px;
     fill: white;
+    position: relative;
+    z-index: 1;
 }
 
 .ncpmi-chat-bubble.has-notification::after {
     content: '1';
     position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 20px;
+    top: -3px;
+    right: -3px;
+    min-width: 20px;
     height: 20px;
-    background: #ef4444;
-    border-radius: 50%;
+    padding: 0 5px;
+    background: var(--ncpmi-orange);
+    border: 2px solid #fff;
+    border-radius: 10px;
     color: white;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 11px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-/* Chat Window */
+@keyframes ncpmi-bubble-in {
+    from { opacity: 0; transform: scale(0.4) translateY(12px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes ncpmi-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(102, 45, 145, 0.45); }
+    70% { box-shadow: 0 0 0 16px rgba(102, 45, 145, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(102, 45, 145, 0); }
+}
+
+/* ============================== */
+/* CHAT WINDOW                    */
+/* ============================== */
 .ncpmi-chat-window {
     position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 380px;
-    height: 600px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
-    display: none;
+    bottom: 100px;
+    right: 24px;
+    width: 390px;
+    height: 640px;
+    max-height: calc(100vh - 130px);
+    background: var(--ncpmi-bg);
+    border-radius: var(--ncpmi-radius);
+    box-shadow: var(--ncpmi-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     z-index: 9998;
-    transition: height 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(24px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.28s ease, transform 0.34s cubic-bezier(0.34, 1.4, 0.64, 1),
+                visibility 0.28s ease, height 0.3s ease;
 }
 
 .ncpmi-chat-window.open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
 }
 
 .ncpmi-chat-window.expanded {
-    height: calc(100vh - 120px);
-    max-height: 800px;
+    height: calc(100vh - 130px);
+    max-height: 860px;
 }
 
-/* Header */
+/* ============================== */
+/* HEADER (compact, solid)        */
+/* ============================== */
 .ncpmi-chat-header {
-    background: linear-gradient(135deg, #662d91 0%, #4a2070 100%);
-    padding: 20px;
+    background: var(--ncpmi-brand);
+    padding: 15px 20px 16px;
     color: white;
     position: relative;
     flex-shrink: 0;
 }
 
 .ncpmi-header-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 3px;
 }
 
 .ncpmi-header-subtitle {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.9;
+    line-height: 1.4;
+    max-width: 82%;
 }
 
 .ncpmi-header-actions {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 13px;
+    right: 14px;
     display: flex;
-    gap: 8px;
+    gap: 7px;
 }
 
 .ncpmi-header-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.15);
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.16);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.15s;
 }
 
 .ncpmi-header-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.ncpmi-header-btn:active {
+    transform: scale(0.92);
 }
 
 .ncpmi-header-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     fill: currentColor;
 }
 
-/* Chat Body */
+/* PMI NC tri-color brand divider under the header */
+.ncpmi-accent-bar {
+    display: flex;
+    height: 3px;
+    flex-shrink: 0;
+}
+
+.ncpmi-accent-bar span {
+    flex: 1;
+}
+
+.ncpmi-accent-bar span:nth-child(1) { background: var(--ncpmi-brand); }
+.ncpmi-accent-bar span:nth-child(2) { background: var(--ncpmi-orange); }
+.ncpmi-accent-bar span:nth-child(3) { background: var(--ncpmi-cyan); }
+
+/* ============================== */
+/* DROPDOWN MENU                  */
+/* ============================== */
+.ncpmi-dropdown-menu {
+    position: absolute;
+    top: 48px;
+    right: 14px;
+    background: white;
+    border: 1px solid var(--ncpmi-border);
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(38, 16, 62, 0.18);
+    min-width: 184px;
+    z-index: 5;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.97);
+    transform-origin: top right;
+    transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+}
+
+.ncpmi-dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.ncpmi-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ncpmi-text);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.ncpmi-dropdown-item:hover {
+    background: var(--ncpmi-soft);
+    color: var(--ncpmi-brand);
+}
+
+.ncpmi-dropdown-item svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+    color: var(--ncpmi-muted);
+    flex-shrink: 0;
+    transition: color 0.15s;
+}
+
+.ncpmi-dropdown-item:hover svg {
+    color: var(--ncpmi-brand);
+}
+
+/* ============================== */
+/* TAB CONTENT WRAPPERS           */
+/* ============================== */
+.ncpmi-tab-content {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.ncpmi-tab-content.active {
+    display: flex;
+}
+
+#ncpmi-home-tab,
+#ncpmi-chat-tab {
+    background: var(--ncpmi-bg);
+}
+
+/* ============================== */
+/* CHAT BODY + MESSAGES           */
+/* ============================== */
 .ncpmi-chat-body {
     flex: 1;
     overflow-y: auto;
-    padding: 16px;
-    background: #f9fafb;
+    padding: 18px 16px;
+    background: var(--ncpmi-bg);
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(102, 45, 145, 0.25) transparent;
 }
 
-/* Messages */
+.ncpmi-chat-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.ncpmi-chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ncpmi-chat-body::-webkit-scrollbar-thumb {
+    background: rgba(102, 45, 145, 0.18);
+    border-radius: 10px;
+}
+
+.ncpmi-chat-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 45, 145, 0.32);
+}
+
 .ncpmi-message {
     margin-bottom: 12px;
     display: flex;
     flex-direction: column;
+    animation: ncpmi-msg-in 0.3s ease both;
 }
 
 .ncpmi-message.bot {
@@ -156,37 +362,53 @@
     align-items: flex-end;
 }
 
+@keyframes ncpmi-msg-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .ncpmi-message-bubble {
-    max-width: 85%;
-    padding: 12px 16px;
+    max-width: 86%;
+    min-width: 0;
+    padding: 11px 15px;
     border-radius: 16px;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 14.5px;
+    line-height: 1.55;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 .ncpmi-message.bot .ncpmi-message-bubble {
     background: white;
-    color: #1f2937;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: var(--ncpmi-text);
+    border: 1px solid var(--ncpmi-border);
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 8px -2px rgba(38, 16, 62, 0.08);
 }
 
 .ncpmi-message.user .ncpmi-message-bubble {
-    background: #662d91;
+    background: var(--ncpmi-brand);
     color: white;
-    border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 12px -3px var(--ncpmi-glow);
 }
 
 .ncpmi-message-bubble a {
-    color: #662d91;
-    text-decoration: underline;
-    word-break: break-all;
+    color: var(--ncpmi-brand);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid rgba(102, 45, 145, 0.3);
+    transition: border-color 0.2s;
+    word-break: break-word;
+}
+
+.ncpmi-message-bubble a:hover {
+    border-bottom-color: var(--ncpmi-brand);
 }
 
 .ncpmi-message.user .ncpmi-message-bubble a {
-    color: #d4a5ff;
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Lists in messages */
@@ -201,204 +423,175 @@
     line-height: 1.5;
 }
 
-.ncpmi-message-bubble ul {
-    list-style-type: disc;
-}
+.ncpmi-message-bubble ul { list-style-type: disc; }
+.ncpmi-message-bubble ol { list-style-type: decimal; }
+.ncpmi-message-bubble strong { font-weight: 700; }
 
-.ncpmi-message-bubble ol {
-    list-style-type: decimal;
-}
-
-/* Bold text */
-.ncpmi-message-bubble strong {
-    font-weight: 600;
-}
-
-/* Quick Reply Buttons */
+/* ============================== */
+/* QUICK REPLIES                  */
+/* ============================== */
 .ncpmi-quick-replies {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
 .ncpmi-quick-reply-btn {
-    padding: 8px 16px;
-    border: 2px solid #662d91;
-    border-radius: 20px;
+    padding: 9px 16px;
+    border: 1.5px solid rgba(102, 45, 145, 0.35);
+    border-radius: 100px;
     background: white;
-    color: #662d91;
-    font-size: 14px;
-    font-weight: 500;
+    color: var(--ncpmi-brand);
+    font-size: 13.5px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
-    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(38, 16, 62, 0.05);
 }
 
 .ncpmi-quick-reply-btn:hover {
-    background: #662d91;
+    background: var(--ncpmi-brand);
+    border-color: var(--ncpmi-brand);
     color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px -4px var(--ncpmi-glow);
 }
 
 .ncpmi-quick-reply-btn:active {
-    transform: scale(0.95);
+    transform: translateY(0) scale(0.97);
 }
 
-/* Feedback Buttons */
+/* ============================== */
+/* FEEDBACK                       */
+/* ============================== */
 .ncpmi-feedback {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    font-size: 13px;
-    color: #6b7280;
+    gap: 7px;
+    margin-top: 9px;
+    font-size: 12.5px;
+    color: var(--ncpmi-muted);
 }
 
 .ncpmi-feedback-btn {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--ncpmi-border);
+    border-radius: 9px;
     background: white;
+    color: var(--ncpmi-muted);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: all 0.18s;
+}
+
+.ncpmi-feedback-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
 }
 
 .ncpmi-feedback-btn:hover {
-    background: #f3f4f6;
-    border-color: #d1d5db;
+    border-color: var(--ncpmi-brand);
+    color: var(--ncpmi-brand);
+    background: var(--ncpmi-soft);
+    transform: translateY(-1px);
 }
 
 .ncpmi-feedback-btn.selected {
-    background: #662d91;
-    border-color: #662d91;
+    background: var(--ncpmi-brand);
+    border-color: var(--ncpmi-brand);
     color: white;
 }
 
-/* Email Collection Form */
+/* ============================== */
+/* EMAIL COLLECTION FORM          */
+/* ============================== */
 .ncpmi-email-form {
     background: white;
-    padding: 16px;
-    margin: 12px 0;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    margin: 6px 0;
+    border: 1px solid var(--ncpmi-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px -4px rgba(38, 16, 62, 0.1);
+    animation: ncpmi-msg-in 0.3s ease both;
 }
 
 .ncpmi-email-form-title {
     font-size: 15px;
-    font-weight: 600;
-    color: #1f2937;
+    font-weight: 700;
+    color: var(--ncpmi-ink);
+    margin-bottom: 12px;
 }
 
 .ncpmi-email-input {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+    border: 1.5px solid var(--ncpmi-border-strong);
+    border-radius: 11px;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     outline: none;
     transition: border-color 0.2s;
     -webkit-appearance: none;
 }
 
 .ncpmi-email-input:focus {
-    border-color: #662d91;
+    border-color: var(--ncpmi-brand);
 }
 
 .ncpmi-email-input::placeholder {
-    color: #9ca3af;
+    color: var(--ncpmi-faint);
 }
 
 .ncpmi-newsletter-checkbox {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 9px;
+    margin-bottom: 14px;
     font-size: 13px;
-    color: #4b5563;
+    color: var(--ncpmi-text);
     cursor: pointer;
 }
 
 .ncpmi-newsletter-checkbox input {
-    width: 18px;
-    height: 18px;
-    accent-color: #662d91;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--ncpmi-brand);
 }
 
 .ncpmi-email-submit {
     width: 100%;
     padding: 12px;
-    background: #662d91;
+    background: var(--ncpmi-brand);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 11px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.15s;
     -webkit-appearance: none;
 }
 
 .ncpmi-email-submit:hover {
-    background: #552080;
+    background: var(--ncpmi-brand-dark);
 }
 
 .ncpmi-email-submit:active {
     transform: scale(0.98);
 }
 
-/* Chat Input */
+/* ============================== */
+/* CHAT FOOTER + INPUT            */
+/* ============================== */
 .ncpmi-chat-footer {
     padding: 12px 16px;
     background: white;
-    border-top: 1px solid #e5e7eb;
-    flex-shrink: 0;
-}
-
-/* Connect with NCPMI staff button */
-.ncpmi-staff-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 10px;
-    border: 1px solid #662d91;
-    border-radius: 10px;
-    background: #f7f1fb;
-    color: #662d91;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, opacity 0.2s;
-    -webkit-appearance: none;
-}
-
-.ncpmi-staff-btn:hover {
-    background: #efe3f8;
-}
-
-.ncpmi-staff-btn:active {
-    transform: scale(0.99);
-}
-
-.ncpmi-staff-btn:disabled {
-    opacity: 0.6;
-    cursor: default;
-    background: #f3f4f6;
-    border-color: #d1d5db;
-    color: #6b7280;
-}
-
-.ncpmi-staff-btn svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+    border-top: 1px solid var(--ncpmi-border);
     flex-shrink: 0;
 }
 
@@ -406,44 +599,57 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    background: white;
+    border: 1.5px solid var(--ncpmi-border-strong);
+    border-radius: 100px;
+    padding: 5px 5px 5px 8px;
+    transition: border-color 0.2s;
+}
+
+.ncpmi-input-container:focus-within {
+    border-color: var(--ncpmi-brand);
 }
 
 .ncpmi-chat-input {
     flex: 1;
-    padding: 12px 14px;
-    border: 1px solid #e5e7eb;
-    border-radius: 24px;
+    padding: 9px 8px;
+    border: none;
+    background: transparent;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.2s;
+    box-shadow: none;
+    color: var(--ncpmi-text);
     -webkit-appearance: none;
 }
 
-.ncpmi-chat-input:focus {
-    border-color: #662d91;
+.ncpmi-chat-input:focus,
+.ncpmi-chat-input:focus-visible {
+    outline: none;
+    box-shadow: none;
 }
 
 .ncpmi-chat-input::placeholder {
-    color: #9ca3af;
+    color: var(--ncpmi-faint);
 }
 
 .ncpmi-send-btn {
-    width: 44px;
-    height: 44px;
-    background: #662d91;
+    width: 40px;
+    height: 40px;
+    background: var(--ncpmi-brand);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s, transform 0.15s;
     flex-shrink: 0;
     -webkit-appearance: none;
 }
 
 .ncpmi-send-btn:hover {
-    background: #552080;
+    background: var(--ncpmi-brand-dark);
+    transform: scale(1.05);
 }
 
 .ncpmi-send-btn:active {
@@ -451,7 +657,7 @@
 }
 
 .ncpmi-send-btn:disabled {
-    background: #d1d5db;
+    background: #cfc8da;
     cursor: not-allowed;
 }
 
@@ -465,59 +671,84 @@
 .ncpmi-footer-links {
     display: flex;
     justify-content: center;
-    gap: 4px;
-    margin-top: 8px;
+    gap: 5px;
+    margin-top: 9px;
     font-size: 11px;
-    color: #9ca3af;
+    color: var(--ncpmi-faint);
 }
 
-/* Bottom Tabs */
+/* ============================== */
+/* BOTTOM TABS                    */
+/* ============================== */
 .ncpmi-tabs {
     display: flex;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid var(--ncpmi-border);
     background: white;
     flex-shrink: 0;
 }
 
 .ncpmi-tab {
     flex: 1;
-    padding: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
     cursor: pointer;
-    color: #6b7280;
-    font-size: 12px;
+    color: var(--ncpmi-muted);
+    font-size: 11.5px;
+    font-weight: 600;
+    position: relative;
     transition: color 0.2s;
     -webkit-tap-highlight-color: transparent;
 }
 
+.ncpmi-tab svg {
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+    transition: transform 0.2s;
+}
+
 .ncpmi-tab:hover {
-    color: #662d91;
+    color: var(--ncpmi-brand);
 }
 
 .ncpmi-tab.active {
-    color: #662d91;
+    color: var(--ncpmi-brand);
 }
 
-.ncpmi-tab svg {
-    width: 20px;
-    height: 20px;
+.ncpmi-tab.active svg {
+    transform: translateY(-1px);
 }
 
-/* Loading Animation */
+.ncpmi-tab.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: var(--ncpmi-brand);
+}
+
+/* ============================== */
+/* TYPING + STREAMING             */
+/* ============================== */
 .ncpmi-typing {
     display: flex;
     gap: 4px;
-    padding: 12px 16px;
+    padding: 2px 0;
 }
 
 .ncpmi-typing-dot {
-    width: 8px;
-    height: 8px;
-    background: #662d91;
+    width: 7px;
+    height: 7px;
+    background: var(--ncpmi-brand);
     border-radius: 50%;
+    opacity: 0.7;
     animation: ncpmi-bounce 1.4s infinite ease-in-out both;
 }
 
@@ -530,418 +761,11 @@
     40% { transform: scale(1); }
 }
 
-/* Timestamp */
-.ncpmi-timestamp {
-    font-size: 11px;
-    color: #9ca3af;
-    margin-top: 4px;
-}
-
-/* Powered by */
-.ncpmi-powered-by {
-    text-align: center;
-    padding: 8px;
-    font-size: 11px;
-    color: #9ca3af;
-    border-top: 1px solid #e5e7eb;
-}
-
-/* ==================== */
-/* MOBILE OPTIMIZATION  */
-/* ==================== */
-
-@media (max-width: 480px) {
-    .ncpmi-chat-bubble {
-        bottom: 16px;
-        right: 16px;
-        width: 56px;
-        height: 56px;
-    }
-
-    .ncpmi-chat-window {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        border-radius: 0;
-        z-index: 10000;
-    }
-
-    .ncpmi-chat-window.expanded {
-        height: 100%;
-        max-height: 100%;
-    }
-
-    .ncpmi-chat-header {
-        padding: 16px;
-        padding-top: max(16px, env(safe-area-inset-top));
-    }
-
-    .ncpmi-header-title {
-        font-size: 20px;
-    }
-
-    .ncpmi-header-subtitle {
-        font-size: 13px;
-    }
-
-    .ncpmi-chat-body {
-        padding: 12px;
-    }
-
-    .ncpmi-message-bubble {
-        max-width: 90%;
-        padding: 10px 14px;
-        font-size: 15px;
-    }
-
-    .ncpmi-quick-reply-btn {
-        padding: 10px 16px;
-        font-size: 15px;
-    }
-
-    .ncpmi-chat-footer {
-        padding: 12px;
-        padding-bottom: max(12px, env(safe-area-inset-bottom));
-    }
-
-    .ncpmi-chat-input {
-        padding: 14px 16px;
-        font-size: 16px; /* Prevents iOS zoom on focus */
-    }
-
-    .ncpmi-send-btn {
-        width: 48px;
-        height: 48px;
-    }
-
-    .ncpmi-email-input {
-        padding: 14px;
-        font-size: 16px; /* Prevents iOS zoom on focus */
-    }
-
-    .ncpmi-email-submit {
-        padding: 14px;
-        font-size: 15px;
-    }
-
-    .ncpmi-tabs {
-        padding-bottom: env(safe-area-inset-bottom);
-    }
-
-    .ncpmi-tab {
-        padding: 14px 12px;
-        font-size: 11px;
-    }
-
-    /* Hide expand button on mobile since it's already fullscreen */
-    .ncpmi-expand-btn {
-        display: none !important;
-    }
-}
-
-/* Tablet */
-@media (min-width: 481px) and (max-width: 768px) {
-    .ncpmi-chat-window {
-        width: 360px;
-        height: 580px;
-        bottom: 80px;
-        right: 16px;
-    }
-
-    .ncpmi-chat-window.expanded {
-        height: calc(100vh - 100px);
-        max-height: 700px;
-    }
-}
-
-/* Landscape mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-    .ncpmi-chat-window {
-        height: 100vh;
-        bottom: 0;
-        top: 0;
-    }
-
-    .ncpmi-chat-header {
-        padding: 12px 16px;
-    }
-
-    .ncpmi-header-title {
-        font-size: 18px;
-    }
-}
-
-/* Touch feedback for mobile */
-@media (hover: none) and (pointer: coarse) {
-    .ncpmi-quick-reply-btn:active {
-        background: #662d91;
-        color: white;
-    }
-
-    .ncpmi-feedback-btn:active {
-        background: #e5e7eb;
-    }
-
-    .ncpmi-tab:active {
-        background: #f3f4f6;
-    }
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .ncpmi-chat-bubble,
-    .ncpmi-chat-window,
-    .ncpmi-quick-reply-btn,
-    .ncpmi-send-btn {
-        transition: none;
-    }
-
-    .ncpmi-typing-dot {
-        animation: none;
-        opacity: 0.5;
-    }
-}
-
-/* ==================== */
-/* DROPDOWN MENU        */
-/* ==================== */
-
-.ncpmi-menu-btn {
-    position: relative;
-}
-
-.ncpmi-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 8px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    min-width: 160px;
-    z-index: 100;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-}
-
-.ncpmi-dropdown-menu.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.ncpmi-dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px 16px;
-    border: none;
-    background: none;
-    text-align: left;
-    font-size: 14px;
-    color: #374151;
-    cursor: pointer;
-    transition: background 0.15s;
-}
-
-.ncpmi-dropdown-item:hover {
-    background: #f3f4f6;
-}
-
-.ncpmi-dropdown-item:active {
-    background: #e5e7eb;
-}
-
-.ncpmi-dropdown-item svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-    flex-shrink: 0;
-}
-
-/* ==================== */
-/* TAB CONTENT          */
-/* ==================== */
-
-.ncpmi-tab-content {
-    display: none;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-}
-
-.ncpmi-tab-content.active {
-    display: flex;
-}
-
-/* Home Tab Specific */
-#ncpmi-home-tab {
-    background: #f9fafb;
-}
-
-#ncpmi-home-tab .ncpmi-home-content {
-    flex: 1;
-    padding: 20px 16px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Chat Tab Specific */
-#ncpmi-chat-tab {
-    background: #f9fafb;
-}
-
-#ncpmi-chat-tab .ncpmi-chat-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-    -webkit-overflow-scrolling: touch;
-}
-
-#ncpmi-chat-tab .ncpmi-chat-footer {
-    flex-shrink: 0;
-}
-
-/* ==================== */
-/* HOME TAB CONTENT     */
-/* ==================== */
-
-.ncpmi-home-section {
-    margin-bottom: 24px;
-}
-
-.ncpmi-home-section h3 {
-    font-size: 13px;
-    font-weight: 600;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-}
-
-.ncpmi-quick-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.ncpmi-quick-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    background: white;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #1f2937;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.2s, transform 0.1s;
-}
-
-.ncpmi-quick-link:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-}
-
-.ncpmi-quick-link:active {
-    transform: translateY(0);
-}
-
-.ncpmi-quick-link-icon {
-    width: 36px;
-    height: 36px;
-    background: #f3e8ff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-}
-
-.ncpmi-contact-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-    color: #662d91;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.ncpmi-contact-link:hover {
-    text-decoration: underline;
-}
-
-.ncpmi-contact-link svg {
-    width: 18px;
-    height: 18px;
-}
-
-.ncpmi-home-cta {
-    flex-shrink: 0;
-    padding: 16px;
-    background: white;
-    border-top: 1px solid #e5e7eb;
-}
-
-.ncpmi-start-chat-btn {
-    width: 100%;
-    padding: 14px;
-    background: #662d91;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-    -webkit-appearance: none;
-}
-
-.ncpmi-start-chat-btn:hover {
-    background: #552080;
-}
-
-.ncpmi-start-chat-btn:active {
-    transform: scale(0.98);
-}
-
-/* Mobile adjustments for home tab */
-@media (max-width: 480px) {
-    #ncpmi-home-tab .ncpmi-home-content {
-        padding: 16px 12px;
-    }
-
-    .ncpmi-quick-link {
-        padding: 12px 14px;
-    }
-
-    .ncpmi-home-cta {
-        padding-bottom: max(16px, env(safe-area-inset-bottom));
-    }
-}
-
-/* ==================== */
-/* STREAMING CURSOR     */
-/* ==================== */
-
 .ncpmi-streaming-cursor {
     display: inline-block;
     width: 2px;
     height: 1em;
-    background: #662d91;
+    background: var(--ncpmi-brand);
     margin-left: 2px;
     vertical-align: text-bottom;
     animation: ncpmi-cursor-blink 0.8s infinite;
@@ -952,13 +776,340 @@
     51%, 100% { opacity: 0; }
 }
 
-/* Streaming message styling */
-.ncpmi-message.streaming .ncpmi-message-bubble {
-    min-height: 20px;
+/* ============================== */
+/* HOME TAB                       */
+/* ============================== */
+#ncpmi-home-tab .ncpmi-home-content {
+    flex: 1;
+    padding: 22px 18px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(102, 45, 145, 0.25) transparent;
 }
 
-/* Reduce motion preference */
+.ncpmi-home-hero {
+    margin-bottom: 22px;
+}
+
+.ncpmi-home-hero-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ncpmi-ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 5px;
+}
+
+.ncpmi-home-hero-sub {
+    font-size: 13.5px;
+    color: var(--ncpmi-muted);
+    line-height: 1.5;
+}
+
+.ncpmi-home-section {
+    margin-bottom: 26px;
+}
+
+.ncpmi-home-section h3 {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--ncpmi-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.ncpmi-quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.ncpmi-quick-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 15px;
+    background: white;
+    border: 1px solid var(--ncpmi-border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--ncpmi-ink);
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px -2px rgba(38, 16, 62, 0.06);
+    transition: all 0.2s;
+}
+
+.ncpmi-quick-link:hover {
+    border-color: rgba(102, 45, 145, 0.3);
+    box-shadow: 0 8px 22px -8px var(--ncpmi-glow);
+    transform: translateY(-2px);
+}
+
+.ncpmi-quick-link:active {
+    transform: translateY(0);
+}
+
+.ncpmi-quick-link-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--ncpmi-soft);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ncpmi-quick-link-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: var(--ncpmi-brand);
+}
+
+/* Color-coded tiles using the PMI NC palette */
+.ncpmi-quick-link-icon.is-purple { background: var(--ncpmi-soft); }
+.ncpmi-quick-link-icon.is-purple svg { fill: var(--ncpmi-brand); }
+.ncpmi-quick-link-icon.is-orange { background: var(--ncpmi-orange-soft); }
+.ncpmi-quick-link-icon.is-orange svg { fill: var(--ncpmi-orange); }
+.ncpmi-quick-link-icon.is-cyan { background: var(--ncpmi-cyan-soft); }
+.ncpmi-quick-link-icon.is-cyan svg { fill: var(--ncpmi-cyan); }
+
+.ncpmi-quick-link-text {
+    flex: 1;
+}
+
+.ncpmi-quick-link-chevron {
+    display: flex;
+    color: #c3bcd0;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.ncpmi-quick-link-chevron svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.ncpmi-quick-link:hover .ncpmi-quick-link-chevron {
+    transform: translateX(3px);
+    color: var(--ncpmi-brand);
+}
+
+.ncpmi-contact-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 15px;
+    background: white;
+    border: 1px solid var(--ncpmi-border);
+    border-radius: 14px;
+    color: var(--ncpmi-brand);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px -2px rgba(38, 16, 62, 0.06);
+    transition: all 0.2s;
+}
+
+.ncpmi-contact-link:hover {
+    border-color: rgba(102, 45, 145, 0.3);
+    box-shadow: 0 8px 22px -8px var(--ncpmi-glow);
+    transform: translateY(-2px);
+}
+
+.ncpmi-contact-link svg {
+    width: 19px;
+    height: 19px;
+    fill: var(--ncpmi-brand);
+    flex-shrink: 0;
+}
+
+.ncpmi-home-cta {
+    flex-shrink: 0;
+    padding: 16px 18px;
+    background: white;
+    border-top: 1px solid var(--ncpmi-border);
+}
+
+.ncpmi-start-chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    padding: 14px;
+    background: var(--ncpmi-brand);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    -webkit-appearance: none;
+}
+
+.ncpmi-start-chat-btn:hover {
+    background: var(--ncpmi-brand-dark);
+    transform: translateY(-1px);
+}
+
+.ncpmi-start-chat-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.ncpmi-start-chat-btn svg {
+    width: 19px;
+    height: 19px;
+    fill: white;
+}
+
+/* ============================== */
+/* MOBILE                         */
+/* ============================== */
+@media (max-width: 480px) {
+    .ncpmi-chat-bubble {
+        bottom: 18px;
+        right: 18px;
+        width: 58px;
+        height: 58px;
+    }
+
+    .ncpmi-chat-window {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        border: none;
+        transform: translateY(100%);
+        z-index: 10000;
+    }
+
+    .ncpmi-chat-window.open {
+        transform: translateY(0);
+    }
+
+    .ncpmi-chat-window.expanded {
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .ncpmi-chat-header {
+        padding: 14px 18px;
+        padding-top: max(14px, env(safe-area-inset-top));
+    }
+
+    .ncpmi-header-title { font-size: 18px; }
+    .ncpmi-header-subtitle { font-size: 13px; }
+
+    .ncpmi-chat-body { padding: 14px; }
+
+    .ncpmi-message-bubble {
+        max-width: 90%;
+        padding: 11px 14px;
+        font-size: 15px;
+    }
+
+    .ncpmi-quick-reply-btn {
+        padding: 10px 16px;
+        font-size: 14.5px;
+    }
+
+    .ncpmi-chat-footer {
+        padding: 12px 14px;
+        padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }
+
+    .ncpmi-chat-input { font-size: 16px; } /* prevents iOS zoom on focus */
+    .ncpmi-email-input { font-size: 16px; }
+
+    .ncpmi-send-btn { width: 42px; height: 42px; }
+
+    .ncpmi-tabs { padding-bottom: env(safe-area-inset-bottom); }
+    .ncpmi-tab { padding: 12px 10px; }
+
+    /* Already fullscreen, so the expand control is redundant */
+    .ncpmi-expand-btn { display: none !important; }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .ncpmi-chat-window {
+        width: 370px;
+        height: 600px;
+        bottom: 90px;
+        right: 18px;
+    }
+
+    .ncpmi-chat-window.expanded {
+        height: calc(100vh - 110px);
+        max-height: 760px;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .ncpmi-chat-window {
+        height: 100%;
+        bottom: 0;
+        top: 0;
+    }
+
+    .ncpmi-chat-header {
+        padding: 10px 16px;
+    }
+
+    .ncpmi-header-title { font-size: 16px; }
+    .ncpmi-header-subtitle { display: none; }
+}
+
+/* Touch feedback */
+@media (hover: none) and (pointer: coarse) {
+    .ncpmi-quick-reply-btn:active {
+        background: var(--ncpmi-brand);
+        color: white;
+        border-color: var(--ncpmi-brand);
+    }
+
+    .ncpmi-feedback-btn:active {
+        background: var(--ncpmi-soft);
+    }
+
+    .ncpmi-tab:active {
+        color: var(--ncpmi-brand);
+    }
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+    .ncpmi-chat-bubble,
+    .ncpmi-chat-window,
+    .ncpmi-message,
+    .ncpmi-quick-reply-btn,
+    .ncpmi-quick-link,
+    .ncpmi-contact-link,
+    .ncpmi-send-btn,
+    .ncpmi-email-submit,
+    .ncpmi-start-chat-btn {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .ncpmi-chat-bubble::before {
+        animation: none !important;
+    }
+
+    .ncpmi-typing-dot {
+        animation: none;
+        opacity: 0.5;
+    }
+
     .ncpmi-streaming-cursor {
         animation: none;
         opacity: 1;

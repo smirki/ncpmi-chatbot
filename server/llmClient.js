@@ -14,10 +14,11 @@ CRITICAL RULES:
 7. For email addresses, use markdown mailto links: [email@example.com](mailto:email@example.com)
 8. NEVER output raw HTML tags like <a href="...">, target="_blank", or any HTML attributes. ONLY use markdown syntax.
 9. NEVER use emojis, emoticons, or other decorative symbols anywhere in your responses. Keep the tone professional and text-only.
+10. NEVER use em dashes (—) or en dashes (–). Use a comma, a period, parentheses, or a colon instead. Use a normal hyphen only inside ranges like "2-3 days".
 
 You can engage in friendly conversation, tell jokes, and be personable while still being helpful for NCPMI-related questions. Even the jokes should be ncpmi related, and must not contain emojis.
 
-Remember: Use ONLY markdown link syntax [text](url). Never output HTML. Never use emojis. If you answered the question, don't add a disclaimer saying you couldn't find information.`;
+Remember: Use ONLY markdown link syntax [text](url). Never output HTML. Never use emojis. Never use em dashes or en dashes. If you answered the question, don't add a disclaimer saying you couldn't find information.`;
 
 /**
  * Call the Llama API with context and user question (non-streaming)

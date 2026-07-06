@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCPMI Chatbot — Admin Dashboard</title>
+<title>NCPMI Chatbot Admin Dashboard</title>
 <style>
     :root {
         --brand: #662d91;
@@ -122,7 +122,7 @@
 <body>
 <header>
     <div>
-        <h1>NCPMI Chatbot — Admin Dashboard</h1>
+        <h1>NCPMI Chatbot Admin Dashboard</h1>
         <div class="sub">Emails, conversations, feedback &amp; staff requests</div>
     </div>
     <button class="refresh-btn" id="refresh">Refresh</button>
@@ -197,7 +197,7 @@
         const convos = await api('/api/admin/conversations');
         const rows = convos.map(c => `
             <tr class="clickable" data-cid="${esc(c.conversation_id)}">
-                <td>${esc(c.email || '—')}</td>
+                <td>${esc(c.email || '-')}</td>
                 <td>${c.question_count}</td>
                 <td>${c.message_count}</td>
                 <td class="when">${fmt(c.started_at)}</td>
@@ -213,7 +213,7 @@
     async function openConversation(cid) {
         const msgs = await api('/api/admin/conversations/' + encodeURIComponent(cid));
         document.getElementById('modal-title').textContent =
-            'Conversation — ' + (msgs[0] && msgs[0].email ? msgs[0].email : cid);
+            'Conversation: ' + (msgs[0] && msgs[0].email ? msgs[0].email : cid);
         document.getElementById('modal-body').innerHTML = msgs.length
             ? msgs.map(m => `
                 <div class="msg ${m.role === 'user' ? 'user' : 'assistant'}">
@@ -229,9 +229,9 @@
         const rows = fb.map(f => `
             <tr>
                 <td>${f.helpful ? '<span class="pill up">Up</span>' : '<span class="pill down">Down</span>'}</td>
-                <td class="truncate" title="${esc(f.question)}">${esc(f.question || '—')}</td>
-                <td class="truncate" title="${esc(f.answer)}">${esc(f.answer || '—')}</td>
-                <td>${esc(f.email || '—')}</td>
+                <td class="truncate" title="${esc(f.question)}">${esc(f.question || '-')}</td>
+                <td class="truncate" title="${esc(f.answer)}">${esc(f.answer || '-')}</td>
+                <td>${esc(f.email || '-')}</td>
                 <td class="when">${fmt(f.created_at)}</td>
             </tr>`);
         document.getElementById('panel-feedback').innerHTML =
@@ -243,8 +243,8 @@
         const opt = (v, cur) => `<option value="${v}" ${v === cur ? 'selected' : ''}>${v}</option>`;
         const rows = reqs.map(r => `
             <tr>
-                <td>${esc(r.email || '—')}</td>
-                <td class="truncate" title="${esc(r.last_question)}">${esc(r.last_question || '—')}</td>
+                <td>${esc(r.email || '-')}</td>
+                <td class="truncate" title="${esc(r.last_question)}">${esc(r.last_question || '-')}</td>
                 <td><span class="pill ${r.status}">${r.status}</span></td>
                 <td class="when">${fmt(r.created_at)}</td>
                 <td>

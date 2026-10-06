@@ -21,6 +21,32 @@ You can engage in friendly conversation, tell jokes, and be personable while sti
 Remember: Use ONLY markdown link syntax [text](url). Never output HTML. Never use emojis. Never use em dashes or en dashes. If you answered the question, don't add a disclaimer saying you couldn't find information.`;
 
 /**
+ * System prompt with today's date. The site keeps old board messages and past events,
+ * so the model needs the date to tell current facts from historical ones.
+ */
+function systemPrompt() {
+    const today = new Date().toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/New_York'
+    });
+    return `${SYSTEM_PROMPT}
+
+Today's date is ${today}. The context can include older pages (past board messages, past events, archived announcements). For who currently holds a role, trust the Current Board pages over older messages or signatures. For upcoming events, only mention events dated after today.`;
+}
+
+/**
+ * POST to the provider, retrying briefly on 429/503 ("model is experiencing high
+ * demand"), which Gemini returns in short bursts.
+ */
+async function postWithRetry(url, init, attempts = 3) {
+    for (let i = 1; ; i++) {
+        const response = await fetch(url, init);
+        if (i >= attempts || (response.status !== 429 && response.status !== 503)) return response;
+        await response.body?.cancel();
+        await new Promise(resolve => setTimeout(resolve, 500 * 2 ** (i - 1)));
+    }
+}
+
+/**
  * Call the Llama API with context and user question (non-streaming)
  * @param {string} context - Retrieved knowledge base context with URLs
  * @param {string} userMessage - User's question
@@ -33,7 +59,7 @@ async function chat(context, userMessage) {
     const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
-        const response = await fetch(`${baseUrl}chat/completions`, {
+        const response = await postWithRetry(`${baseUrl}chat/completions`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
@@ -45,7 +71,7 @@ async function chat(context, userMessage) {
                 // Gemini 3.x models can't fully disable thinking; "minimal" is the floor.
                 extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
-                    { role: 'system', content: SYSTEM_PROMPT },
+                    { role: 'system', content: systemPrompt() },
                     { role: 'user', content: `Context:\n${context}\n\nQuestion: ${userMessage}` }
                 ],
                 temperature: 0.3,
@@ -82,7 +108,7 @@ async function chatStream(context, userMessage, onChunk, onDone, onError) {
     const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
-        const response = await fetch(`${baseUrl}chat/completions`, {
+        const response = await postWithRetry(`${baseUrl}chat/completions`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
@@ -94,7 +120,7 @@ async function chatStream(context, userMessage, onChunk, onDone, onError) {
                 // Gemini 3.x models can't fully disable thinking; "minimal" is the floor.
                 extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
-                    { role: 'system', content: SYSTEM_PROMPT },
+                    { role: 'system', content: systemPrompt() },
                     { role: 'user', content: `Context:\n${context}\n\nQuestion: ${userMessage}` }
                 ],
                 temperature: 0.3,

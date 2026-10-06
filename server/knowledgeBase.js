@@ -46,50 +46,92 @@ function parseKnowledgeBase(content) {
         });
     }
 
+    indexChunks();
     console.log(`Loaded ${knowledgeChunks.length} knowledge chunks`);
     return knowledgeChunks;
 }
 
+// Words too common to say anything about which page answers the question.
+const STOPWORDS = new Set(`
+    a about after all also am an and any are as at be been but by can could did do does
+    for from get got had has have how i if in into is it its just me more most my no not
+    now of on or our out please right should so some than that the their them then there
+    these they this those to up us was we were what when where which who whom why will
+    with would you your ncpmi pmi chapter find link info information know tell need want like see look
+`.trim().split(/\s+/));
+
+// BM25 parameters, plus how much a hit in the page title/URL counts versus the body.
+const K1 = 1.2;
+const B = 0.75;
+const META_WEIGHT = 5;
+
+let docFreq = new Map();
+let avgLength = 1;
+
+/** Light stemmer so "jobs"/"job" and "meetings"/"meeting" match. */
+function stem(token) {
+    if (token.length > 4 && token.endsWith('ies')) return token.slice(0, -3) + 'y';
+    if (token.length > 3 && token.endsWith('s') && !token.endsWith('ss')) return token.slice(0, -1);
+    return token;
+}
+
+function termCounts(text) {
+    const counts = new Map();
+    for (const t of tokenize(text)) counts.set(t, (counts.get(t) || 0) + 1);
+    return counts;
+}
+
 /**
- * Tokenize a string into searchable terms
+ * Precompute per-chunk term counts for BM25. Title ("# Title" line written by
+ * scripts/scrape.mjs) and URL path are a separate, boosted field, so a short page
+ * that is *about* the topic (e.g. /about-us/current-board) beats a long page that
+ * merely mentions it often.
+ */
+function indexChunks() {
+    docFreq = new Map();
+    let totalLength = 0;
+    for (const chunk of knowledgeChunks) {
+        const title = (chunk.content.match(/^# (.+)$/m) || [])[1] || '';
+        const urlPath = chunk.url.replace(/^https?:\/\/[^/]+/, '').replace(/[-_/]/g, ' ');
+        chunk.body = termCounts(chunk.content);
+        chunk.meta = termCounts(`${title} ${urlPath}`);
+        chunk.length = [...chunk.body.values()].reduce((a, b) => a + b, 0);
+        totalLength += chunk.length;
+        for (const term of new Set([...chunk.body.keys(), ...chunk.meta.keys()])) {
+            docFreq.set(term, (docFreq.get(term) || 0) + 1);
+        }
+    }
+    avgLength = totalLength / Math.max(knowledgeChunks.length, 1) || 1;
+}
+
+/**
+ * Tokenize a string into searchable terms (lowercased, stemmed, no stopwords)
  */
 function tokenize(text) {
     return text
         .toLowerCase()
         .replace(/[^\w\s]/g, ' ')
         .split(/\s+/)
-        .filter(token => token.length > 2);
+        .filter(token => token.length > 1 && !STOPWORDS.has(token))
+        .map(stem);
 }
 
 /**
- * Calculate relevance score for a chunk
- * @param {Object} chunk - { url, content }
+ * BM25 relevance score for a chunk, with title/URL hits weighted META_WEIGHT times
+ * @param {Object} chunk - indexed chunk from parseKnowledgeBase
  * @param {string} query - User's question
  * @returns {number} - Relevance score
  */
 function calculateScore(chunk, query) {
-    const queryTokens = tokenize(query);
-    const contentLower = chunk.content.toLowerCase();
+    const n = knowledgeChunks.length;
     let score = 0;
-
-    // Check for exact phrase match (high value)
-    if (contentLower.includes(query.toLowerCase())) {
-        score += 20;
+    for (const term of new Set(tokenize(query))) {
+        const tf = (chunk.body.get(term) || 0) + META_WEIGHT * (chunk.meta.get(term) || 0);
+        if (!tf) continue;
+        const df = docFreq.get(term) || 0;
+        const idf = Math.log(1 + (n - df + 0.5) / (df + 0.5));
+        score += idf * (tf * (K1 + 1)) / (tf + K1 * (1 - B + B * chunk.length / avgLength));
     }
-
-    // Score based on keyword matches
-    for (const token of queryTokens) {
-        // Count occurrences of token in content
-        const regex = new RegExp(token, 'gi');
-        const matches = (chunk.content.match(regex) || []).length;
-        score += matches;
-
-        // Bonus for token in URL
-        if (chunk.url.toLowerCase().includes(token)) {
-            score += 5;
-        }
-    }
-
     return score;
 }
 
@@ -120,7 +162,7 @@ function searchKnowledge(query, topK = 5) {
  * @param {number} topK - Number of top matching chunks
  * @returns {Array} - Array of { url, content, score } including adjacent chunks
  */
-function searchKnowledgeWithContext(query, topK = 5, minScore = 5) {
+function searchKnowledgeWithContext(query, topK = 5, minScore = 2) {
     // Score all chunks with their indices
     const scored = knowledgeChunks.map((chunk, index) => ({
         url: chunk.url,

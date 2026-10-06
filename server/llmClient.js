@@ -28,8 +28,8 @@ Remember: Use ONLY markdown link syntax [text](url). Never output HTML. Never us
  */
 async function chat(context, userMessage) {
     const apiKey = process.env.LLAMA_API_KEY;
-    const baseUrl = process.env.LLAMA_BASE_URL || 'https://api.llama.com/compat/v1/';
-    const model = process.env.LLAMA_MODEL || 'Llama-4-Maverick-17B-128E-Instruct-FP8';
+    const baseUrl = process.env.LLAMA_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta/openai/';
+    const model = process.env.LLAMA_MODEL || 'models/gemini-3.5-flash-lite';
     const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
@@ -42,7 +42,7 @@ async function chat(context, userMessage) {
             body: JSON.stringify({
                 model: model,
                 // Gemini "thinking" control via the OpenAI-compat layer's extra_body.
-                // gemini-flash-latest (Gemini 3) can't fully disable thinking; "minimal" is the floor.
+                // Gemini 3.x models can't fully disable thinking; "minimal" is the floor.
                 extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
                     { role: 'system', content: SYSTEM_PROMPT },
@@ -77,8 +77,8 @@ async function chat(context, userMessage) {
  */
 async function chatStream(context, userMessage, onChunk, onDone, onError) {
     const apiKey = process.env.LLAMA_API_KEY;
-    const baseUrl = process.env.LLAMA_BASE_URL || 'https://api.llama.com/compat/v1/';
-    const model = process.env.LLAMA_MODEL || 'Llama-4-Maverick-17B-128E-Instruct-FP8';
+    const baseUrl = process.env.LLAMA_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta/openai/';
+    const model = process.env.LLAMA_MODEL || 'models/gemini-3.5-flash-lite';
     const thinkingLevel = process.env.THINKING_LEVEL || 'minimal';
 
     try {
@@ -91,7 +91,7 @@ async function chatStream(context, userMessage, onChunk, onDone, onError) {
             body: JSON.stringify({
                 model: model,
                 // Gemini "thinking" control via the OpenAI-compat layer's extra_body.
-                // gemini-flash-latest (Gemini 3) can't fully disable thinking; "minimal" is the floor.
+                // Gemini 3.x models can't fully disable thinking; "minimal" is the floor.
                 extra_body: { google: { thinking_config: { thinking_level: thinkingLevel } } },
                 messages: [
                     { role: 'system', content: SYSTEM_PROMPT },

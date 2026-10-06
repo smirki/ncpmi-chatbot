@@ -1,0 +1,16 @@
+{
+  "name": "ncpmi-chatbot",
+  "private": true,
+  "description": "NCPMI Chatbot: Cloudflare Worker deploy + knowledge-base scraper (the Express server lives in server/)",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute ncpmi-db --remote --file=worker/schema.sql"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

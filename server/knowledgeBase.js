@@ -1,14 +1,21 @@
-const fs = require('fs');
-const path = require('path');
-
 let knowledgeChunks = [];
 
 /**
  * Parse the ncpmicontent.txt file into URL-based chunks
  */
 function loadKnowledgeBase() {
+    const fs = require('fs');
+    const path = require('path');
     const filePath = path.join(__dirname, '..', 'ncpmicontent.txt');
-    const content = fs.readFileSync(filePath, 'utf-8');
+    return parseKnowledgeBase(fs.readFileSync(filePath, 'utf-8'));
+}
+
+/**
+ * Parse knowledge base text (URL line, then that page's content) into chunks.
+ * Used directly by the Cloudflare Worker, which bundles the file as a string.
+ */
+function parseKnowledgeBase(content) {
+    knowledgeChunks = [];
     const lines = content.split('\n');
 
     let currentUrl = null;
@@ -200,6 +207,7 @@ function buildContext(relevantChunks, maxCharsPerChunk = 4000) {
 
 module.exports = {
     loadKnowledgeBase,
+    parseKnowledgeBase,
     searchKnowledge,
     searchKnowledgeWithContext,
     buildContext

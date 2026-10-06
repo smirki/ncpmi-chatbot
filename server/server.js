@@ -32,9 +32,8 @@ app.use((req, res, next) => {
     next();
 });
 
-// Serve static files (widget)
-app.use('/widget', express.static(path.join(__dirname, '..', 'widget')));
-app.use(express.static(path.join(__dirname, '..')));
+// Serve static files (demo page + widget). The Cloudflare Worker serves the same folder.
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // HTTP Basic Auth for the admin dashboard (shared password from .env)
 function adminAuth(req, res, next) {

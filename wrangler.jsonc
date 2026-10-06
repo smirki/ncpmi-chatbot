@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ncpmi-chatbot",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  // nodejs_compat lets the Worker share server/llmClient.js + knowledgeBase.js
+  // (CommonJS, process.env) with the Express server.
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "./public" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "ncpmi-db", "database_id": "ae7442f8-68c2-45b3-abca-b1716d2f1c78" }
+  ],
+  // Secrets (set with `wrangler secret put`): LLAMA_API_KEY, ADMIN_PASSWORD
+  "vars": {
+    "LLAMA_BASE_URL": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "LLAMA_MODEL": "models/gemini-3.5-flash-lite",
+    "THINKING_LEVEL": "minimal"
+  },
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true }
+}

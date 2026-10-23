@@ -12,7 +12,7 @@
 
 import kbText from '../ncpmicontent.txt';
 import dashboardHtml from '../server/admin/dashboard.html';
-import { parseKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks } from '../server/knowledgeBase.js';
+import { parseKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks, isGibberish, CLARIFY_REPLY } from '../server/knowledgeBase.js';
 import { chat, chatStream } from '../server/llmClient.js';
 import { createDb } from './db.js';
 
@@ -70,6 +70,11 @@ async function handleChat(body, db) {
 
     try {
         await db.recordMessage({ conversationId, email, role: 'user', content: message });
+        // Keyboard mash etc.: ask to rephrase without calling the LLM
+        if (isGibberish(message)) {
+            await db.recordMessage({ conversationId, email, role: 'assistant', content: CLARIFY_REPLY, sources: [] });
+            return json({ answer: CLARIFY_REPLY, sources: [] });
+        }
         const { context, sources } = retrieve(message);
         const answer = fixLinks(await chat(context, message));
         await db.recordMessage({ conversationId, email, role: 'assistant', content: answer, sources });
@@ -93,6 +98,12 @@ function handleChatStream(body, db, ctx) {
     ctx.waitUntil((async () => {
         try {
             await db.recordMessage({ conversationId, email, role: 'user', content: message });
+            if (isGibberish(message)) {
+                await db.recordMessage({ conversationId, email, role: 'assistant', content: CLARIFY_REPLY, sources: [] });
+                await send({ type: 'chunk', content: CLARIFY_REPLY });
+                await send({ type: 'done', sources: [], text: CLARIFY_REPLY });
+                return;
+            }
             const { context, sources } = retrieve(message);
             let finished;
             const done = new Promise(resolve => { finished = resolve; });

@@ -287,6 +287,11 @@
      */
     function initChat() {
         if (state.messages.length === 0) {
+            // Returning visitors (email already saved) go straight to the main menu
+            if (state.email) {
+                showEmailFormIfNeeded();
+                return;
+            }
             addBotMessage("Hello, Would you like to learn about membership?\n\nPlease note as a new or renewed member it may take up to 3 business days to access NCPMI.ORG.", [
                 { text: 'YES', action: () => handleQuickReply('Tell me about NCPMI membership') },
                 { text: 'NO', action: () => showEmailFormIfNeeded() }

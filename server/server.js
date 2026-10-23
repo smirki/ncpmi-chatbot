@@ -3,7 +3,7 @@ require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') }
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { loadKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks } = require('./knowledgeBase');
+const { loadKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks, isGibberish, CLARIFY_REPLY } = require('./knowledgeBase');
 const { chat, chatStream } = require('./llmClient');
 const db = require('./db');
 
@@ -94,6 +94,12 @@ app.post('/api/chat', async (req, res) => {
         // Log the user's question
         db.recordMessage({ conversationId, email, role: 'user', content: message });
 
+        // Keyboard mash etc.: ask to rephrase without calling the LLM
+        if (isGibberish(message)) {
+            db.recordMessage({ conversationId, email, role: 'assistant', content: CLARIFY_REPLY, sources: [] });
+            return res.json({ answer: CLARIFY_REPLY, sources: [] });
+        }
+
         // Search knowledge base for relevant chunks (5 chunks + adjacent context)
         const relevantChunks = searchKnowledgeWithContext(message, 5);
 
@@ -151,6 +157,13 @@ app.post('/api/chat/stream', async (req, res) => {
     try {
         // Log the user's question
         db.recordMessage({ conversationId, email, role: 'user', content: message });
+
+        if (isGibberish(message)) {
+            db.recordMessage({ conversationId, email, role: 'assistant', content: CLARIFY_REPLY, sources: [] });
+            res.write(`data: ${JSON.stringify({ type: 'chunk', content: CLARIFY_REPLY })}\n\n`);
+            res.write(`data: ${JSON.stringify({ type: 'done', sources: [], text: CLARIFY_REPLY })}\n\n`);
+            return res.end();
+        }
 
         const relevantChunks = searchKnowledgeWithContext(message, 5);
 

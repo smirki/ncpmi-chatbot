@@ -277,7 +277,7 @@ function fixLinks(text) {
  * @param {number} maxCharsPerChunk - Max characters per chunk (default 4000)
  */
 function buildContext(relevantChunks, maxCharsPerChunk = 4000) {
-    return relevantChunks.map(chunk => {
+    const blocks = relevantChunks.map(chunk => {
         // Strip HTML from content before sending to LLM
         let cleanContent = stripHtml(chunk.content);
 
@@ -286,8 +286,30 @@ function buildContext(relevantChunks, maxCharsPerChunk = 4000) {
             : cleanContent;
 
         return `--- Source: ${chunk.url} ---\n${truncatedContent}`;
-    }).join('\n\n');
+    });
+    // Always offer the contact page, so a "can't answer" reply has a real link to send people to.
+    if (!relevantChunks.some(chunk => chunk.url === CONTACT_URL) && knowledgeChunks.some(chunk => chunk.url === CONTACT_URL)) {
+        blocks.push(`--- Source: ${CONTACT_URL} ---\nContact Us: general contact form for NCPMI. Use this for anything the other sources do not answer.`);
+    }
+    return blocks.join('\n\n');
 }
+
+const CONTACT_URL = 'https://ncpmi.org/about-us/general-contact-us';
+
+// Words that are not on the site but are still real conversation.
+const CHAT_WORDS = new Set(['hi', 'hello', 'hey', 'thanks', 'thank', 'yes', 'yeah', 'ok', 'okay', 'bye', 'help', 'question']);
+
+/**
+ * True when no word in the message is a known word (stopword, chat word, or a term that
+ * appears anywhere on the site), e.g. "asdfghjkl". Those get a "please rephrase" reply
+ * instead of an LLM call; real but unanswerable questions still go to the LLM.
+ */
+function isGibberish(message) {
+    const words = message.toLowerCase().match(/[a-z]+/g) || [];
+    return !words.some(w => STOPWORDS.has(w) || CHAT_WORDS.has(w) || docFreq.has(stem(w)));
+}
+
+const CLARIFY_REPLY = "I didn't quite understand that. Could you rephrase your question? You can ask about membership, events, PDUs, volunteering, or jobs, or use the \"Connect with NCPMI staff\" button below the chat.";
 
 module.exports = {
     loadKnowledgeBase,
@@ -296,5 +318,7 @@ module.exports = {
     searchKnowledgeWithContext,
     buildContext,
     fallbackContext,
-    fixLinks
+    fixLinks,
+    isGibberish,
+    CLARIFY_REPLY
 };

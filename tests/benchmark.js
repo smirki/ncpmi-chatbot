@@ -1,36 +1,98 @@
 /**
- * NCPMI Chatbot Benchmark Tests
+ * NCPMI Chatbot Benchmark / Regression Tests
  *
- * Tests the chatbot with the three benchmark questions
- * to verify it returns grounded answers with correct source URLs.
+ * Asks the chatbot a fixed set of questions and checks each answer is grounded:
+ * the expected page is cited, expected keywords appear, and every ncpmi.org link
+ * in the answer actually loads on the live site (no 404s). Run it after every
+ * knowledge base refresh or prompt/config change.
  *
  * Usage:
- *   1. Start the server: cd server && npm start
- *   2. Run tests: node tests/benchmark.js
+ *   node tests/benchmark.js                                               # local server (http://localhost:3002)
+ *   API_URL=https://ncpmi-chatbot.manavmaj2001.workers.dev node tests/benchmark.js
  */
 
 const API_URL = process.env.API_URL || 'http://localhost:3002';
+const STAFF_BUTTON = 'connect with ncpmi staff';
+const CONTACT_PAGE = '/about-us/general-contact-us';
 
+// expectedUrl: path that must be in the sources or the answer.
+// expectedKeywords: at least one must appear in the answer (case-insensitive).
+// expectedExact: the answer must equal this text.
 const BENCHMARK_TESTS = [
+    // The three benchmark queries listed on the demo page
     {
         name: 'PDU Information',
         query: 'Where can I find information about PDUs?',
-        expectedUrl: 'https://ncpmi.org/education/pdu-information',
-        expectedKeywords: ['PDU', 'Professional Development', 'certification', 'CCR']
+        expectedUrl: '/education/pdu-information',
+        expectedKeywords: ['PDU', 'Professional Development', 'CCR']
     },
     {
         name: 'Volunteer Opportunities',
         query: 'Where can I find the link to volunteer?',
-        expectedUrl: 'https://ncpmi.org/membership/volunteer-opportunities',
-        expectedKeywords: ['volunteer', 'opportunities', 'VRMS', 'volunteers@ncpmi.org']
+        expectedUrl: '/membership/volunteer-opportunities',
+        expectedKeywords: ['volunteer']
     },
     {
-        name: 'Chapter Meeting Recordings',
-        query: 'How do I find chapter meeting recordings?',
-        expectedUrl: 'https://ncpmi.org/events/monthly-chapter-meeting/chapter-meeting-recordings',
-        expectedKeywords: ['recording', 'Programs', 'Member Documents', 'speaker']
+        name: 'Membership Renewal',
+        query: 'How do I renew my NCPMI membership?',
+        expectedUrl: '/membership/renew-transfer',
+        expectedKeywords: ['renew']
+    },
+    // Coverage added after the Oct 15, 2026 test report (recommendation 4)
+    {
+        name: 'Job Board',
+        query: 'Where can I find job postings?',
+        expectedUrl: '/jobs',
+        expectedKeywords: ['job']
+    },
+    {
+        name: 'Mentoring',
+        query: 'Does NCPMI have a mentoring program?',
+        expectedKeywords: ['mentor']
+    },
+    {
+        name: 'PMP Certification Prep',
+        query: 'How can I prepare for the PMP certification exam?',
+        expectedKeywords: ['PMP']
+    },
+    {
+        name: 'Corporate Partnership',
+        query: 'How can my company become a sponsor or corporate partner?',
+        expectedUrl: '/sponsors',
+        expectedKeywords: ['sponsor']
+    },
+    {
+        name: 'Staff Contact',
+        query: 'How do I contact NCPMI staff?',
+        expectedUrl: CONTACT_PAGE,
+        expectedKeywords: ['contact']
+    },
+    // Edge cases from the report (defects D001, D002)
+    {
+        name: 'Out of scope gets an escalation path',
+        query: 'What is the weather in Raleigh today?',
+        expectedUrl: CONTACT_PAGE,
+        expectedKeywords: [STAFF_BUTTON]
+    },
+    {
+        name: 'Gibberish asks to rephrase',
+        query: 'asdfghjkl',
+        expectedKeywords: ['rephrase', STAFF_BUTTON]
     }
 ];
+
+/** ncpmi.org links in an answer that do not load (404 etc.). */
+async function deadLinks(answer) {
+    const urls = [...new Set(answer.match(/https?:\/\/(?:www\.)?ncpmi\.org[^\s)\]]*/g) || [])]
+        .map(u => u.replace(/[.,;:!?]+$/, ''));
+    const dead = [];
+    for (const url of urls) {
+        // The site's firewall blocks user agents containing "bot".
+        const res = await fetch(url, { headers: { 'User-Agent': 'NCPMI-Knowledge-Sync/1.0' } }).catch(() => null);
+        if (!res || !res.ok) dead.push(`${res ? res.status : 'ERR'} ${url}`);
+    }
+    return dead;
+}
 
 async function runBenchmarks() {
     console.log('='.repeat(60));
@@ -54,7 +116,8 @@ async function runBenchmarks() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: test.query,
-                    email: 'benchmark-test@example.com'
+                    email: 'benchmark-test@example.com',
+                    conversationId: 'benchmark'
                 })
             });
 
@@ -70,23 +133,19 @@ async function runBenchmarks() {
             console.log('Sources:', data.sources?.join(', ') || 'None');
             console.log('');
 
-            // Check if expected URL is in sources or answer
-            const hasExpectedUrl =
-                (data.sources && data.sources.some(url => url.includes(test.expectedUrl.replace('https://ncpmi.org', '')))) ||
-                data.answer.includes(test.expectedUrl) ||
-                data.answer.toLowerCase().includes(test.expectedUrl.split('/').pop().replace(/-/g, ' '));
-
-            // Check if expected keywords are present
             const answerLower = data.answer.toLowerCase();
-            const keywordsFound = test.expectedKeywords.filter(kw =>
-                answerLower.includes(kw.toLowerCase())
-            );
+            const hasExpectedUrl = !test.expectedUrl ||
+                (data.sources || []).some(url => url.includes(test.expectedUrl)) ||
+                data.answer.includes(test.expectedUrl);
+            const keywordsFound = test.expectedKeywords.filter(kw => answerLower.includes(kw.toLowerCase()));
+            const dead = await deadLinks(data.answer);
 
             console.log('Validation:');
-            console.log(`  Expected URL mentioned: ${hasExpectedUrl ? '✅ YES' : '❌ NO'}`);
+            if (test.expectedUrl) console.log(`  Expected page cited: ${hasExpectedUrl ? '✅ YES' : '❌ NO'} (${test.expectedUrl})`);
             console.log(`  Keywords found: ${keywordsFound.length}/${test.expectedKeywords.length} (${keywordsFound.join(', ')})`);
+            console.log(`  Dead links: ${dead.length ? '❌ ' + dead.join(', ') : '✅ none'}`);
 
-            if (hasExpectedUrl && keywordsFound.length > 0) {
+            if (hasExpectedUrl && keywordsFound.length > 0 && dead.length === 0) {
                 console.log(`  Result: ✅ PASSED`);
                 passed++;
             } else {

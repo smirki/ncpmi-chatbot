@@ -229,6 +229,48 @@ function stripHtml(text) {
         .trim();
 }
 
+// Main pages offered when no page matches the question, so the model has real
+// URLs to point to instead of guessing section URLs. Pages no longer on the site
+// (not in the knowledge base) are skipped automatically.
+const DIRECTORY_PATHS = [
+    'membership/membership-information', 'membership/renew-transfer', 'membership/volunteer-opportunities',
+    'events/events-calendar', 'events/monthly-chapter-meeting', 'education/pdu-information',
+    'education/certification-courses-pmp-acp', 'programs/programs-overview', 'jobs/view-jobs',
+    'about-us/current-board', 'about-us/frequently-asked-questions', 'about-us/general-contact-us'
+];
+
+/**
+ * Context used when no chunk matches: a short directory of main pages (title + URL).
+ */
+function fallbackContext() {
+    const lines = DIRECTORY_PATHS
+        .map(p => knowledgeChunks.find(chunk => chunk.url === `https://ncpmi.org/${p}`))
+        .filter(Boolean)
+        .map(chunk => {
+            const title = (chunk.content.match(/^# (.+)$/m) || [])[1] || chunk.url;
+            return `--- Source: ${chunk.url} ---\n${title}`;
+        });
+    return `No page on the site matched this question. Main pages you may point the visitor to:\n\n${lines.join('\n\n')}`;
+}
+
+const normalizeUrl = (url) => url.replace(/[?#].*$/, '').replace(/\/+$/, '').toLowerCase();
+
+/**
+ * Remove ncpmi.org links that are not pages in the knowledge base. The model sometimes
+ * guesses section URLs (e.g. https://ncpmi.org/membership) that 404 on the live site.
+ * Markdown links keep their label as plain text; bare URLs are dropped.
+ */
+function fixLinks(text) {
+    const known = new Set(knowledgeChunks.map(chunk => normalizeUrl(chunk.url)));
+    const isBad = (url) => /^https?:\/\/(www\.)?ncpmi\.org/i.test(url) && !known.has(normalizeUrl(url.replace('://www.', '://')));
+    return text
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (match, label, url) => (isBad(url) ? label : match))
+        .replace(/(^|[^(\w])(https?:\/\/(?:www\.)?ncpmi\.org[^\s)\]]*)/gi, (match, before, url) => {
+            const trimmed = url.replace(/[.,;:!?]+$/, '');
+            return isBad(trimmed) ? before + url.slice(trimmed.length) : match;
+        });
+}
+
 /**
  * Build context string for LLM with source URLs
  * @param {Array} relevantChunks - Array of chunks
@@ -252,5 +294,7 @@ module.exports = {
     parseKnowledgeBase,
     searchKnowledge,
     searchKnowledgeWithContext,
-    buildContext
+    buildContext,
+    fallbackContext,
+    fixLinks
 };

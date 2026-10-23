@@ -3,7 +3,7 @@ require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') }
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { loadKnowledgeBase, searchKnowledgeWithContext, buildContext } = require('./knowledgeBase');
+const { loadKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks } = require('./knowledgeBase');
 const { chat, chatStream } = require('./llmClient');
 const db = require('./db');
 
@@ -97,13 +97,13 @@ app.post('/api/chat', async (req, res) => {
         // Search knowledge base for relevant chunks (5 chunks + adjacent context)
         const relevantChunks = searchKnowledgeWithContext(message, 5);
 
-        // Build context with source URLs (empty if no chunks found - LLM will handle gracefully)
+        // Build context with source URLs (main-page directory if no chunks match)
         const context = relevantChunks.length > 0
             ? buildContext(relevantChunks)
-            : 'No specific information found in the available resources.';
+            : fallbackContext();
 
         // Call LLM
-        const answer = await chat(context, message);
+        const answer = fixLinks(await chat(context, message));
 
         // Extract source URLs from relevant chunks (default to main site if none found)
         const sources = relevantChunks.length > 0
@@ -154,10 +154,10 @@ app.post('/api/chat/stream', async (req, res) => {
 
         const relevantChunks = searchKnowledgeWithContext(message, 5);
 
-        // Build context (empty message if no chunks - LLM will handle gracefully)
+        // Build context (main-page directory if no chunks match)
         const context = relevantChunks.length > 0
             ? buildContext(relevantChunks)
-            : 'No specific information found in the available resources.';
+            : fallbackContext();
 
         // Default to main site if no sources found
         const sources = relevantChunks.length > 0
@@ -173,9 +173,10 @@ app.post('/api/chat/stream', async (req, res) => {
             },
             // onDone
             (fullText) => {
-                // Log the assistant's full answer
-                db.recordMessage({ conversationId, email, role: 'assistant', content: fullText, sources });
-                res.write(`data: ${JSON.stringify({ type: 'done', sources })}\n\n`);
+                // Final text with dead ncpmi.org links removed; the widget swaps it in.
+                const text = fixLinks(fullText);
+                db.recordMessage({ conversationId, email, role: 'assistant', content: text, sources });
+                res.write(`data: ${JSON.stringify({ type: 'done', sources, text })}\n\n`);
                 res.end();
             },
             // onError

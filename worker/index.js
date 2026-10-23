@@ -12,7 +12,7 @@
 
 import kbText from '../ncpmicontent.txt';
 import dashboardHtml from '../server/admin/dashboard.html';
-import { parseKnowledgeBase, searchKnowledgeWithContext, buildContext } from '../server/knowledgeBase.js';
+import { parseKnowledgeBase, searchKnowledgeWithContext, buildContext, fallbackContext, fixLinks } from '../server/knowledgeBase.js';
 import { chat, chatStream } from '../server/llmClient.js';
 import { createDb } from './db.js';
 
@@ -56,7 +56,7 @@ function retrieve(message) {
     const relevantChunks = searchKnowledgeWithContext(message, 5);
     const context = relevantChunks.length > 0
         ? buildContext(relevantChunks)
-        : 'No specific information found in the available resources.';
+        : fallbackContext();
     const sources = relevantChunks.length > 0
         ? relevantChunks.map(chunk => chunk.url)
         : ['https://ncpmi.org'];
@@ -71,7 +71,7 @@ async function handleChat(body, db) {
     try {
         await db.recordMessage({ conversationId, email, role: 'user', content: message });
         const { context, sources } = retrieve(message);
-        const answer = await chat(context, message);
+        const answer = fixLinks(await chat(context, message));
         await db.recordMessage({ conversationId, email, role: 'assistant', content: answer, sources });
         return json({ answer, sources });
     } catch (error) {
@@ -101,10 +101,14 @@ function handleChatStream(body, db, ctx) {
                 context,
                 message,
                 (chunk) => send({ type: 'chunk', content: chunk }),
-                (fullText) => finished(
-                    db.recordMessage({ conversationId, email, role: 'assistant', content: fullText, sources })
-                        .then(() => send({ type: 'done', sources }))
-                ),
+                (fullText) => {
+                    // Final text with dead ncpmi.org links removed; the widget swaps it in.
+                    const text = fixLinks(fullText);
+                    finished(
+                        db.recordMessage({ conversationId, email, role: 'assistant', content: text, sources })
+                            .then(() => send({ type: 'done', sources, text }))
+                    );
+                },
                 (error) => finished(send({ type: 'error', message: error.message }))
             );
             await done;

@@ -584,6 +584,11 @@
                                 fullText += data.content;
                                 updateStreamingMessage(messageEl, fullText);
                             } else if (data.type === 'done') {
+                                // Server sends the final text with dead links removed
+                                if (typeof data.text === 'string' && data.text !== fullText) {
+                                    fullText = data.text;
+                                    updateStreamingMessage(messageEl, fullText);
+                                }
                                 // Finalize message with feedback (tied to the question asked)
                                 finalizeStreamingMessage(messageEl, fullText, message);
                                 state.messages.push({ role: 'bot', text: fullText });

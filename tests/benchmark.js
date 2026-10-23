@@ -12,7 +12,6 @@
  */
 
 const API_URL = process.env.API_URL || 'http://localhost:3002';
-const STAFF_BUTTON = 'connect with ncpmi staff';
 const CONTACT_PAGE = '/about-us/general-contact-us';
 
 // expectedUrl: path that must be in the sources or the answer.
@@ -72,12 +71,13 @@ const BENCHMARK_TESTS = [
         name: 'Out of scope gets an escalation path',
         query: 'What is the weather in Raleigh today?',
         expectedUrl: CONTACT_PAGE,
-        expectedKeywords: [STAFF_BUTTON]
+        expectedKeywords: ['NCPMI']
     },
     {
         name: 'Gibberish asks to rephrase',
         query: 'asdfghjkl',
-        expectedKeywords: ['rephrase', STAFF_BUTTON]
+        expectedUrl: CONTACT_PAGE,
+        expectedKeywords: ['rephrase']
     }
 ];
 

@@ -309,7 +309,7 @@ function isGibberish(message) {
     return !words.some(w => STOPWORDS.has(w) || CHAT_WORDS.has(w) || docFreq.has(stem(w)));
 }
 
-const CLARIFY_REPLY = "I didn't quite understand that. Could you rephrase your question? You can ask about membership, events, PDUs, volunteering, or jobs, or use the \"Connect with NCPMI staff\" button below the chat.";
+const CLARIFY_REPLY = "I didn't quite understand that. Could you rephrase your question? You can ask about membership, events, PDUs, volunteering, or jobs, or reach the team through the [Contact Us page](https://ncpmi.org/about-us/general-contact-us).";
 
 module.exports = {
     loadKnowledgeBase,

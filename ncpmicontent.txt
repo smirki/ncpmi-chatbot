@@ -63,54 +63,6 @@ Upcoming Events
 
 Oct
 
-08
-
-Future Proof Your Project Management Career: 7 Strategies for Staying Relevant, Marketable and Employable in the Age of AI
-
-Oct
-
-10
-
-Study Group Session
-
-Oct
-
-10
-
-Social Good & Networking Event - PoeFest Community Festival
-
-Oct
-
-12
-
-October 2026 Board Meeting
-
-Oct
-
-13
-
-Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
-
-Oct
-
-15
-
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
-
-Oct
-
-17
-
-Social Good & Networking Event - Hope Reins
-
-Oct
-
-20
-
-The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
-
-Oct
-
 24
 
 Study Group Session
@@ -141,15 +93,63 @@ November 2026 Board Meeting
 
 Nov
 
+10
+
+Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking"
+
+Nov
+
 12
 
 Annual Meeting - November 2026
+
+Nov
+
+14
+
+Study Group Session
+
+Nov
+
+17
+
+AI COP: In Person Event - AI in Action
+
+Nov
+
+18
+
+Leadership COP: Leading Through the Messy Middle
+
+Nov
+
+28
+
+Study Group Session
 
 Dec
 
 07
 
 December Virtual Member Orientation Session
+
+Dec
+
+12
+
+Study Group Session
+
+Dec
+
+14
+
+December 2026 Board Meeting
+
+Jan
+
+04
+
+January Virtual Member Orientation Session
 
 Chapter Membership
 
@@ -169,7 +169,7 @@ Join PMI North Carolina Chapter
 
 Membership Discounts!
 
-www.iil.com/ncpmi
+IIL Discounted Classes
 
 Join PMI North Carolina Chapter
 
@@ -177,9 +177,8 @@ Join PMI North Carolina Chapter
 
 SoftEd is offering chapter members 50% off training courses!
 
-https://www.softed.com/us/courses/all-courses/
-
 Contact David Mantica, This email address is being protected from spambots. You need JavaScript enabled to view it. to get the discount. (Does not include Certified Scrum Master classes)
+
 ------------------------------------------------------
 
 Take advantage of a special negotiated rate for NCPMI Members: Individual / $39, Couple / $59, Family / $69, No Enrollment fee, Month to month.
@@ -194,13 +193,13 @@ More Information
 
 Membership Statistics
 
-Total Members | 4259
+Total Members | 4311
 
-New Members This Year | 760
+New Members This Year | 800
 
-PMP® Members | 2932
+PMP® Members | 2952
 
-CAPM® Members | 131
+CAPM® Members | 140
 
 PgMP® Members | 14
 
@@ -208,15 +207,15 @@ PMI-SP® Members | 6
 
 PMI-RMP® Members | 14
 
-PMI-ACP® Members | 133
+PMI-ACP® Members | 135
 
 PfMP® Members | 6
 
-PMI-PBA® Members | 7
+PMI-PBA® Members | 8
 
-Members with no Certification | 1209
+Members with no Certification | 1232
 
-Student Members | 167
+Student Members | 171
 
 PMP/CAPM/PgMP/PMI-SP/PMI-RMP/PMI-ACP/PfMP/PMI-PBA are registered marks of the Project Management Institute, Inc.
 
@@ -224,33 +223,141 @@ Stay Informed
 
 Members in Spotlight
 
-- Kaymah Strickland
+- Brittny Zenere
+
+- April Raphiou
+
+- Jessica Johnson, PMP
+
+- Lauren Habermehl
+
+- Dara Ehtesham
+
+- Tina Bowness, CAPM
+
+- Michael Marsh
+
+- Sean Farrell
+
+- Chris Pfeifer
+
+- Crystal Lawrence
+
+- John Kotlas
+
+- Moon Park
+
+- Palak Karode, CAPM
+
+- Zakir Lalani
+
+- Gaurav Singh
+
+- Alexander Reynolds
+
+- Joseph Fields
+
+- Josephine Bland
+
+- Marissa Peterson
+
+- Geselle Lagunes Marquez
+
+- Julianna Villarosa, CAPM
+
+- Kim Mezza, PMP
+
+- Saurav Mall
+
+- Rebecca Chaves
+
+- Breckany Eckhardt, PMP
+
+- Carrie Crews, PMP
+
+- Melissa Bebb
+
+- Kudzwai Kandimba, PMP
+
+- Donterise Anderson
+
+- Lakaysha Al-Uqdah
+
+- Felix Kyere
+
+- Samson Ayana
+
+- Madhuri Pothineni
+
+- Lauren Outlaw
+
+- Lawrence Flowers Jr, PMP
+
+- Macalister Bunbury, CAPM
+
+- Austin Eldred, PMP
 
 - KEITH FLOYD
 
-- Jeremy Ackerley
+- Kaymah Strickland
+
+- Matthew Eresman, PMP
+
+- Rylee Ennis
 
 - Iymaani Tusler
 
-- Angel Joyner
+- Jeremy Ackerley
 
 - Keli Bronson
 
+- Angel Joyner
+
 - Taylor Johnson
 
-- Tonitra Smith, PMP
-
-- Jakita Wilkins
-
-- Emilia Beyler
-
-- Chaniyha Alston
-
-- Beatrice Knight, PMP
+- Chase Albritton
 
 - Marshall Burkes
 
-- Chase Albritton
+- Beatrice Knight, PMP
+
+- Chaniyha Alston
+
+- Emilia Beyler
+
+- Jakita Wilkins
+
+- Tonitra Smith, PMP
+
+- Kudzwai Kandimba, PMP
+
+- Robert Douglas, PMP
+
+- James Gaskill, II, PMP
+
+- Robert Hampton, PMP
+
+- Robert Bailey, PMP
+
+- Ricardo Cruz, PMP
+
+- James Wilds Jr, PMP
+
+- Lawrence Flowers Jr, PMP
+
+- Melissa Chapin, PMP
+
+- Brittany Gardner, PMP
+
+- Holly Peck, PMP
+
+- Laura Ault, PMP
+
+- Yaril Rivera Perez, PMP
+
+- LakshmanaRao Kakumani, PMP
+
+- Lori Hartley, PMP
 
 - LU XIAOMING, PMP
 
@@ -306,23 +413,365 @@ Members in Spotlight
 
 - Mariah Best
 
+- William Lanier, PMP
+
+- Ricardo Baron
+
+- Nargis Ramprashad
+
+- Sarah Wieland, PMP
+
+- Alison Harding, PMP
+
+- Rovid Rivera Burgos, PMI-CPMAI, PMP
+
+- Shawn Stevens
+
+- Kayla Lemons, PMP
+
+- Jessica Norwood, PMP
+
+- Ian Thackrah
+
+- Sarah Sconyers, PMP
+
+- Emily Kozubowski
+
+- Renae Stout, CAPM, PMP
+
+- Rebecca Garrett
+
+- Kevin Ginnerty, PMP
+
+- Sean Dever, PMP
+
+- Jordan Parnell, PMP
+
+- Bradley Walker, PMP
+
+- Makenna Dillingham, PMP
+
+- Shelly Sabhikhi, PMP
+
+- Eric Coughlin, PMP
+
+- Claire Bremble
+
+- Sarah Barry, PMP
+
+- Noreen Jaafar, PMP
+
+- Jimmy Cifuentes, PMP
+
+- Willie Breeden Jr., PMP
+
+- Kalyan Boppudi, PMP
+
+- Stephanie Love
+
+- Marjorie Gottier, PMP
+
+- Matthew Riecks, CPBEP
+
+- Rajesh Melappalayam
+
+- Rebecca Coward, PMP
+
+- Deborah DeYulia, PMP
+
+- Keacha Simmons, PMP
+
+- Carrissa Dixon
+
+- Joanna Mularchik
+
 - Louise Okyne, PMP
 
 - Mary Sharp, PMP
 
 - CALNECIA GREGG, PMP
 
+- Alanna Steffens, PMP
+
+- Bobby Ellison, CAPM
+
+- Kateryna Clark, PMP
+
+- Stephen Stewart, CAPM, PMI-ACP, PMP
+
+- Seif Juban, PMP
+
+- Jan Fulford, PMP
+
+- Patience Leino
+
+- Laura Warner
+
+- Stephen Doherty, PMP
+
+- Kimberly Matthews, PMP
+
+- Kevin Suddeth
+
+- Jennifer Ray
+
+- Patricia Feimster, PMP
+
+- Catherine Teague, PMP
+
+- Gilbert Benavente
+
+- JOHN DUNBAR
+
+- Robert McCauley, PMP
+
+- Richard Markeson III, CAPM
+
+- Christminfa Gbenou Sagbohan, PMP
+
+- Kyle Best, PMI-PMOCP, PMO-CP, PMP
+
+- Tara Lane
+
+- Tara Baker
+
+- Jacob Bowlus
+
+- Susan Pilkington
+
+- Brandon Seagroves, PMP
+
+- Jason Boysen
+
+- Alireza Tabakh
+
+- Shirley Smith
+
+- Robert Groff, PMP
+
+- DiAndrea Major, PMP
+
+- Wendy Toney, PMP
+
 - Abiodun Eniyandunni, PMI-ACP, PMP
+
+- Amy Chintamaneni, PMP
+
+- Meghan Howard, PMP
+
+- Thaddeus Hartlaub, PMP
+
+- Sharon Cramer, PMP
+
+- Juan Martin Balaguer, PMP
+
+- Ahmad Bilal, PMP
+
+- LeeAnn Solomon, PMP
+
+- Alric James, PMP
+
+- Peter Levola, PMP
+
+- Darin Mueller, PMP
+
+- Andrew Bates
+
+- Heath Smitherman
+
+- Logan Hodges, PMP
+
+- Thomas Peters, PMP
+
+- Jennifer Walz, PMP
+
+- Rachael Grossman, PMP
+
+- Stephen Hill, PMP
+
+- JLeighsa Moore-Mitchell
+
+- Nathanael Bennett, PMP
+
+- Miger Fernandes, PMP
+
+- Brandon Sargent, PMP
+
+- Soni Rani, PMI-ACP, PMP
+
+- John Richards, CAPM, PMP
 
 - Geoff Trinchard, PMP
 
+- Matthew Wilson, PMP
+
+- Francine McLeod
+
+- Thomas Hudspeth, PMP
+
+- Joe Fanjoy, PMP
+
+- Laura Benning, PMP
+
+- Teresa Herring, PMP
+
+- Brian Deye, PMP
+
+- Grace Hanson, PMP
+
+- Frank Losito, PMP
+
+- Ella Chisholm, PMP
+
+- Martha Hodge, PMP
+
+- Jennifer Phillips, PMP
+
+- Paul McGinty
+
 - John McDonald, PMP
+
+- Paula Lucignani
+
+- Melinda Bomar, PMP
+
+- Leroy Straker, PMP
+
+- terrence walker
+
+- Meredith Harrington, PMP
+
+- Jennifer Ruble
+
+- Amanda Green, PMP
+
+- Hong Nhung Pham, PMP
+
+- Konrad Kosmala, PMP
+
+- Venisha Hoskins
+
+- Tiffany Pitt, PMP
+
+- Michelle Thomsen-Curwen, PMP
+
+- Karen Williams, PMP
+
+- Tiffany Yancey, PMP
+
+- Amanda Dalton, PMP
 
 - Cameron Peyton, PMP
 
+- Lindsay Hoffman, PMP
+
+- Samuel Wambugu, PMP
+
+- Jacqueline Reiter
+
+- Anne Marie Jacobs, PMP
+
+- Christopher Scott, PMI-ACP, PMP
+
+- Donna Daniels, PMP
+
+- Rick Madoni, PMP
+
+- David Russell, PMP
+
+- Caitlyn Mabry, PMP
+
+- Toni Gadsden, PMP
+
+- Stepan Provorov, PMP
+
+- Melanie Cruz, PMP
+
+- Dan Vandergrift, PMP
+
+- kelly beebe, PMP
+
+- Tanisha Singleton-Dozier
+
+- Lori Dale, PMP
+
+- Alexandria Harris, PMP
+
 - Ahmed Avais, PMP
 
+- Cameron Aukerman, PMP
+
+- Mary Edbrooke
+
+- Pamela Bayles, PMP
+
+- Jesus Atiles, PMP
+
+- Fondrea Miles, PMP
+
+- Kristyn Young, PMP
+
+- Elizabeth Taylor, PMI-ACP, PMP
+
+- Craig Kessler
+
+- Suman Reza, PMP
+
+- David Gross, PMP
+
+- Joshua Lowry, PMP
+
+- Tejumade Ajasa, PMP
+
+- Ashley Nau, PMP
+
+- Christopher Sessions, PMP
+
+- Ricardo Govindasamy, PMP
+
+- Kamran Kamrani, PMP
+
+- Sarah Cleary, PMP
+
+- Sonya Quaintance, PMP
+
+- Shelly Freeman, PMP
+
+- Jeff Marusiak, PMP
+
+- Joseph Adams, PMP
+
+- Elizabeth Hamilton, PMP
+
 - Sage Dunlevy, PMP
+
+- Soma Kadikatla, PMP
+
+- Mary Ann Louw
+
+- Selena Smith, PMP
+
+- Veronica Brown-Anang, PMI-ACP, PMP
+
+- Alecia Ramsay, PMP
+
+- Karen Vlaminck, PMP
+
+- Lisa Neal, PMP
+
+- Rajnish Bhatia, PMP
+
+- Sarah Cumming, PMP
+
+- Erica Batkin, PMP
+
+- Michelle Walter, PMP
+
+- Vanessa Fernandes, PMI-ACP, PMP
+
+- Patricia Karpus, PMP
+
+- Leighton Fairbairn, PMP
 
 - Yogeshwar Velu, PMP
 
@@ -330,15 +779,163 @@ Members in Spotlight
 
 - Jonathan Talarek, PMI-PBA, PMI-RMP, PMI-SP, PMP
 
+- Tiahna McDowell, PMP
+
+- Beth Bush
+
+- Tara Roebuck, PMP
+
+- Lavanya Kotcharlakota, PMP
+
+- Maria DArco, PMP
+
+- Arvind Bharti, PMP
+
+- Steven Holloway, PMP
+
+- Rodney Shepard, PMP
+
+- Kuttan Abu, PMP
+
+- Nathan Peterson, PMP
+
+- Mark Dixon, PMP
+
+- Christopher Bumgarner, PMP
+
+- Jennifer Johnson, PMP
+
+- Robert Myron, PMP
+
+- Ken McCalla
+
+- Kimberly Buchanan, PMP
+
+- Durga Kothandaraman, PMP
+
+- Cesar Hernandez, PMP
+
+- Jocelyn Polito, PMP
+
+- Karen Moore, PMP
+
 - Brad Gillespie, PMP
+
+- Rena Henry, PMP
+
+- Rod Winkler, PMI-ACP, PMP
+
+- Cathie Dillon, PMP
 
 - Andrew Lamb, PMP
 
+- Brian Cordell, PMP
+
+- Eric Gamble, PMP
+
+- Heidi Grable, PMP
+
+- Nelson Tyner, PMP
+
+- John Yuschak, PMP
+
+- Tim Krings
+
+- Daniel Sullivan, PMP
+
+- Yvonne Meader, PMP
+
+- Vicki Humphreys, CAPM, PMP
+
+- Heather Martin, PMP
+
+- Diane Whitmore, PMP
+
+- john stewart, PMP
+
+- Stacy Hanna, PMP
+
+- Rafael Agostini, PMP
+
+- Herman Reeves
+
+- Siva Bodavula, PMP
+
+- Christopher Blais, PMP
+
+- Jayne Murphy, PMP
+
+- Ana Rider, PMP
+
+- Jennifer Dulac, PMP
+
+- Chad Schwartz
+
+- Sharon Nusser, PMP
+
+- David McLean, PMP
+
+- Lawrence Creech, PMP
+
+- Micah Retzlaff
+
+- Elizabeth Farner, PMP
+
+- Brian Walker, PMP
+
+- Floyd Wachter, PMP
+
+- Sharon Mayes, PMP
+
+- Dilip Mirajkar
+
+- J. Hackney, PMP
+
+- Cheryl Schramm, PMP
+
+- Christy Miller, PMP
+
+- Majida Malki, PMP
+
+- Linda Roseboro
+
 - Sreekanth Nandagiri, PMP
+
+- Marcus Davis, PMP
+
+- Donna Yeaw, PMP
+
+- Michael Frost, PMP
+
+- Francis Savarese, PMP
+
+- Deborah White, PMP
+
+- Mary Miller, PMP
+
+- Jason Slovensky, PMP
+
+- Peter Gollmar
+
+- Nishesh Patel, PMP
+
+- William Blevins
 
 - Laura Kneavel, PMP
 
+- Stephen Gant, PMP
+
+- Grace Kirchgessner, PMP
+
 - William Smith, PMP
+
+- Romona Benson, PMP
+
+- Joyce Cunningham
+
+- Steven DelGrosso, PMP
+
+- Cedric Thomas, PMP
 
 Sponsorship Opportunities
 
@@ -375,13 +972,13 @@ https://ncpmi.org/about-us/2026-ncpmi-board-elections
 # 2026 NCPMI Board Elections
 2026 NCPMI Board of Directors Elections
 
-Voting Is Open!
+Voting Has Closed.
 
-Help choose the leaders who will guide NCPMI. Meet the candidates and review their priorities, then use your personal voting link sent to you by PMI North Carolina Chapter via BigPulse.
+Thank you to all members who participated in the 2026 NCPMI Board of Directors Elections. Results will be announced at the October 27 Chapter Meeting.
 
-If you do not see the email, check your spam or junk folder. If you still cannot find it, contact the Elections Team at elections@ncpmi.org for help.
+For election questions, contact the Elections Team at elections@ncpmi.org.
 
-Voting Closes: October 19
+Results Announced: October 27
 
 Meet the Candidates
 
@@ -1775,87 +2372,6 @@ AC 2026 Photos
 
 Share On:
 
-https://ncpmi.org/education/ncpmi-scholarship-application
-
-# NCPMI Scholarship Application
-Please complete all required fields!
-
-Welcome to the NCPMI Fall Scholarship Application.
-
-The North Carolina Project Management Institute (NCPMI) is pleased to offer Fall Scholarships to support individuals pursuing education or professional development in the project management field. Scholarships are awarded to individual applicants who are either current NCPMI members or have a NCPMI member sponsor.
-
-Eligible coursework must be directly related to project management. Scholarships will cover course fees only and will be paid directly to the educational institution, or reimbursement may be requested with a submitted receipt. Scholarship awards will vary based on need and scope, but individual awards will not exceed $1,000.
-
-Section 1: Personal Information
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Are you an NCPMI Member?(*)
-
-Are you an NCPMI Member?
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Invalid Input
-
-Are you an NCPMI Volunteer?(*)
-
-Are you an NCPMI Volunteer? Invalid Input
-
-Will you be willing to give a 3–5 minute presentation on the scholarship opportunity and what it meant to you at a future Chapter meeting?(*)
-
-Will you be willing to give a 3–5 minute presentation on the scholarship opportunity and what it meant to you at a future Chapter meeting?
-
-Invalid Input
-
-Please enter a # <= 1,000.
-
-Is this scholarship for:(*)
-
-Is this scholarship for:
-
-Invalid Input
-
-Educational Development
-
-Invalid Input
-
-Invalid Input
-
-Professional Development
-
-Invalid Input
-
-Invalid Input
-
-0/1500
-Invalid Input
-
-0/1500
-Invalid Input
-
-0/1500
-Invalid Input
-
-0/1500
-Invalid Input
-
-Invalid Input
-
 https://ncpmi.org/education/pdu-information
 
 # PDU Information
@@ -2167,13 +2683,13 @@ https://ncpmi.org/elections-overview
 # Overview
 2026 NCPMI Board of Directors Elections
 
-Voting Is Open!
+Voting Has Closed.
 
-Help choose the leaders who will guide NCPMI. Meet the candidates and review their priorities, then use your personal voting link sent to you by PMI North Carolina Chapter via BigPulse.
+Thank you to all members who participated in the 2026 NCPMI Board of Directors Elections. Results will be announced at the October 27 Chapter Meeting.
 
-If you do not see the email, check your spam or junk folder. If you still cannot find it, contact the Elections Team at elections@ncpmi.org for help.
+For election questions, contact the Elections Team at elections@ncpmi.org.
 
-Voting Closes: October 19
+Results Announced: October 27
 
 Meet the Candidates
 
@@ -2577,33 +3093,7 @@ Note: You must be logged in to get the member or volunteer discount. Please use 
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
 
-08
-
-Oct
-
-2026
-
-Future Proof Your Project Management Career: 7 Strategies for Staying Relevant, Marketable and Employable in the Age of AI
-
-10-08-2026 5:45 pm -7:30 pm
-
-Virtual Meeting
-
-Free
-
-Participants will leave with practical strategies they can immediately apply to their own careers. Topics will include developing a future-ready portfolio of skills, using AI to enhance project management effectiveness, translating project accomplishments into measurable business impact, strengthening professional visibility and networks, and identifying emerging career opportunities beyond traditional project management roles.
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
-10
+24
 
 Oct
 
@@ -2611,7 +3101,7 @@ Oct
 
 Study Group Session
 
-10-10-2026 11:00 am -12:30 pm
+10-24-2026 11:00 am -12:30 pm
 
 Free
 
@@ -2629,31 +3119,75 @@ Join the Study Group Community
 
 - Details
 
-10
+27
 
 Oct
 
 2026
 
-Social Good & Networking Event - PoeFest Community Festival
+NCPMI October Chapter Meeting - Leading from Tomorrow
 
-10-10-2026 1:00 pm -4:00 pm
+10-27-2026 6:00 pm -8:30 pm
 
-Poe Center for Health Education
+ReCity Network
 
-FREE for all NCPMI members and non-members
+$25.00
 
-NCPMI will be volunteering at PoeFest, a free community wellness festival at
+(IN-PERSON) Chapter Meeting
 
-the Poe Center for Health Education that celebrates healthy decision-making
+Non-Members $25, Members $10, Volunteers $0. No refunds for No Show / Cancellations.
 
-and connects families to local resources. Commitment to serve must be
+Join us for our October Chapter Meeting at ReCity! Save the date and plan to connect, network, and engage with fellow project management professionals. Additional program and speaker details will be announced soon.
 
-confirmed by September 26. In addition to registering here, volunteers must
+Date & Time
 
-also sign up via the Poe Center's official volunteer form. Please ensure your
+Tuesday, October 27, 2026
 
-registration reflects a firm intention to attend.
+6:00 PM – 8:30 PM
+
+Location & Additional Event Details
+
+ReCity Network, 112 Broadway St, Suite B, Durham, NC 27701
+
+Dinner will be provided
+
+Speaker: Mack Murray, Jr.
+
+Mack Murray, Jr. is a dynamic keynote speaker, workshop facilitator, and leadership consultant known for his energetic and transformational approach to leadership and personal development. With experience engaging thousands of students, professionals, organizations, and government leaders, Mack has a unique ability to shift perspectives, inspire growth, and equip people to navigate challenges and change with confidence. His experience includes working with organizations such as Fellowship of Christian Athletes, Easter Seals UCP, the National Association of Housing & Redevelopment Officials, the North Carolina Mayor-Council Government, and the City of Goldsboro. An award-winning mentor and leader, Mack is passionate about developing people, strengthening organizations, and helping individuals and teams move through seasons of transition toward greater purpose, impact, and excellence.
+
+Presentation Title
+
+Leading from Tomorrow
+
+Practical Leadership for Project Professionals Navigating Change, Complexity, and Growth
+
+Abstract
+
+Project management is no longer just about managing timelines, budgets, scope, and deliverables—it’s about leading people through complexity, change, competing priorities, and an increasingly technology-driven workplace. Leading from Tomorrow challenges project professionals to think beyond the traditional responsibilities of their role and recognize the leadership opportunities that exist in every project, conversation, and decision. Through practical insights, interactive activities, real-world scenarios, and guided reflection, participants will explore how to lead themselves, influence others, navigate change, and leverage emerging tools while keeping people at the center of their leadership.
+
+Key Takeaways / Objectives
+
+1. Lead Yourself Before Leading Others
+
+Participants will identify practical ways to strengthen self-awareness, ownership, adaptability, and intentionality—the foundation for leading effectively in complex environments.
+
+2. Lead People Through Influence, Communication & Change
+
+Participants will explore strategies for building trust, communicating with clarity, influencing without relying solely on authority, and helping teams navigate changing priorities and uncertainty.
+
+3. Lead Forward by Embracing What's Next
+
+Participants will examine how emerging technology and AI are reshaping the workplace and discover ways to leverage these tools while maintaining the human connection, judgment, and leadership necessary for meaningful impact.
+
+Agenda
+
+- 6:00 PM – 7:00 PM: Social & Networking Hour
+
+- 7:00 PM – 7:30 PM: Chapter Announcements
+
+- 7:30 PM – 8:30 PM: Featured Speaker & Program
+
+By participating in this event, attendees acknowledge and accept that NCPMI (North Carolina Project Management Institute) is not responsible for any injuries, accidents, or damages that may occur as a result of participation. Attendees voluntarily assume all risks associated with the nature of the activities involved.
 
 - Register (Individual)
 
@@ -2665,27 +3199,21 @@ registration reflects a firm intention to attend.
 
 - Details
 
-12
+28
 
 Oct
 
 2026
 
-October 2026 Board Meeting
+Agile COP: Feedback-Driven Team Growth Turning Difficult Agile Feedback into Growth, Embedding Feedback Loops into Ceremonies
 
-10-12-2026 5:30 pm -8:00 pm
+10-28-2026 6:00 pm -7:00 pm
 
-Ribbon Communications
+Virtual Meeting – Conferencing details will be distributed prior to the meeting
 
 Free
 
-October 2026 Board Meeting
-
-Subject: NCPMI Board Meeting (IN PERSON)
-
-When: Monday, October 12, 2026 5:30-8:00 PM
-
-Where: Ribbon Communications
+Feedback is one of the most powerful tools a team has for improving performance—but only when people know how to give it, receive it, and turn it into action. This session explores how leaders and team members can approach difficult feedback with greater emotional intelligence, focusing on observable behaviors and impact rather than assumptions or judgment. Participants will examine the difference between reinforcing and re-directive feedback and learn a practical approach for creating conversations that are specific, respectful, future-focused, and designed to promote growth rather than defensiveness.
 
 - Register (Individual)
 
@@ -2697,61 +3225,53 @@ Where: Ribbon Communications
 
 - Details
 
-13
+02
 
-Oct
+Nov
 
 2026
 
-Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+November Virtual Member Orientation Session
 
-10-13-2026 5:45 pm -8:00 pm
+11-02-2026 6:30 pm -7:15 pm
 
 Virtual Meeting
 
 Free
 
-Title: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
 
-Abstract
+- Register (Individual)
 
-Are you frustrated that no matter what you try, your change initiatives seem to
+- Google Calendar
 
-either fail outright or produce gains that don’t last? Yet, your organization’s growth and your
+- Yahoo Calendar
 
-career progress hinges on your ability to lead successful and sustainable change. In this
+- Save Ical
 
-highly interactive keynote/workshop, you’ll get introduced to how to get beyond the
+- Details
 
-buzzwords and leverage a proven formula for change. The CQ® System for Developing
+09
 
-Change Intelligence® is based on decades of change leadership in the workplace, years of
+Nov
 
-conducting global research on managing change, and study into the psychology and
+2026
 
-neuroscience of change. Through real-life examples you’ll learn how to:
+November 2026 Board Meeting
 
-Learning Objectives
+11-09-2026 5:30 pm -8:00 pm
 
-- Engage Hearts, enlighten Heads, and equip Hands to get people moving in positive, new directions so change sticks
+Ribbon Communications
 
-- Diagnose your own Change Intelligence®, appreciate the strengths and potential struggles of your Change Leadership Style, and obtain targeted developmental coaching for improvement
+Free
 
-- Reframe resistance from enemy to ally, and learn how to use resistance as a powerful source of information to engage for change up, down, and across your organization
+November 2026 Board Meeting
 
-- Learn how to coach others to develop their CQ®, build Change Intelligent® teams, and enhance your organization’s collective change capabilities
+Subject: NCPMI Board Meeting (IN PERSON)
 
-- Emerge as a more competent and confident – and less stressed and frustrated – leader of change
+When: Monday, November 9, 2026 5:30-8:00 PM
 
-Keynote: Barbara Trautlein
-
-BIO:
-
-Barbara A. Trautlein, PhD is author of the best-selling book Change Intelligence: Use the Power of CQ® to Lead Change that Sticks, principal and founder of Change Catalysts, and originator of the CQ® System for Developing Change Intelligence®.
-
-For over 30 years, Barbara has coached executives, trained leaders at all levels, certified change agents, and facilitated mission-critical change management initiatives - achieving bottom-line business and powerful leadership results for clients. In 2015 she had the honor of being awarded Change Management Consultant of the Year by the Association of Change Management Professionals (ACMP) Midwest Chapter. She is gifted at sharing strategies and tactics that are accessible, actionable, and immediately applicable. Her blend of research and real-world expertise makes her an in-demand speaker at conferences around the globe.
-
-Barbara has a unique ability to connect with her audiences, from C-level executives in Fortune 500 organizations to front line employees, and across industries, from steel mills to sales teams, refineries to retail outlets, and healthcare to high tech. Clients served include Abbott Laboratories, BP, Cisco, Deloitte, Northwestern University, and the United Nations. Barbara holds a doctorate in Organizational Psychology from the University of Michigan.
+Where: Ribbon Communications
 
 - Register (Individual)
 
@@ -2784,38 +3304,6 @@ BOD
 Note: You must be logged in to get the member or volunteer discount. Please use the Member login at the top right of this site.
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
-
-12
-
-Oct
-
-2026
-
-October 2026 Board Meeting
-
-10-12-2026 5:30 pm -8:00 pm
-
-Ribbon Communications
-
-Free
-
-October 2026 Board Meeting
-
-Subject: NCPMI Board Meeting (IN PERSON)
-
-When: Monday, October 12, 2026 5:30-8:00 PM
-
-Where: Ribbon Communications
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
 
 09
 
@@ -2987,65 +3475,12 @@ Location | Ribbon Communications
 
 - Back
 
-https://ncpmi.org/events/event-timeline/board/october-2026-board-meeting
+https://ncpmi.org/events/event-timeline/communications-and-public-speaking-cop-communications-place-holder-1/individual-registration
 
-# October 2026 Board Meeting
-October 2026 Board Meeting
-
-October 2026 Board Meeting
-
-Subject: NCPMI Board Meeting (IN PERSON)
-
-When: Monday, October 12, 2026 5:30-8:00 PM
-
-Where: Ribbon Communications
-
-The purpose of the Board meeting is to:
-
-- Review organisational performance and plan/progress against strategic goals.
-
-- Discuss key initiatives and upcoming projects.
-
-- Address governance matters, compliance updates, and risk management.
-
-- Foster alignmnet among board members on priorities for the upcoming quarter/year.
-
-Note:
-
-- Due to limited conference room space, a limit of 5 guests will be accomodated per Board meeting. If there is a request to present, there will be a 5 minute time limit. Your content should be mailed at least 3 business days ahead of the meeting to the Board Administrator/Secretary: This email address is being protected from spambots. You need JavaScript enabled to view it.
-
-- There might be a closed session for the Board to discuss administrative and strategy/budget topics. During this period all guests shall be requested to leave the meeting.
-
-Event Details
-
-Event Date | 10-12-2026 5:30 pm - 8:00 pm
-
-Cut off date | 10-09-2026
-
-Registered | 1
-
-Available place | 4
-
-Individual Price | Free
-
-Location | Ribbon Communications
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
-
-https://ncpmi.org/events/event-timeline/communications-and-public-speaking-cop-communications-you-know-your-iq-but-whats-your-cq-develop-change-intelligence-to-lead-organizational-change/individual-registration
-
-# Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change - Individual Registration
+# Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking" - Individual Registration
 Individual Registration
 
-Please enter information in the form below to process registration for event Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change.
+Please enter information in the form below to process registration for event Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking" .
 
 Terms and Conditions *
 
@@ -3066,49 +3501,25 @@ Agile CoP 1 Event
 
 Communications and Public Speaking CoP 1 Event
 
+Leadership CoP 1 Event
+
 AI CoP 1 Event
 
-15
+18
 
-Oct
-
-2026
-
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
-
-10-15-2026 6:00 pm -7:30 pm
-
-Virtual Meeting – Conferencing details will be distributed prior to the meeting
-
-Free
-
-Move beyond basic AI prompting and learn how to get more useful, relevant, and actionable results from AI. In this interactive session, you'll learn a practical framework for improving prompts step by step, practice it using real project management scenarios, and explore prompt-engineering best practices from an enterprise AI perspective. Bring a laptop or phone with internet access so you can follow along and experiment.
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
-20
-
-Oct
+Nov
 
 2026
 
-The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
+Leadership COP: Leading Through the Messy Middle
 
-10-20-2026 12:00 pm -1:00 pm
+11-18-2026 6:00 pm -7:30 pm
 
 Virtual Meeting
 
 Free
 
-Participants will: 1) Learn to apply the Wheel of Life framework to assess personal wellbeing, identify areas of imbalance, and develop a realistic action plan for improvement; 2) Evaluate how personal wellbeing and self-awareness influence leadership, communication, decision-making, and resilience in project management; 3) Apply insights from the Wheel of Life framework to lead project teams with greater empathy, awareness, and understanding of individual stressors.
+Join the Leadership COP as we discuss Leading Through the Messy Middle: Working Deterministically in a Non-Deterministic World.
 
 - Register (Individual)
 
@@ -3194,7 +3605,7 @@ Event Date | 10-28-2026 6:00 pm - 7:00 pm
 
 Cut off date | 10-28-2026 6:00 pm
 
-Registered | 19
+Registered | 36
 
 Individual Price | Free
 
@@ -3221,21 +3632,21 @@ Note: You must be logged in to get the member or volunteer discount. Please use 
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
 
-15
+17
 
-Oct
+Nov
 
 2026
 
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+AI COP: In Person Event - AI in Action
 
-10-15-2026 6:00 pm -7:30 pm
+11-17-2026 5:30 pm -7:30 pm
 
-Virtual Meeting – Conferencing details will be distributed prior to the meeting
+Echo
 
 Free
 
-Move beyond basic AI prompting and learn how to get more useful, relevant, and actionable results from AI. In this interactive session, you'll learn a practical framework for improving prompts step by step, practice it using real project management scenarios, and explore prompt-engineering best practices from an enterprise AI perspective. Bring a laptop or phone with internet access so you can follow along and experiment.
+Join us in person at Echo Durham for the November meeting of the NCPMI AI Community of Practice on Tuesday, November 17, 2026, at 5:30 PM. After 30 minutes of networking, three speakers will show AI at work: Dennis Ellis leads a live simulation in which a team of AI agents takes a project from charter to delivery, Neetu Punwani shares how a live AI agent cut customer onboarding from seven days to three, and Tiffany Bargeman offers a jargon-free session on prompt engineering for project managers. You’ll leave with a clear view of what AI means for your projects and your role, plus techniques you can use right away.
 
 - Register (Individual)
 
@@ -3246,6 +3657,89 @@ Move beyond basic AI prompting and learn how to get more useful, relevant, and a
 - Save Ical
 
 - Details
+
+https://ncpmi.org/events/event-timeline/communities-of-practice/ai-cop/nov-meeting
+
+# AI COP: In Person Event - AI in Action
+AI COP: In Person Event - AI in Action
+
+Join us in person for three practical, real-world sessions on putting AI to work.
+
+Location:
+
+Echo
+
+404 Hunt St Ste 500
+
+Durham, NC 27701
+
+The first 30 minutes will be networking followed by our 3 speakers.
+
+What happens when a team of AI agents takes on a real project from start to finish? In this live simulation, you’ll watch agents move a project from charter through planning, build, and delivery, with the work unfolding in front of you. Dennis Ellis, a technology leader with 30 years of experience across healthcare, energy, defense, civil engineering, and nonprofit sectors, shows what agents can do today, which platforms make it possible, and how they are changing the way teams plan, build, and deliver. You’ll leave with a clear picture of what this shift means for your projects and your role, and with ideas you can start applying right away.
+
+How do you pick an AI use case that delivers measurable results? Neetu Punwani shares lessons from a real behavioral propensity pilot in which a live AI agent cut customer onboarding time from seven days to three. She walks through how the use case was selected, how the model was designed, which operational guardrails kept the pilot safe and reliable, and which metrics proved its value. With more than 20 years in product management, business analysis, and program leadership, Neetu offers a grounded, practical look at taking AI from idea to impact. You’ll leave with a framework for evaluating your own AI opportunities and avoiding common pilot pitfalls.
+
+AI doesn’t have to be intimidating, and you don’t need a technical background to benefit from it. This vendor-neutral, educational session is built for project managers and focuses on practical, day-to-day uses of AI. Tiffany Bargeman, a communications expert, business analyst, and Prosci-certified change practitioner with over 28 years of corporate experience, shows how to write effective prompts to elevate planning, streamline reporting, and improve stakeholder communications. She also covers the principles of responsible AI use, all without technical jargon or software pitches. You’ll leave with confidence and ready-to-use techniques to put AI to work in your projects right away.
+
+You’ll leave with a clear view of what AI means for your projects and your role, a framework for evaluating your own AI opportunities, and techniques you can use right away.
+
+Parking:
+
+Free parking is available for this event. To avoid receiving a parking ticket, please follow these steps:
+
+1. Park in the Farmers Market parking area.
+
+2. Bring your vehicle information with you, including your license plate number, vehicle make, and model.
+
+3. Go to the 5th floor of Echo and locate the meeting room.
+
+4. Find the parking QR code posted on the wall to the right of the meeting room door.
+
+5. Scan the QR code, enter your vehicle information, and submit the form.
+
+Important: You must scan the QR code and submit the form to qualify for free parking. Failure to do so may result in a parking ticket. Neither the NCPMI Chapter nor Echo is responsible for parking tickets.
+
+Need help? Please ask someone at the event for assistance.
+
+Event Details
+
+Event Date | 11-17-2026 5:30 pm - 7:30 pm
+
+Cut off date | 11-14-2026 11:55 pm
+
+Registered | 9
+
+Available place | 41
+
+Individual Price | Free
+
+No. of Ways of Working PDUs | 2
+
+Location | Echo
+
+Speakers
+
+Dennis Ellis
+
+Dennis Ellis, MBA, CCP, CSM, is a technology leader with 30 years of experience spanning software engineering, executive leadership, and project management across healthcare, energy, defense, civil engineering, and nonprofit sectors. He has led software development teams and complex technology programs with a focus on business outcomes, innovation, and human-centered design. Today, Dennis builds AI-enabled solutions and helps organizations prepare their teams for the rapidly evolving future of work.
+
+Neetu Punwani
+
+Neetu is a product and transformation leader with more than 20 years of experience across product management, business analysis, and program leadership. She is completing her Master of Management in Risk Analytics at NC State University and was selected for the prestigious McLauchlan Leadership Fellowship. Neetu’s global leadership perspective was shaped at Maersk, where she coached and mentored teams across Denmark, Europe, and the Middle East. For the last decade she has been working at the top banks as Product Manager.
+
+Tiffany Bargeman
+
+Tiffany Bargeman is a communications expert, business analyst, Prosci-certified change practitioner, and Forward Progress Strategist with over 28 years of corporate experience. She helps leaders turn ideas into actionable plans, navigate change, and strengthen their professional presence. Through engaging storytelling and practical strategies, Tiffany equips audiences to move forward with clarity and confidence.
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
 
 https://ncpmi.org/events/event-timeline/communities-of-practice/communications-cop
 
@@ -3256,61 +3750,23 @@ Note: You must be logged in to get the member or volunteer discount. Please use 
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
 
-13
+10
 
-Oct
+Nov
 
 2026
 
-Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking"
 
-10-13-2026 5:45 pm -8:00 pm
+11-10-2026 5:45 pm -8:00 pm
 
 Virtual Meeting
 
 Free
 
-Title: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+We all have been told that networking is more than collecting business cards; that it is making lasting connections...but are we being told just how to do just that? No! Russell shares the HOW. To quote Montel Jordan: 'This is how we do it!' With Internal Networking and with POWER!
 
-Abstract
-
-Are you frustrated that no matter what you try, your change initiatives seem to
-
-either fail outright or produce gains that don’t last? Yet, your organization’s growth and your
-
-career progress hinges on your ability to lead successful and sustainable change. In this
-
-highly interactive keynote/workshop, you’ll get introduced to how to get beyond the
-
-buzzwords and leverage a proven formula for change. The CQ® System for Developing
-
-Change Intelligence® is based on decades of change leadership in the workplace, years of
-
-conducting global research on managing change, and study into the psychology and
-
-neuroscience of change. Through real-life examples you’ll learn how to:
-
-Learning Objectives
-
-- Engage Hearts, enlighten Heads, and equip Hands to get people moving in positive, new directions so change sticks
-
-- Diagnose your own Change Intelligence®, appreciate the strengths and potential struggles of your Change Leadership Style, and obtain targeted developmental coaching for improvement
-
-- Reframe resistance from enemy to ally, and learn how to use resistance as a powerful source of information to engage for change up, down, and across your organization
-
-- Learn how to coach others to develop their CQ®, build Change Intelligent® teams, and enhance your organization’s collective change capabilities
-
-- Emerge as a more competent and confident – and less stressed and frustrated – leader of change
-
-Keynote: Barbara Trautlein
-
-BIO:
-
-Barbara A. Trautlein, PhD is author of the best-selling book Change Intelligence: Use the Power of CQ® to Lead Change that Sticks, principal and founder of Change Catalysts, and originator of the CQ® System for Developing Change Intelligence®.
-
-For over 30 years, Barbara has coached executives, trained leaders at all levels, certified change agents, and facilitated mission-critical change management initiatives - achieving bottom-line business and powerful leadership results for clients. In 2015 she had the honor of being awarded Change Management Consultant of the Year by the Association of Change Management Professionals (ACMP) Midwest Chapter. She is gifted at sharing strategies and tactics that are accessible, actionable, and immediately applicable. Her blend of research and real-world expertise makes her an in-demand speaker at conferences around the globe.
-
-Barbara has a unique ability to connect with her audiences, from C-level executives in Fortune 500 organizations to front line employees, and across industries, from steel mills to sales teams, refineries to retail outlets, and healthcare to high tech. Clients served include Abbott Laboratories, BP, Cisco, Deloitte, Northwestern University, and the United Nations. Barbara holds a doctorate in Organizational Psychology from the University of Michigan.
+Networking isn’t about collecting contacts; it’s about creating connections with intention. The P.O.W.E.R. of Intentional Networking gives you five principles: Purpose, Openness, Willingness, Engagement, and Remind, to turn your encounters into meaningful professional relationships.
 
 - Register (Individual)
 
@@ -3322,70 +3778,52 @@ Barbara has a unique ability to connect with her audiences, from C-level executi
 
 - Details
 
-https://ncpmi.org/events/event-timeline/communities-of-practice/communications-cop/communications-and-public-speaking-cop-communications-you-know-your-iq-but-whats-your-cq-develop-change-intelligence-to-lead-organizational-change
+https://ncpmi.org/events/event-timeline/communities-of-practice/communications-cop/communications-and-public-speaking-cop-communications-place-holder-1
 
-# Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
-Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+# Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking"
+Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking"
 
-Title: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
+Title: "The P.O.W.E.R. of Intentional Networking"
 
 Abstract
 
-Are you frustrated that no matter what you try, your change initiatives seem to
+Learning Objectives:
 
-either fail outright or produce gains that don’t last? Yet, your organization’s growth and your
+- Understand the value of being intentional
 
-career progress hinges on your ability to lead successful and sustainable change. In this
+- Breakdown and learn how to incorporate the P.O.W.E.R.
 
-highly interactive keynote/workshop, you’ll get introduced to how to get beyond the
+- How to balance introversion and extroversion
 
-buzzwords and leverage a proven formula for change. The CQ® System for Developing
+- The art of the follow-up
 
-Change Intelligence® is based on decades of change leadership in the workplace, years of
+Keynote: Russell W. Scott
 
-conducting global research on managing change, and study into the psychology and
+Russell W. Scott, founder of Russell W. Scott | Training Solutions, is a Talent Development Leader, Keynote Speaker, Consultant, and Public Speaking Coach who specializes in customer service, leadership, management, practical skills, and career development training through the P.O.W.E.R. of Intention, with over 30 years of Federal service and private sector training. His audiences include professional teams, support staff, and executives. Mr. Scott's passion for
 
-neuroscience of change. Through real-life examples you’ll learn how to:
+public speaking and story-telling shines through his course deliveries and facilitated discussions.
 
-Learning Objectives
+Mr. Scott is a Maxwell Leadership Certified Team member, as well as Association for Talent Development (ADT) Certified in Virtual Training and Facilitation, and Canva Teacher Essentials certified. Mr. Scott is a consultant for WCOM 103.5 FM and serves as Co-Chair of their Programming Committee. He is also a published writer and mentor. He served as the Vice-Chair of the Charles County Commission for Women in Maryland. Mr. Scott was the co-lead of the Triangle Men's Mastermind and he has also served as a board member of the DC Blues Society.
 
-- Engage Hearts, enlighten Heads, and equip Hands to get people moving in positive, new directions so change sticks
-
-- Diagnose your own Change Intelligence®, appreciate the strengths and potential struggles of your Change Leadership Style, and obtain targeted developmental coaching for improvement
-
-- Reframe resistance from enemy to ally, and learn how to use resistance as a powerful source of information to engage for change up, down, and across your organization
-
-- Learn how to coach others to develop their CQ®, build Change Intelligent® teams, and enhance your organization’s collective change capabilities
-
-- Emerge as a more competent and confident – and less stressed and frustrated – leader of change
-
-Keynote: Barbara Trautlein
-
-BIO:
-
-Barbara A. Trautlein, PhD is author of the best-selling book Change Intelligence: Use the Power of CQ® to Lead Change that Sticks, principal and founder of Change Catalysts, and originator of the CQ® System for Developing Change Intelligence®.
-
-For over 30 years, Barbara has coached executives, trained leaders at all levels, certified change agents, and facilitated mission-critical change management initiatives - achieving bottom-line business and powerful leadership results for clients. In 2015 she had the honor of being awarded Change Management Consultant of the Year by the Association of Change Management Professionals (ACMP) Midwest Chapter. She is gifted at sharing strategies and tactics that are accessible, actionable, and immediately applicable. Her blend of research and real-world expertise makes her an in-demand speaker at conferences around the globe.
-
-Barbara has a unique ability to connect with her audiences, from C-level executives in Fortune 500 organizations to front line employees, and across industries, from steel mills to sales teams, refineries to retail outlets, and healthcare to high tech. Clients served include Abbott Laboratories, BP, Cisco, Deloitte, Northwestern University, and the United Nations. Barbara holds a doctorate in Organizational Psychology from the University of Michigan.
+Please welcome former Area Director, Club Coach, a founder of The Tamara Smiley Hamilton Aspiring Speakers Club, a Mentor, and currently the Events Ambassador for BORN Toastmasters, Russell W. Scott. joining us in person.
 
 Event Details
 
-Event Date | 10-13-2026 5:45 pm - 8:00 pm
+Event Date | 11-10-2026 5:45 pm - 8:00 pm
 
-Cut off date | 10-13-2026 3:00 pm
+Cut off date | 11-10-2026 3:00 pm
 
-Registered | 18
+Registered | 6
 
-Available place | 82
+Available place | 94
 
 Individual Price | Free
 
-No. of Ways of Working PDUs | .50
+No. of Business Acumen PDUs | .25
 
-No. of Power Skills PDUs | .75
+No. of Power Skills PDUs | 1.0
 
-PMI Event Number | 0085N8RRR3
+PMI Event Number | 0085I197FA
 
 Location | Virtual Meeting
 
@@ -3399,78 +3837,30 @@ Location | Virtual Meeting
 
 - Back
 
-https://ncpmi.org/events/event-timeline/communities-of-practice/prompting-for-project-managers-from-better-prompts-to-real-world-results-2
+https://ncpmi.org/events/event-timeline/communities-of-practice/leadership-committee
 
-# AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+# Leadership CoP
+Leadership CoP
 
-AI tools can be powerful assistants for project managers—but the quality of their output depends significantly on how we communicate with them. Simple, search-engine-style prompts often produce generic results. This interactive AI Community of Practice session will help you move beyond basic prompting and develop a more structured and practical approach to working with AI. There are two speakers for this event.
+Note: You must be logged in to get the member or volunteer discount. Please use the Member login at the top right of this site.
 
-Manav Majumdar – “Prompt Engineering to the Next Level”
+All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
 
-Manav will take participants through an interactive, hands-on exercise using an everyday project management task such as creating a status report, assessing project risks, or drafting a stakeholder communication. Starting with a simple, vague prompt, participants will improve it step by step by adding role, context, constraints, examples, and output format, comparing the AI-generated results at each stage.
+18
 
-Rather than simply hearing about prompt engineering, participants will practice it and leave with a clear framework and reusable prompt template they can apply to their own projects.
+Nov
 
-Karen McCann – Prompt Engineering Best Practices
+2026
 
-Karen will build on the practical foundation by sharing best practices for AI prompt engineering, demonstrating effective prompting methods and highlighting important things project professionals should watch for when working with AI. Drawing from her work leading the development, deployment, and operations of AI initiatives within her organization, Karen will bring an enterprise perspective to the discussion.
+Leadership COP: Leading Through the Messy Middle
 
-Together, the two sessions will provide both practical techniques and organizational insights to help project professionals use AI more effectively and responsibly in their day-to-day work.
+11-18-2026 6:00 pm -7:30 pm
 
-This will be an interactive session. Attendees are encouraged to bring a laptop or phone with internet access.
+Virtual Meeting
 
-Speakers
+Free
 
-Manav Majumdar. Manav is an entrepreneur, product builder, and technologist focused on AI, startups, and the future of consumer technology. He previously founded and led Tesslate, an AI software company, and now works on building technology that makes automotive repair more transparent and accessible. Manav is passionate about turning ambitious ideas into real products and sharing the lessons learned along the way.
-
-Karen McCann. Karen is a Senior IT Project Manager in Innovation Development at Tokio Marine HCC, an international finance conglomerate. She leads the development, deployment, and operations of AI initiatives for her corporation. Karen holds PMP, PMI-ACP, and CPMAI certifications through PMI and has also earned an AI Practitioner certification through IIL.
-
-Agenda
-
-Time
-
-Session
-
-Presenter
-
-6:00–6:05 PM
-
-Welcome, AI CoP Update & Session Kickoff
-
-NK Shrivastava
-
-6:05–6:50 PM
-
-Prompt Engineering to the Next Level — Interactive, step-by-step prompt building using project management scenarios, including Q&A
-
-Manav Majumdar
-
-6:50–7:15 PM
-
-Prompt Engineering Best Practices — Effective prompting methods, enterprise perspective, what to watch for, and Q&A
-
-Karen McCann
-
-7:15–7:30 PM
-
-Interactive Quiz, Final Q&A & Closing
-
-NK / Presenters
-
-Event Details
-
-Event Date | 10-15-2026 6:00 pm - 7:30 pm
-
-Registered | 70
-
-Individual Price | Free
-
-No. of Ways of Working PDUs | 0.5
-
-No. of Power Skills PDUs | 1.0
-
-Location | Virtual Meeting – Conferencing details will be distributed prior to the meeting
+Join the Leadership COP as we discuss Leading Through the Messy Middle: Working Deterministically in a Non-Deterministic World.
 
 - Register (Individual)
 
@@ -3480,26 +3870,30 @@ Location | Virtual Meeting – Conferencing details will be distributed prior to
 
 - Save Ical
 
-- Back
+- Details
 
-https://ncpmi.org/events/event-timeline/communities-of-practice/the-wheel-of-life-a-practical-framework-for-balance-resilience-and-leadership
+https://ncpmi.org/events/event-timeline/communities-of-practice/leadership-cop-leading-through-the-messy-middle
 
-# The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
-The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
+# Leadership COP: Leading Through the Messy Middle
+Leadership COP: Leading Through the Messy Middle
 
-Ana Sanchez, PhD, Associate Dean for Performance Improvement and Project Management at the Duke University School of Medicine
+Join us on November 18, 2026, from 6:00–7:30 PM ET, for Leading Through the Messy Middle: Working Deterministically in a Non-Deterministic World, featuring Brett Coakley, founder of Critical Path Executive Coaching & Fractional Leadership.
 
-Learning Objectives: Participants will: 1) Learn to apply the Wheel of Life framework to assess personal wellbeing, identify areas of imbalance, and develop a realistic action plan for improvement; 2) Evaluate how personal wellbeing and self-awareness influence leadership, communication, decision-making, and resilience in project management; 3) Apply insights from the Wheel of Life framework to lead project teams with greater empathy, awareness, and understanding of individual stressors.
+Brett works with founder-led companies in the Research Triangle, serving in fractional leadership roles and coaching senior leaders on leadership effectiveness and career positioning. His experience spans development engineering at Motorola Mobility/Google and Fitbit, production leadership in consumer goods, regulated medical technology project and program management, and strategy and transformation. He holds PMP, CSM, and CSPO credentials and has completed an EMBA at UNC Kenan-Flagler Business School.
+
+In a world where uncertainty and complexity are unavoidable, how can leaders remain intentional, focused, and effective? This session will explore the challenge of leading through the messy middle and working deterministically in a non-deterministic world. Join fellow NC PMI members to gain new perspectives, reflect on your leadership practices, and explore approaches for moving forward when outcomes and circumstances are uncertain.
+
+Don't miss this opportunity to learn, connect, and grow! Register today and join the conversation.
 
 Event Details
 
-Event Date | 10-20-2026 12:00 pm - 1:00 pm
+Event Date | 11-18-2026 6:00 pm - 7:30 pm
 
-Cut off date | 10-20-2026 10:00 am
+Cut off date | 11-18-2026 6:30 pm
 
-Registered | 11
+Registered | 4
 
-Available place | 89
+Available place | 296
 
 Individual Price | Free
 
@@ -3528,12 +3922,296 @@ Captcha*
 
 Please enter the text you see in the image in the text box for captcha validation
 
-https://ncpmi.org/events/event-timeline/hope-reins/view-map
+https://ncpmi.org/events/event-timeline/december-virtual-member-orientation-session-4/individual-registration
 
-# Location Map - Hope Reins
-Hope Reins
+# December Virtual Member Orientation Session - Individual Registration
+Individual Registration
 
-https://hopereins.org/
+Please enter information in the form below to process registration for event December Virtual Member Orientation Session .
+
+Terms and Conditions *
+
+Captcha*
+
+Please enter the text you see in the image in the text box for captcha validation
+
+https://ncpmi.org/events/event-timeline/january-virtual-member-orientation-session-4/individual-registration
+
+# January Virtual Member Orientation Session - Individual Registration
+Individual Registration
+
+Please enter information in the form below to process registration for event January Virtual Member Orientation Session.
+
+Terms and Conditions *
+
+Captcha*
+
+Please enter the text you see in the image in the text box for captcha validation
+
+https://ncpmi.org/events/event-timeline/leadership-cop-leading-through-the-messy-middle/individual-registration
+
+# Leadership COP: Leading Through the Messy Middle - Individual Registration
+Individual Registration
+
+Please enter information in the form below to process registration for event Leadership COP: Leading Through the Messy Middle.
+
+Terms and Conditions *
+
+Captcha*
+
+Please enter the text you see in the image in the text box for captcha validation
+
+https://ncpmi.org/events/event-timeline/membership
+
+# Membership
+Membership
+
+Note: You must be logged in to get the member or volunteer discount. Please use the Member login at the top right of this site.
+
+All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
+
+02
+
+Nov
+
+2026
+
+November Virtual Member Orientation Session
+
+11-02-2026 6:30 pm -7:15 pm
+
+Virtual Meeting
+
+Free
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+07
+
+Dec
+
+2026
+
+December Virtual Member Orientation Session
+
+12-07-2026 6:30 pm -7:15 pm
+
+Virtual Meeting
+
+Free
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+04
+
+Jan
+
+2027
+
+January Virtual Member Orientation Session
+
+01-04-2027 6:30 pm -7:15 pm
+
+Virtual Meeting
+
+Free
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+https://ncpmi.org/events/event-timeline/membership/december-virtual-member-orientation-session-4
+
+# December Virtual Member Orientation Session
+December Virtual Member Orientation Session
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+Member orientation sessions are for:
+
+- Anyone interested in learning about the benefits of NCPMI Chapter membership.
+
+- New and existing members are interested in becoming more engaged with NCPMI.
+
+- Members and non-members are welcome to register and attend.
+
+Event Details
+
+Event Date | 12-07-2026 6:30 pm - 7:15 pm
+
+Registered | 4
+
+Available place | 46
+
+Individual Price | Free
+
+No. of Ways of Working PDUs | 1
+
+Location | Virtual Meeting
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/membership/january-virtual-member-orientation-session-4
+
+# January Virtual Member Orientation Session
+January Virtual Member Orientation Session
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+Member orientation sessions are for:
+
+- Anyone interested in learning about the benefits of NCPMI Chapter membership.
+
+- New and existing members are interested in becoming more engaged with NCPMI.
+
+- Members and non-members are welcome to register and attend.
+
+Event Details
+
+Event Date | 01-04-2027 6:30 pm - 7:15 pm
+
+Registered | 1
+
+Available place | 49
+
+Individual Price | Free
+
+No. of Ways of Working PDUs | 1
+
+Location | Virtual Meeting
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/membership/november-virtual-member-orientation-session-4
+
+# November Virtual Member Orientation Session
+November Virtual Member Orientation Session
+
+NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
+
+Member orientation sessions are for:
+
+- Anyone interested in learning about the benefits of NCPMI Chapter membership.
+
+- New and existing members are interested in becoming more engaged with NCPMI.
+
+- Members and non-members are welcome to register and attend.
+
+Event Details
+
+Event Date | 11-02-2026 6:30 pm - 7:15 pm
+
+Registered | 14
+
+Available place | 36
+
+Individual Price | Free
+
+No. of Ways of Working PDUs | 1
+
+Location | Virtual Meeting
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/ncpmi-october-chapter-meeting-leading-from-tomorrow/individual-registration
+
+# NCPMI October Chapter Meeting - Leading from Tomorrow - Individual Registration
+Individual Registration
+
+Please enter information in the form below to process registration for event NCPMI October Chapter Meeting - Leading from Tomorrow.
+
+Payment Information
+
+Amount
+
+$
+
+Payment Method
+
+PayPal / Credit Card / Debit Card
+
+If you're having difficulties with PayPal, please see these instructions.
+
+Credit Card Number*
+
+Expiration Date*
+
+/
+
+Card (CVV) Code*
+
+Card Holder Name*
+
+Terms and Conditions *
+
+Captcha*
+
+Please enter the text you see in the image in the text box for captcha validation
+
+https://ncpmi.org/events/event-timeline/nov-meeting/individual-registration
+
+# AI COP: In Person Event - AI in Action - Individual Registration
+Individual Registration
+
+Please enter information in the form below to process registration for event AI COP: In Person Event - AI in Action.
+
+Terms and Conditions *
+
+Captcha*
+
+Please enter the text you see in the image in the text box for captcha validation
 
 https://ncpmi.org/events/event-timeline/november-2026-board-meeting/individual-registration
 
@@ -3548,25 +4226,12 @@ Captcha*
 
 Please enter the text you see in the image in the text box for captcha validation
 
-https://ncpmi.org/events/event-timeline/october-2026-board-meeting/individual-registration
+https://ncpmi.org/events/event-timeline/november-virtual-member-orientation-session-4/individual-registration
 
-# October 2026 Board Meeting - Individual Registration
+# November Virtual Member Orientation Session - Individual Registration
 Individual Registration
 
-Please enter information in the form below to process registration for event October 2026 Board Meeting.
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
-https://ncpmi.org/events/event-timeline/prompting-for-project-managers-from-better-prompts-to-real-world-results-2/individual-registration
-
-# AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results.
+Please enter information in the form below to process registration for event November Virtual Member Orientation Session .
 
 Terms and Conditions *
 
@@ -3583,207 +4248,6 @@ Ste 150, 5927 S Miami Blvd Ste 150, Morrisville, NC 27560, US)
 
 IP Optical Networking and Communications | Ribbon
 
-https://ncpmi.org/events/event-timeline/social-good-networking
-
-# Social Good & Networking
-Social Good & Networking
-
-Note: You must be logged in to get the member or volunteer discount. Please use the Member login at the top right of this site.
-
-All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
-
-10
-
-Oct
-
-2026
-
-Social Good & Networking Event - PoeFest Community Festival
-
-10-10-2026 1:00 pm -4:00 pm
-
-Poe Center for Health Education
-
-FREE for all NCPMI members and non-members
-
-NCPMI will be volunteering at PoeFest, a free community wellness festival at
-
-the Poe Center for Health Education that celebrates healthy decision-making
-
-and connects families to local resources. Commitment to serve must be
-
-confirmed by September 26. In addition to registering here, volunteers must
-
-also sign up via the Poe Center's official volunteer form. Please ensure your
-
-registration reflects a firm intention to attend.
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
-17
-
-Oct
-
-2026
-
-Social Good & Networking Event - Hope Reins
-
-10-17-2026 8:30 am -11:30 am
-
-Hope Reins
-
-FREE for all NCPMI members and non-members
-
-NCPMI is spending a morning at the 38-acre Hope Reins Ranch, an Equine Therapy organization located in Wake county. We welcome non-members (guardians required for ages 13 to 17) to join members during this opportunity to network while serving.
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
-https://ncpmi.org/events/event-timeline/social-good-networking-event-hope-reins-4/individual-registration
-
-# Social Good & Networking Event - Hope Reins - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event Social Good & Networking Event - Hope Reins.
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
-https://ncpmi.org/events/event-timeline/social-good-networking-event-poefest-community-festival/individual-registration
-
-# Social Good & Networking Event - PoeFest Community Festival - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event Social Good & Networking Event - PoeFest Community Festival.
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
-https://ncpmi.org/events/event-timeline/social-good-networking/social-good-networking-event-hope-reins-4
-
-# Social Good & Networking Event - Hope Reins
-Social Good & Networking Event - Hope Reins
-
-NCPMI is spending a morning at the 38-acre Hope Reins Ranch, an Equine Therapy organization located in Wake county. We welcome non-members (guardians required for ages 13 to 17) to join members during this opportunity to network while serving.
-
-The Hope Reins Mission: Pair hurting kids with trained mentors and rescued horses to find hope and healing.
-
-Where do you as a volunteer fit in? All services provided at the Ranch are free of charge and made possible by volunteers and donors.
-
-During this 3-hour morning shift, volunteers will participate in one or more of the following activities:
-
-· Invasive plant species removal in pastures to keep pastures healthy and nutrition-rich for the horses
-
-· Fence staining - with miles of four board fence, it's an ongoing process!
-
-· Trail construction
-
-· Clearing fence lines - from downed limbs, brush and debris
-
-· General Barn and Stall maintenance
-
-For more information, please visit their volunteer support page: Serve - Hope Reins
-
-All volunteers will sign a waiver digitally. Link to be provided in separate welcome email.
-
-We will gather at Zinc House Winery for additional networking opportunities following our event.
-
-8420 Wake Forest Hwy, Raleigh NC 27613
-
-Event Details
-
-Event Date | 10-17-2026 8:30 am - 11:30 am
-
-Cut off date | 10-14-2026
-
-Registered | 15
-
-Available place | 1
-
-Individual Price | FREE for all NCPMI members and non-members
-
-Location | Hope Reins
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
-
-https://ncpmi.org/events/event-timeline/social-good-networking/social-good-networking-event-poefest-community-festival
-
-# Social Good & Networking Event - PoeFest Community Festival
-Social Good & Networking Event - PoeFest Community Festival
-
-PoeFest is a free community festival hosted by the Poe Center for Health
-
-Education that celebrates healthy choices and brings families together for
-
-fun, food, prizes, special guests, interactive activities, and local
-
-entertainment. Activities include snacktivities, games and prizes, arts and
-
-crafts, a traffic safety course, a community health fair, and local vendors.
-
-During this 3 hour shift, volunteers will assist with festival activities and help
-
-connect attendees with community resources. Commitment to serve must be
-
-confirmed by September 26. Volunteers must also sign up directly via the
-
-Poe Center's official volunteer Google Form (link provided upon registration).
-
-Please ensure your registration reflects a firm intention to attend.
-
-Event Details
-
-Event Date | 10-10-2026 1:00 pm - 4:00 pm
-
-Cut off date | 10-08-2026 10:00 am
-
-Registered | 3
-
-Available place | 37
-
-Individual Price | FREE for all NCPMI members and non-members
-
-Location | Poe Center for Health Education
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
-
 https://ncpmi.org/events/event-timeline/study-group-2
 
 # Study Group
@@ -3792,32 +4256,6 @@ Study Group
 Note: You must be logged in to get the member or volunteer discount. Please use the Member login at the top right of this site.
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
-
-10
-
-Oct
-
-2026
-
-Study Group Session
-
-10-10-2026 11:00 am -12:30 pm
-
-Free
-
-Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
-
-Join the Study Group Community
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
 
 24
 
@@ -3845,24 +4283,21 @@ Join the Study Group Community
 
 - Details
 
-https://ncpmi.org/events/event-timeline/study-group-2/study-group-session-10-10-2026
+14
 
-# Study Group Session
+Nov
+
+2026
+
 Study Group Session
 
-To participate in the Certification Study Group session, please join the Microsoft Teams community first using the link below. The community serves as the main hub for study session announcements, meeting access, resources, and updates.
+11-14-2026 11:00 am -12:30 pm
 
-After entering the community, locate the upcoming study session post or event details to join the meeting.
+Free
+
+Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
 
 Join the Study Group Community
-
-Event Details
-
-Event Date | 10-10-2026 11:00 am - 12:30 pm
-
-Registered | 3
-
-Individual Price | Free
 
 - Register (Individual)
 
@@ -3872,7 +4307,59 @@ Individual Price | Free
 
 - Save Ical
 
-- Back
+- Details
+
+28
+
+Nov
+
+2026
+
+Study Group Session
+
+11-28-2026 11:00 am -12:30 pm
+
+Free
+
+Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
+
+Join the Study Group Community
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+12
+
+Dec
+
+2026
+
+Study Group Session
+
+12-12-2026 11:00 am -12:30 pm
+
+Free
+
+Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
+
+Join the Study Group Community
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
 
 https://ncpmi.org/events/event-timeline/study-group-2/study-group-session-10-24-2026
 
@@ -3889,6 +4376,35 @@ Event Details
 
 Event Date | 10-24-2026 11:00 am - 12:30 pm
 
+Registered | 5
+
+Individual Price | Free
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/study-group-2/study-group-session-11-14-2026
+
+# Study Group Session
+Study Group Session
+
+To participate in the Certification Study Group session, please join the Microsoft Teams community first using the link below. The community serves as the main hub for study session announcements, meeting access, resources, and updates.
+
+After entering the community, locate the upcoming study session post or event details to join the meeting.
+
+Join the Study Group Community
+
+Event Details
+
+Event Date | 11-14-2026 11:00 am - 12:30 pm
+
 Registered | 1
 
 Individual Price | Free
@@ -3903,25 +4419,70 @@ Individual Price | Free
 
 - Back
 
-https://ncpmi.org/events/event-timeline/study-group-session-10-10-2026/individual-registration
+https://ncpmi.org/events/event-timeline/study-group-2/study-group-session-11-28-2026
+
+# Study Group Session
+Study Group Session
+
+To participate in the Certification Study Group session, please join the Microsoft Teams community first using the link below. The community serves as the main hub for study session announcements, meeting access, resources, and updates.
+
+After entering the community, locate the upcoming study session post or event details to join the meeting.
+
+Join the Study Group Community
+
+Event Details
+
+Event Date | 11-28-2026 11:00 am - 12:30 pm
+
+Registered | 1
+
+Individual Price | Free
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/study-group-2/study-group-session-12-12-2026
+
+# Study Group Session
+Study Group Session
+
+To participate in the Certification Study Group session, please join the Microsoft Teams community first using the link below. The community serves as the main hub for study session announcements, meeting access, resources, and updates.
+
+After entering the community, locate the upcoming study session post or event details to join the meeting.
+
+Join the Study Group Community
+
+Event Details
+
+Event Date | 12-12-2026 11:00 am - 12:30 pm
+
+Registered | 1
+
+Individual Price | Free
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/event-timeline/study-group-session-10-24-2026/individual-registration
 
 # Study Group Session - Individual Registration
 Individual Registration
 
 Please enter information in the form below to process registration for event Study Group Session.
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
-https://ncpmi.org/events/event-timeline/the-wheel-of-life-a-practical-framework-for-balance-resilience-and-leadership/individual-registration
-
-# The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership.
 
 Terms and Conditions *
 
@@ -4045,36 +4606,6 @@ https://ncpmi.org/events/events-calendar/board
 # BOD
 BOD
 
-October 2026 Board Meeting
-
-October 2026 Board Meeting
-
-Subject: NCPMI Board Meeting (IN PERSON)
-
-When: Monday, October 12, 2026 5:30-8:00 PM
-
-Where: Ribbon Communications
-
-Event Date | 10-12-2026 5:30 pm - 8:00 pm
-
-Cut off date | 10-09-2026
-
-Registered | 1
-
-Available place | 4
-
-Individual Price | Free
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
 November 2026 Board Meeting
 
 November 2026 Board Meeting
@@ -4135,6 +4666,59 @@ Individual Price | Free
 
 - Details
 
+https://ncpmi.org/events/events-calendar/board/october-2026-board-meeting
+
+# October 2026 Board Meeting
+October 2026 Board Meeting
+
+October 2026 Board Meeting
+
+Subject: NCPMI Board Meeting (IN PERSON)
+
+When: Monday, October 12, 2026 5:30-8:00 PM
+
+Where: Ribbon Communications
+
+The purpose of the Board meeting is to:
+
+- Review organisational performance and plan/progress against strategic goals.
+
+- Discuss key initiatives and upcoming projects.
+
+- Address governance matters, compliance updates, and risk management.
+
+- Foster alignmnet among board members on priorities for the upcoming quarter/year.
+
+Note:
+
+- Due to limited conference room space, a limit of 5 guests will be accomodated per Board meeting. If there is a request to present, there will be a 5 minute time limit. Your content should be mailed at least 3 business days ahead of the meeting to the Board Administrator/Secretary: This email address is being protected from spambots. You need JavaScript enabled to view it.
+
+- There might be a closed session for the Board to discuss administrative and strategy/budget topics. During this period all guests shall be requested to leave the meeting.
+
+Event Details
+
+Event Date | 10-12-2026 5:30 pm - 8:00 pm
+
+Cut off date | 10-09-2026
+
+Registered | 1
+
+Available place | 4
+
+Individual Price | Free
+
+Location | Ribbon Communications
+
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
 https://ncpmi.org/events/events-calendar/communities-of-practice
 
 # Communities of Practice
@@ -4144,43 +4728,21 @@ Agile CoP 1 Event
 
 Communications and Public Speaking CoP 1 Event
 
+Leadership CoP 1 Event
+
 AI CoP 1 Event
 
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+Leadership COP: Leading Through the Messy Middle
 
-Move beyond basic AI prompting and learn how to get more useful, relevant, and actionable results from AI. In this interactive session, you'll learn a practical framework for improving prompts step by step, practice it using real project management scenarios, and explore prompt-engineering best practices from an enterprise AI perspective. Bring a laptop or phone with internet access so you can follow along and experiment.
+Join the Leadership COP as we discuss Leading Through the Messy Middle: Working Deterministically in a Non-Deterministic World.
 
-Event Date | 10-15-2026 6:00 pm - 7:30 pm
+Event Date | 11-18-2026 6:00 pm - 7:30 pm
 
-Registered | 70
+Cut off date | 11-18-2026 6:30 pm
 
-Individual Price | Free
+Registered | 4
 
-No. of Ways of Working PDUs | 0.5
-
-No. of Power Skills PDUs | 1.0
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
-The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
-
-Participants will: 1) Learn to apply the Wheel of Life framework to assess personal wellbeing, identify areas of imbalance, and develop a realistic action plan for improvement; 2) Evaluate how personal wellbeing and self-awareness influence leadership, communication, decision-making, and resilience in project management; 3) Apply insights from the Wheel of Life framework to lead project teams with greater empathy, awareness, and understanding of individual stressors.
-
-Event Date | 10-20-2026 12:00 pm - 1:00 pm
-
-Cut off date | 10-20-2026 10:00 am
-
-Registered | 11
-
-Available place | 89
+Available place | 296
 
 Individual Price | Free
 
@@ -4207,7 +4769,7 @@ Event Date | 10-28-2026 6:00 pm - 7:00 pm
 
 Cut off date | 10-28-2026 6:00 pm
 
-Registered | 19
+Registered | 36
 
 Individual Price | Free
 
@@ -4228,19 +4790,21 @@ https://ncpmi.org/events/events-calendar/communities-of-practice/ai-cop
 # AI CoP
 AI CoP
 
-AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+AI COP: In Person Event - AI in Action
 
-Move beyond basic AI prompting and learn how to get more useful, relevant, and actionable results from AI. In this interactive session, you'll learn a practical framework for improving prompts step by step, practice it using real project management scenarios, and explore prompt-engineering best practices from an enterprise AI perspective. Bring a laptop or phone with internet access so you can follow along and experiment.
+Join us in person at Echo Durham for the November meeting of the NCPMI AI Community of Practice on Tuesday, November 17, 2026, at 5:30 PM. After 30 minutes of networking, three speakers will show AI at work: Dennis Ellis leads a live simulation in which a team of AI agents takes a project from charter to delivery, Neetu Punwani shares how a live AI agent cut customer onboarding from seven days to three, and Tiffany Bargeman offers a jargon-free session on prompt engineering for project managers. You’ll leave with a clear view of what AI means for your projects and your role, plus techniques you can use right away.
 
-Event Date | 10-15-2026 6:00 pm - 7:30 pm
+Event Date | 11-17-2026 5:30 pm - 7:30 pm
 
-Registered | 70
+Cut off date | 11-14-2026 11:55 pm
+
+Registered | 9
+
+Available place | 41
 
 Individual Price | Free
 
-No. of Ways of Working PDUs | 0.5
-
-No. of Power Skills PDUs | 1.0
+No. of Ways of Working PDUs | 2
 
 - Register (Individual)
 
@@ -4252,11 +4816,129 @@ No. of Power Skills PDUs | 1.0
 
 - Details
 
+https://ncpmi.org/events/events-calendar/communities-of-practice/ai-cop/prompting-for-project-managers-from-better-prompts-to-real-world-results-2
+
+# AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+AI CoP: Prompting for Project Managers: From Better Prompts to Real-World Results
+
+AI tools can be powerful assistants for project managers—but the quality of their output depends significantly on how we communicate with them. Simple, search-engine-style prompts often produce generic results. This interactive AI Community of Practice session will help you move beyond basic prompting and develop a more structured and practical approach to working with AI. There are two speakers for this event.
+
+Manav Majumdar – “Prompt Engineering to the Next Level”
+
+Manav will take participants through an interactive, hands-on exercise using an everyday project management task such as creating a status report, assessing project risks, or drafting a stakeholder communication. Starting with a simple, vague prompt, participants will improve it step by step by adding role, context, constraints, examples, and output format, comparing the AI-generated results at each stage.
+
+Rather than simply hearing about prompt engineering, participants will practice it and leave with a clear framework and reusable prompt template they can apply to their own projects.
+
+Karen McCann – Prompt Engineering Best Practices
+
+Karen will build on the practical foundation by sharing best practices for AI prompt engineering, demonstrating effective prompting methods and highlighting important things project professionals should watch for when working with AI. Drawing from her work leading the development, deployment, and operations of AI initiatives within her organization, Karen will bring an enterprise perspective to the discussion.
+
+Together, the two sessions will provide both practical techniques and organizational insights to help project professionals use AI more effectively and responsibly in their day-to-day work.
+
+This will be an interactive session. Attendees are encouraged to bring a laptop or phone with internet access.
+
+Speakers
+
+Manav Majumdar. Manav is an entrepreneur, product builder, and technologist focused on AI, startups, and the future of consumer technology. He previously founded and led Tesslate, an AI software company, and now works on building technology that makes automotive repair more transparent and accessible. Manav is passionate about turning ambitious ideas into real products and sharing the lessons learned along the way.
+
+Karen McCann. Karen is a Senior IT Project Manager in Innovation Development at Tokio Marine HCC, an international finance conglomerate. She leads the development, deployment, and operations of AI initiatives for her corporation. Karen holds PMP, PMI-ACP, and CPMAI certifications through PMI and has also earned an AI Practitioner certification through IIL.
+
+Agenda
+
+Time
+
+Session
+
+Presenter
+
+6:00–6:05 PM
+
+Welcome, AI CoP Update & Session Kickoff
+
+NK Shrivastava
+
+6:05–6:50 PM
+
+Prompt Engineering to the Next Level — Interactive, step-by-step prompt building using project management scenarios, including Q&A
+
+Manav Majumdar
+
+6:50–7:15 PM
+
+Prompt Engineering Best Practices — Effective prompting methods, enterprise perspective, what to watch for, and Q&A
+
+Karen McCann
+
+7:15–7:30 PM
+
+Interactive Quiz, Final Q&A & Closing
+
+NK / Presenters
+
+Event Details
+
+Event Date | 10-15-2026 6:00 pm - 7:30 pm
+
+Registered | 110
+
+Individual Price | Free
+
+No. of Ways of Working PDUs | 0.5
+
+No. of Power Skills PDUs | 1.0
+
+Location | Virtual Meeting – Conferencing details will be distributed prior to the meeting
+
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
 https://ncpmi.org/events/events-calendar/communities-of-practice/communications-cop
 
 # Communications and Public Speaking CoP
 Communications and Public Speaking CoP
 
+Communications and Public Speaking: Title: "The P.O.W.E.R. of Intentional Networking"
+
+We all have been told that networking is more than collecting business cards; that it is making lasting connections...but are we being told just how to do just that? No! Russell shares the HOW. To quote Montel Jordan: 'This is how we do it!' With Internal Networking and with POWER!
+
+Networking isn’t about collecting contacts; it’s about creating connections with intention. The P.O.W.E.R. of Intentional Networking gives you five principles: Purpose, Openness, Willingness, Engagement, and Remind, to turn your encounters into meaningful professional relationships.
+
+Event Date | 11-10-2026 5:45 pm - 8:00 pm
+
+Cut off date | 11-10-2026 3:00 pm
+
+Registered | 6
+
+Available place | 94
+
+Individual Price | Free
+
+No. of Business Acumen PDUs | .25
+
+No. of Power Skills PDUs | 1.0
+
+PMI Event Number | 0085I197FA
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+https://ncpmi.org/events/events-calendar/communities-of-practice/communications-cop/communications-and-public-speaking-cop-communications-you-know-your-iq-but-whats-your-cq-develop-change-intelligence-to-lead-organizational-change
+
+# Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
 Communications and Public Speaking: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
 
 Title: You Know Your IQ, But What’s Your CQ®? Develop Change Intelligence® to Lead Organizational Change
@@ -4301,13 +4983,15 @@ For over 30 years, Barbara has coached executives, trained leaders at all levels
 
 Barbara has a unique ability to connect with her audiences, from C-level executives in Fortune 500 organizations to front line employees, and across industries, from steel mills to sales teams, refineries to retail outlets, and healthcare to high tech. Clients served include Abbott Laboratories, BP, Cisco, Deloitte, Northwestern University, and the United Nations. Barbara holds a doctorate in Organizational Psychology from the University of Michigan.
 
+Event Details
+
 Event Date | 10-13-2026 5:45 pm - 8:00 pm
 
 Cut off date | 10-13-2026 3:00 pm
 
-Registered | 18
+Registered | 35
 
-Available place | 82
+Available place | 65
 
 Individual Price | Free
 
@@ -4316,6 +5000,37 @@ No. of Ways of Working PDUs | .50
 No. of Power Skills PDUs | .75
 
 PMI Event Number | 0085N8RRR3
+
+Location | Virtual Meeting
+
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/events-calendar/communities-of-practice/leadership-committee
+
+# Leadership CoP
+Leadership CoP
+
+Leadership COP: Leading Through the Messy Middle
+
+Join the Leadership COP as we discuss Leading Through the Messy Middle: Working Deterministically in a Non-Deterministic World.
+
+Event Date | 11-18-2026 6:00 pm - 7:30 pm
+
+Cut off date | 11-18-2026 6:30 pm
+
+Registered | 4
+
+Available place | 296
+
+Individual Price | Free
 
 - Register (Individual)
 
@@ -4327,31 +5042,45 @@ PMI Event Number | 0085N8RRR3
 
 - Details
 
-https://ncpmi.org/events/events-calendar/december-virtual-member-orientation-session-4/individual-registration
+https://ncpmi.org/events/events-calendar/communities-of-practice/the-wheel-of-life-a-practical-framework-for-balance-resilience-and-leadership
 
-# December Virtual Member Orientation Session - Individual Registration
-Individual Registration
+# The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
+The Wheel of Life: A Practical Framework for Balance, Resilience, and Leadership
 
-Please enter information in the form below to process registration for event December Virtual Member Orientation Session .
+Ana Sanchez, PhD, Associate Dean for Performance Improvement and Project Management at the Duke University School of Medicine
 
-Terms and Conditions *
+Learning Objectives: Participants will: 1) Learn to apply the Wheel of Life framework to assess personal wellbeing, identify areas of imbalance, and develop a realistic action plan for improvement; 2) Evaluate how personal wellbeing and self-awareness influence leadership, communication, decision-making, and resilience in project management; 3) Apply insights from the Wheel of Life framework to lead project teams with greater empathy, awareness, and understanding of individual stressors.
 
-Captcha*
+Event Details
 
-Please enter the text you see in the image in the text box for captcha validation
+Event Date | 10-20-2026 12:00 pm - 1:00 pm
 
-https://ncpmi.org/events/events-calendar/january-virtual-member-orientation-session-4/individual-registration
+Cut off date | 10-20-2026 10:00 am
 
-# January Virtual Member Orientation Session - Individual Registration
-Individual Registration
+Registered | 24
 
-Please enter information in the form below to process registration for event January Virtual Member Orientation Session.
+Available place | 76
 
-Terms and Conditions *
+Individual Price | Free
 
-Captcha*
+Location | Virtual Meeting
 
-Please enter the text you see in the image in the text box for captcha validation
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
+
+https://ncpmi.org/events/events-calendar/hope-reins/view-map
+
+# Location Map - Hope Reins
+Hope Reins
+
+https://hopereins.org/
 
 https://ncpmi.org/events/events-calendar/membership
 
@@ -4364,9 +5093,9 @@ NCPMI Member Orientation sessions are being offered in a virtual setting. Join u
 
 Event Date | 11-02-2026 6:30 pm - 7:15 pm
 
-Registered | 4
+Registered | 14
 
-Available place | 46
+Available place | 36
 
 Individual Price | Free
 
@@ -4388,9 +5117,9 @@ NCPMI Member Orientation sessions are being offered in a virtual setting. Join u
 
 Event Date | 12-07-2026 6:30 pm - 7:15 pm
 
-Registered | 3
+Registered | 4
 
-Available place | 47
+Available place | 46
 
 Individual Price | Free
 
@@ -4429,123 +5158,6 @@ No. of Ways of Working PDUs | 1
 - Save Ical
 
 - Details
-
-https://ncpmi.org/events/events-calendar/membership/december-virtual-member-orientation-session-4
-
-# December Virtual Member Orientation Session
-December Virtual Member Orientation Session
-
-NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
-
-Member orientation sessions are for:
-
-- Anyone interested in learning about the benefits of NCPMI Chapter membership.
-
-- New and existing members are interested in becoming more engaged with NCPMI.
-
-- Members and non-members are welcome to register and attend.
-
-Event Details
-
-Event Date | 12-07-2026 6:30 pm - 7:15 pm
-
-Registered | 3
-
-Available place | 47
-
-Individual Price | Free
-
-No. of Ways of Working PDUs | 1
-
-Location | Virtual Meeting
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
-
-https://ncpmi.org/events/events-calendar/membership/january-virtual-member-orientation-session-4
-
-# January Virtual Member Orientation Session
-January Virtual Member Orientation Session
-
-NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
-
-Member orientation sessions are for:
-
-- Anyone interested in learning about the benefits of NCPMI Chapter membership.
-
-- New and existing members are interested in becoming more engaged with NCPMI.
-
-- Members and non-members are welcome to register and attend.
-
-Event Details
-
-Event Date | 01-04-2027 6:30 pm - 7:15 pm
-
-Registered | 1
-
-Available place | 49
-
-Individual Price | Free
-
-No. of Ways of Working PDUs | 1
-
-Location | Virtual Meeting
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
-
-https://ncpmi.org/events/events-calendar/membership/november-virtual-member-orientation-session-4
-
-# November Virtual Member Orientation Session
-November Virtual Member Orientation Session
-
-NCPMI Member Orientation sessions are being offered in a virtual setting. Join us to find out about the benefits of being a Chapter member. The session will introduce you to the various program offerings and help you get the best use of your NCPMI Chapter membership.
-
-Member orientation sessions are for:
-
-- Anyone interested in learning about the benefits of NCPMI Chapter membership.
-
-- New and existing members are interested in becoming more engaged with NCPMI.
-
-- Members and non-members are welcome to register and attend.
-
-Event Details
-
-Event Date | 11-02-2026 6:30 pm - 7:15 pm
-
-Registered | 4
-
-Available place | 46
-
-Individual Price | Free
-
-No. of Ways of Working PDUs | 1
-
-Location | Virtual Meeting
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Back
 
 https://ncpmi.org/events/events-calendar/membership/october-virtual-member-orientation-session-3
 
@@ -4586,61 +5198,38 @@ We are no longer accepting registration for this event
 
 - Back
 
-https://ncpmi.org/events/events-calendar/november-virtual-member-orientation-session-4/individual-registration
+https://ncpmi.org/events/events-calendar/social-good-networking/social-good-networking-event-hope-reins-4
 
-# November Virtual Member Orientation Session - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event November Virtual Member Orientation Session .
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
-https://ncpmi.org/events/events-calendar/social-good-networking
-
-# Social Good & Networking
-Social Good & Networking
-
-Social Good & Networking Event - PoeFest Community Festival
-
-NCPMI will be volunteering at PoeFest, a free community wellness festival at
-
-the Poe Center for Health Education that celebrates healthy decision-making
-
-and connects families to local resources. Commitment to serve must be
-
-confirmed by September 26. In addition to registering here, volunteers must
-
-also sign up via the Poe Center's official volunteer form. Please ensure your
-
-registration reflects a firm intention to attend.
-
-Event Date | 10-10-2026 1:00 pm - 4:00 pm
-
-Cut off date | 10-08-2026 10:00 am
-
-Registered | 3
-
-Available place | 37
-
-Individual Price | FREE for all NCPMI members and non-members
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
-
+# Social Good & Networking Event - Hope Reins
 Social Good & Networking Event - Hope Reins
 
 NCPMI is spending a morning at the 38-acre Hope Reins Ranch, an Equine Therapy organization located in Wake county. We welcome non-members (guardians required for ages 13 to 17) to join members during this opportunity to network while serving.
+
+The Hope Reins Mission: Pair hurting kids with trained mentors and rescued horses to find hope and healing.
+
+Where do you as a volunteer fit in? All services provided at the Ranch are free of charge and made possible by volunteers and donors.
+
+During this 3-hour morning shift, volunteers will participate in one or more of the following activities:
+
+· Invasive plant species removal in pastures to keep pastures healthy and nutrition-rich for the horses
+
+· Fence staining - with miles of four board fence, it's an ongoing process!
+
+· Trail construction
+
+· Clearing fence lines - from downed limbs, brush and debris
+
+· General Barn and Stall maintenance
+
+For more information, please visit their volunteer support page: Serve - Hope Reins
+
+All volunteers will sign a waiver digitally. Link to be provided in separate welcome email.
+
+We will gather at Zinc House Winery for additional networking opportunities following our event.
+
+8420 Wake Forest Hwy, Raleigh NC 27613
+
+Event Details
 
 Event Date | 10-17-2026 8:30 am - 11:30 am
 
@@ -4652,7 +5241,9 @@ Available place | 1
 
 Individual Price | FREE for all NCPMI members and non-members
 
-- Register (Individual)
+Location | Hope Reins
+
+We are no longer accepting registration for this event
 
 - Google Calendar
 
@@ -4660,7 +5251,56 @@ Individual Price | FREE for all NCPMI members and non-members
 
 - Save Ical
 
-- Details
+- Back
+
+https://ncpmi.org/events/events-calendar/social-good-networking/social-good-networking-event-poefest-community-festival
+
+# Social Good & Networking Event - PoeFest Community Festival
+Social Good & Networking Event - PoeFest Community Festival
+
+PoeFest is a free community festival hosted by the Poe Center for Health
+
+Education that celebrates healthy choices and brings families together for
+
+fun, food, prizes, special guests, interactive activities, and local
+
+entertainment. Activities include snacktivities, games and prizes, arts and
+
+crafts, a traffic safety course, a community health fair, and local vendors.
+
+During this 3 hour shift, volunteers will assist with festival activities and help
+
+connect attendees with community resources. Commitment to serve must be
+
+confirmed by September 26. Volunteers must also sign up directly via the
+
+Poe Center's official volunteer Google Form (link provided upon registration).
+
+Please ensure your registration reflects a firm intention to attend.
+
+Event Details
+
+Event Date | 10-10-2026 1:00 pm - 4:00 pm
+
+Cut off date | 10-08-2026 10:00 am
+
+Registered | 3
+
+Available place | 37
+
+Individual Price | FREE for all NCPMI members and non-members
+
+Location | Poe Center for Health Education
+
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
 
 https://ncpmi.org/events/events-calendar/study-group-2
 
@@ -4673,9 +5313,9 @@ Join the Certification Study Group community first using the link below. Once yo
 
 Join the Study Group Community
 
-Event Date | 10-10-2026 11:00 am - 12:30 pm
+Event Date | 10-24-2026 11:00 am - 12:30 pm
 
-Registered | 3
+Registered | 5
 
 Individual Price | Free
 
@@ -4695,7 +5335,7 @@ Join the Certification Study Group community first using the link below. Once yo
 
 Join the Study Group Community
 
-Event Date | 10-24-2026 11:00 am - 12:30 pm
+Event Date | 11-14-2026 11:00 am - 12:30 pm
 
 Registered | 1
 
@@ -4710,6 +5350,79 @@ Individual Price | Free
 - Save Ical
 
 - Details
+
+Study Group Session
+
+Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
+
+Join the Study Group Community
+
+Event Date | 11-28-2026 11:00 am - 12:30 pm
+
+Registered | 1
+
+Individual Price | Free
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+Study Group Session
+
+Join the Certification Study Group community first using the link below. Once you enter the community, you will be able to access the study session details and join the meeting.
+
+Join the Study Group Community
+
+Event Date | 12-12-2026 11:00 am - 12:30 pm
+
+Registered | 1
+
+Individual Price | Free
+
+- Register (Individual)
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Details
+
+https://ncpmi.org/events/events-calendar/study-group-2/study-group-session-10-10-2026
+
+# Study Group Session
+Study Group Session
+
+To participate in the Certification Study Group session, please join the Microsoft Teams community first using the link below. The community serves as the main hub for study session announcements, meeting access, resources, and updates.
+
+After entering the community, locate the upcoming study session post or event details to join the meeting.
+
+Join the Study Group Community
+
+Event Details
+
+Event Date | 10-10-2026 11:00 am - 12:30 pm
+
+Registered | 5
+
+Individual Price | Free
+
+We are no longer accepting registration for this event
+
+- Google Calendar
+
+- Yahoo Calendar
+
+- Save Ical
+
+- Back
 
 https://ncpmi.org/events/monthly-chapter-meeting
 
@@ -4830,23 +5543,29 @@ Address: 1101 West Chapel Hill Street, Durham, NC
 
 Format: In-Person Only
 
-Dinner Provided
+Dinner & Valet Parking Provided
 
 Agenda
 
-5:30 – 6:30 PM: Check-In, Networking & Dinner
+5:30 – 6:30 PM: Cocktail Hour, Check-In & Networking
 
-6:30 – 8:00 PM: NCPMI Annual Meeting
+6:30 – 7:30 PM: Dinner
 
-2026 Year in Review – Chapter Highlights, Chapter Financial Review, Milestones & Impact
+7:30 – 8:30 PM: NCPMI Board Updates & Board Panel
 
-Volunteer & Community Recognition
+Chapter and Board Updates
 
-Introduction of the 2027 NCPMI Board of Directors
+Board Panel Discussion
 
-Looking Ahead – Priorities & Vision for 2027
+Reflections, Priorities & Looking Ahead
 
-8:00 – 9:00 PM: Closing Remarks, Community Connection & Networking
+8:30 – 9:00 PM: Community Connection & Networking
+
+Additional Details
+
+Valet parking will be available.
+
+Cash bar available throughout the evening.
 
 An Evening to Celebrate & Look Ahead
 
@@ -4903,23 +5622,29 @@ Address: 1101 West Chapel Hill Street, Durham, NC
 
 Format: In-Person Only
 
-Dinner Provided
+Dinner & Valet Parking Provided
 
 Agenda
 
-5:30 – 6:30 PM: Check-In, Networking & Dinner
+5:30 – 6:30 PM: Cocktail Hour, Check-In & Networking
 
-6:30 – 8:00 PM: NCPMI Annual Meeting
+6:30 – 7:30 PM: Dinner
 
-2026 Year in Review – Chapter Highlights, Chapter Financial Review, Milestones & Impact
+7:30 – 8:30 PM: NCPMI Board Updates & Board Panel
 
-Volunteer & Community Recognition
+Chapter and Board Updates
 
-Introduction of the 2027 NCPMI Board of Directors
+Board Panel Discussion
 
-Looking Ahead – Priorities & Vision for 2027
+Reflections, Priorities & Looking Ahead
 
-8:00 – 9:00 PM: Closing Remarks, Community Connection & Networking
+8:30 – 9:00 PM: Community Connection & Networking
+
+Additional Details
+
+Valet parking will be available.
+
+Cash bar available throughout the evening.
 
 An Evening to Celebrate & Look Ahead
 
@@ -4949,9 +5674,9 @@ Event Date | 11-12-2026 5:30 pm - 9:00 pm
 
 Cut off date | 11-12-2026 9:00 pm
 
-Registered | 19
+Registered | 32
 
-Available place | 131
+Available place | 118
 
 Individual Price | $25.00
 
@@ -5137,33 +5862,6 @@ We are no longer accepting registration for this event
 - Save Ical
 
 - Back
-
-https://ncpmi.org/events/monthly-chapter-meeting/chapter-meeting-recordings
-
-# Chapter Meeting Recordings
-Chapter Meeting Recordings
-
-Meeting recordings are available for meetings that have received the speaker's consent to record. Thank you.
-
-Chapter Meeting May 16 2024: "Cashing in on Agile: The One Thing a PMO Can Do to Really Add Value"
-
-Speaker: Keith Wilson
-
-Meeting Recording:
-
-Navigate to the Programs tab
-
-----Choose Programs Overview
-
-----Scroll down and look for Member Menu on the right navigational panel
-
-----Select Member Documents
-
-----Select Monthly Chapter Meetings
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-Share On:
 
 https://ncpmi.org/events/monthly-chapter-meeting/monthly-chapter-meeting-october-2019
 
@@ -5368,9 +6066,9 @@ Event Date | 10-27-2026 6:00 pm - 8:30 pm
 
 Cut off date | 10-27-2026 7:30 pm
 
-Registered | 35
+Registered | 48
 
-Available place | 115
+Available place | 102
 
 Individual Price | $25.00
 
@@ -5388,41 +6086,6 @@ Location | ReCity Network
 
 - Back
 
-https://ncpmi.org/events/monthly-chapter-meeting/ncpmi-october-chapter-meeting-leading-from-tomorrow/individual-registration
-
-# NCPMI October Chapter Meeting - Leading from Tomorrow - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event NCPMI October Chapter Meeting - Leading from Tomorrow.
-
-Payment Information
-
-Amount
-
-$
-
-Payment Method
-
-PayPal / Credit Card / Debit Card
-
-If you're having difficulties with PayPal, please see these instructions.
-
-Credit Card Number*
-
-Expiration Date*
-
-/
-
-Card (CVV) Code*
-
-Card Holder Name*
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
-
 https://ncpmi.org/events/monthly-chapter-meeting/the-cookery/view-map
 
 # Location Map - The Cookery,
@@ -5430,283 +6093,10 @@ The Cookery,
 
 The Cookery: Historic Durham Wedding Venue and Event Space
 
-https://ncpmi.org/fund-raising
-
-# Fundraising
-Sundarban Beekeeping
-The Challenge The Solution Impact Fund the Project
-
-Sundarban Beekeeping Initiative
-
-Help Sundarban Women
-
-Build a Safer , Sustainable Future
-
-A safer livelihood. A stronger community. A healthier Sundarbans.
-Fund the Project
-
-A safer livelihood • A stronger community • A healthier Sundarbans
-
-Creating a safer, sustainable alternative
-
-to forest-based honey
-
-collection.
-
-Women in the Sundarbans can face serious risks when entering forests to collect wild honey. Community-based beekeeping offers a path toward safer, more sustainable livelihoods while supporting pollinators and the local ecosystem.
-
-Fund the Project Become an Impact Partner
-
-50Women in the pilot
-
-350Bee boxes planned
-
-$3,500Planned pilot investment
-
-$1,000Projected annual income per woman
-
-The challenge
-
-A livelihood that can
-
-come with a
-
-dangerous cost.
-
-Forest honey collection is deeply connected to life in the Sundarbans, yet entering forest territory can expose collectors to serious hazards, including tiger and crocodile encounters, difficult terrain and changing environmental conditions.
-
-The alternative
-
-Community-based
-
-beekeeping
-
-Train women, provide managed bee boxes, support hive installation and management, develop honey production, and connect producers with markets—creating a safer path to income.
-
-How it works
-
-From training to income.
-
-01
-Train
-
-Practical beekeeping and safety training.
-
-02
-Equip
-
-Bee boxes, protective equipment and basic tools.
-
-03
-Manage
-
-Hive installation, maintenance and production support.
-
-04
-Sell
-
-Market access and income generation.
-
-Measurable impact
-
-We intend to measure what changes.
-
-Livelihood
-
-Beneficiary income tracking
-
-Hive health
-
-Hive survival and production monitoring
-
-Safety
-
-Monitoring of forest-entry dependence
-
-Biodiversity
-
-Pollinator and ecosystem outcomes
-
-Fund the pilot
-
-50 women. 350 bee boxes. One
-
-safer, sustainable livelihood model.
-
-The planned pilot investment is $3,500. Individual contributions can also help support training, equipment, implementation and monitoring.
-
-Choose an amount above to continue to the secure donation page.
-
-For companies & foundations
-
-Become an Impact Partner.
-
-Support women’s economic empowerment, safer livelihoods and biodiversity through a measurable community beekeeping program.
-Discuss a Partnership
-
-Accountability
-
-Impact should be visible.
-
-The program is designed around regular monitoring, beneficiary feedback, production records, implementation evidence and financial reconciliation.
-
 https://ncpmi.org/jobs
 
 # Jobs
-Title
-
-Information Security Project Manager
-
-https://ncpmi.org/jobs/632-information-security-project-manager
-
-# Information Security Project Manager
-Information Security Project Manager
-
-Company Name: Golden Technology
-
-Location: Durham NC
-
-URL for job details
-
-https://goldenitinc.com/careers/job/?jobcode=23990
-
-Job Details
-
-Your Next Career Move Starts Here!
-
-The Role: Information Security Project Manager
-
-Location: Durham, NC – in office Tuesday - Thursday
-
-Type: Contract
-
-What You’ll Do:
-
-The Information Security Project Manager is responsible for planning, coordinating, and driving the successful delivery of information security projects, initiatives, and remediation activities across the organization. This role ensures that cybersecurity, risk, compliance, privacy, and operational resilience requirements are embedded into project planning and execution while supporting business objectives, regulatory obligations, and the organization’s overall information security strategy.
-
-Main Duties and Responsibilities
-
-Lead the planning, coordination, execution, monitoring, and closure of information security projects, ensuring deliverables are completed on time and aligned with approved scope, budget, and quality expectations.
-
-Develop and maintain project plans, schedules, RAID logs, action trackers, status reports, and other project governance documentation.
-
-Coordinate cybersecurity risk assessments, security reviews, control implementation activities, audit remediation, vulnerability remediation, penetration testing findings, and compliance initiatives.
-
-Partner with Information Security, IT, Quality, Legal, Privacy, Procurement, Internal Audit, vendors, and business stakeholders to define project requirements, dependencies, milestones, and success criteria.
-
-Ensure information security and data protection requirements are considered throughout the project lifecycle, including intake, design, implementation, testing, go-live readiness, and post-implementation review.
-
-Track and report project risks, issues, decisions, dependencies, overdue actions, and escalation items to information security leadership and relevant stakeholders.
-
-Facilitate meetings, workshops, working sessions, and stakeholder updates to maintain alignment, accountability, and timely decision-making.
-
-Support governance, risk, and compliance activities by coordinating evidence collection, control validation, audit response activities, and remediation tracking.
-
-Maintain clear ownership and accountability across project workstreams by identifying responsible parties, due dates, dependencies, and escalation paths.
-
-Coordinate third-party and vendor-related security project activities, including due diligence, remediation follow-up, contract-related security actions, and supplier risk initiatives.
-
-Support disaster recovery, business continuity, operational resilience, incident response readiness, and crisis management initiatives as assigned.
-
-Prepare executive-ready project status updates, dashboards, and management reports that clearly communicate progress, risks, blockers, and required decisions.
-
-Drive continuous improvement in information security project delivery practices, documentation standards, reporting discipline, and stakeholder engagement.
-
-Maintain confidentiality of company, customer, employee, supplier, and project information and comply with all applicable information security policies, standards, and procedures.
-
-Required Qualifications:
-
-Bachelor’s degree in Information Technology, Cybersecurity, Business, Project Management, or a related field; equivalent experience may be considered.
-
-Five or more years of experience managing IT, cybersecurity, information security, risk, compliance, infrastructure, or technology projects.
-
-Demonstrated experience coordinating cross-functional initiatives involving technical, business, compliance, and leadership stakeholders.
-
-Working knowledge of information security principles, cybersecurity controls, risk management, vulnerability management, audit remediation, and compliance processes.
-
-Familiarity with security and compliance frameworks such as ISO/IEC 27001, NIST Cybersecurity Framework, NIST Risk Management Framework, CIS Controls, GDPR, or similar standards.
-
-Experience using project management tools, collaboration platforms, issue trackers, reporting dashboards, and document repositories.
-
-Project management certification such as PMP, PRINCE2, CAPM, Agile/Scrum, or equivalent is preferred.
-
-Information security or risk certification such as CISSP, CISM, CISA, CRISC, Security+, ISO 27001 Lead Implementer, or ISO 27001 Lead Auditor is desirable.
-
-Strong project management, planning, organization, prioritization, and follow-through skills.
-
-Ability to translate technical and security concepts into clear business language for nontechnical stakeholders.
-
-Strong understanding of cybersecurity risk, control implementation, governance processes, and compliance obligations.
-
-Excellent written and verbal communication skills, including the ability to prepare concise executive-level reporting.
-
-Ability to influence stakeholders, drive accountability, and resolve barriers in a matrixed environment.
-
-Strong analytical, problem-solving, critical thinking, and decision-support skills.
-
-High attention to detail with the ability to maintain accurate project documentation, trackers, and status updates.
-
-Ability to manage multiple priorities in a fast-paced environment while maintaining professionalism and confidentiality.
-
-Why Golden Technology?
-
-Founded in 1997, Golden Technology has grown from a two-person vision into a trusted partner for Fortune 500 clients nationwide. Along the way, we’ve built a culture centered on family, professional growth, and giving back to our communities through our Golden Community initiatives.
-
-Here’s what sets us apart:
-
-Family-first culture that values balance and support.
-
-Career development through mentorship, opportunities, and investment in our people.
-
-Community impact by dedicating time, talent, and resources to the places we live and work.
-
-What’s In It for You
-
-Exciting opportunities with innovative companies.
-
-Guidance from a recruiting team with decades of experience.
-
-A professional, supportive culture built on trust and collaboration.
-
-Ready to take the next step?
-
-Apply today and let’s build your brighter future together.
-
-Document (PDF) English
-
-Contact Person:
-
-First Name
-
-Susan
-
-Last Name
-
-Delmonico
-
-Email
-
-This email address is being protected from spambots. You need JavaScript enabled to view it.
-
-Phone
-
-9196965434
-
-Company
-
-Golden Technology
-
-Address
-
-Address 2
-
-City
-
-Raleigh
-
-Country
-
-Share On:
+There are no job posting available at the moment. Please visit again later.
 
 https://ncpmi.org/jobs/submit-a-job-posting
 
@@ -5760,9 +6150,7 @@ Invalid Input
 https://ncpmi.org/jobs/view-jobs
 
 # View Jobs
-Title | Published Date
-
-Information Security Project Manager | 11 September 2026
+There are no job posting available at the moment. Please visit again later.
 
 https://ncpmi.org/login-help
 
@@ -6277,31 +6665,7 @@ Note: You must be logged in to get the member or volunteer discount. Please use 
 
 All visitors are shown the full price. Discounts, when applicable, are taken at the time of checkout. If you feel that the fee shown is not correct, please do not check out as processing refunds is costly. Contact us at This email address is being protected from spambots. You need JavaScript enabled to view it. with your concern and we will look into it for you. - Thank you.
 
-08
-
-Oct
-
-2026
-
-Future Proof Your Project Management Career: 7 Strategies for Staying Relevant, Marketable and Employable in the Age of AI
-
-10-08-2026 5:45 pm -7:30 pm
-
-Virtual Meeting
-
-Free
-
-Participants will leave with practical strategies they can immediately apply to their own careers. Topics will include developing a future-ready portfolio of skills, using AI to enhance project management effectiveness, translating project accomplishments into measurable business impact, strengthening professional visibility and networks, and identifying emerging career opportunities beyond traditional project management roles.
-
-- Register (Individual)
-
-- Google Calendar
-
-- Yahoo Calendar
-
-- Save Ical
-
-- Details
+There are no events in the selected category
 
 https://ncpmi.org/programs/workshops/future-proof-your-project-management-career-7-strategies-for-staying-relevant-marketable-and-employable-in-the-age-of-ai
 
@@ -6316,15 +6680,15 @@ Event Date | 10-08-2026 5:45 pm - 7:30 pm
 
 Cut off date | 10-08-2026 4:00 pm
 
-Registered | 77
+Registered | 87
 
-Available place | 23
+Available place | 13
 
 Individual Price | Free
 
 Location | Virtual Meeting
 
-- Register (Individual)
+We are no longer accepting registration for this event
 
 - Google Calendar
 
@@ -6333,19 +6697,6 @@ Location | Virtual Meeting
 - Save Ical
 
 - Back
-
-https://ncpmi.org/programs/workshops/future-proof-your-project-management-career-7-strategies-for-staying-relevant-marketable-and-employable-in-the-age-of-ai/individual-registration
-
-# Future Proof Your Project Management Career: 7 Strategies for Staying Relevant, Marketable and Employable in the Age of AI - Individual Registration
-Individual Registration
-
-Please enter information in the form below to process registration for event Future Proof Your Project Management Career: 7 Strategies for Staying Relevant, Marketable and Employable in the Age of AI.
-
-Terms and Conditions *
-
-Captcha*
-
-Please enter the text you see in the image in the text box for captcha validation
 
 https://ncpmi.org/programs/workshops/nov082022
 

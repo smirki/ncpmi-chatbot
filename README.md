@@ -88,15 +88,18 @@ Copy `.env.example` to `.env` and fill these in:
 
 ## Embedding the widget on a website
 
-The widget is plain JS/CSS — drop it into any page and point it at your server:
+The widget is plain JS/CSS. For ncpmi.org, add this sitewide (page footer, before `</body>`);
+it points at the production Cloudflare Worker:
 
 ```html
-<link rel="stylesheet" href="https://your-server.com/widget/widget.css">
+<link rel="stylesheet" href="https://ncpmi-chatbot.manavmaj2001.workers.dev/widget/widget.css">
 <script>
-  window.NCPMI_CHAT_API_URL = 'https://your-server.com';
+  window.NCPMI_CHAT_API_URL = 'https://ncpmi-chatbot.manavmaj2001.workers.dev';
 </script>
-<script src="https://your-server.com/widget/widget.js"></script>
+<script src="https://ncpmi-chatbot.manavmaj2001.workers.dev/widget/widget.js"></script>
 ```
+
+For a self-hosted server, replace the URL with your own.
 
 For production, set `CORS_ORIGINS` in `.env` to the site(s) that will embed the widget.
 
